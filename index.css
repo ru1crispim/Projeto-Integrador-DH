@@ -1,0 +1,45 @@
+
+nav {
+    border: 2px solid;
+    text-align: center;
+    padding: 10px;
+    
+}
+
+body {
+    width: 98%;
+    padding: 10px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.intro{
+    background-color: white;
+    border: 2px solid;
+}
+.populares{
+    background-color: white;
+    border: 2px solid;
+}
+.usados{
+    background-color: white;
+    border: 2px solid;
+}
+.listaDeNovidades{
+    background-color: white;
+    border: 2px solid;
+}
+footer{
+    background-color: white;
+    border: 2px solid;
+}
+.populares img{
+    width: 100px;
+}
+.novidades img{
+    width: 100px;
+}
+footer img{
+    width: 30px;
+}
+
+
