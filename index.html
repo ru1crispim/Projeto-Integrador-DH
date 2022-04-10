@@ -2,24 +2,25 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home - DH Games</title>
     <link rel="stylesheet" href="public/css/index.css">
 </head>
 <body>
     
     <header>
-    <nav>
-    <img width="100" src="./public/img/logo-loja.png" alt="logo-loja">
+    <img class="logoPressStart" src="./public/img/logo-loja-br.png" alt="logo-loja">
+    <nav class="navegacao">
     <a href="">Inicio</a>
     <a href="">Jogos</a>
     <a href="">Contato</a>
     <a href="">Orçamentos</a>
+    </nav>
+    <nav class="login">
     <a href="">Entrar</a>
     <a href="">Crie sua conta</a>
-    <img width="25
-    " src="./public/img/login.png" alt="login">
+    <a href=""><img src="./public/img/login.png" alt="login"></a>
     </nav>
-
     </header>
     <main>
         <section class="intro">
@@ -33,10 +34,10 @@
         
             <div>
                 <img src="./public/img/catalogo/populares/eldenRing.png" alt="img do produto1">
-              <h3>Titulo do produto1</h3> 
-              <p>Categoria</p>
-              <p>Valor: R$</p>
-              <button>Comprar</button> 
+                <h3>Titulo do produto1</h3> 
+                <p>Categoria</p>
+                <p>Valor: R$</p>
+                <button>Comprar</button> 
             </div>
             <div>
                 <img src="./public/img/catalogo/populares/gran turismo.png" alt="img do produto2">
@@ -44,14 +45,14 @@
                 <p>Categoria</p>
                 <p>Valor: R$</p>
                 <button>Comprar</button> 
-              </div>
-              <div>
+            </div>
+            <div>
                 <img src="./public/img/catalogo/populares/residentEvil.png" alt="img do produto3">
                 <h3>Titulo do produto3</h3> 
                 <p>Categoria</p>
                 <p>Valor: R$</p>
                 <button>Comprar</button> 
-              </div>
+            </div>
 
         </section>
         <section class="usados">
@@ -61,13 +62,13 @@
             <button>Solicitar avaliação</button>
         </section>
         <section class="novidades">
-            <div class="listaDeNovidades">
+            <h2>Novidades</h2>   
                 <div>
                     <img src="./public/img/novidades/demonssouls.jpg" alt="img do produto1">
-                  <h3>Titulo do produto1</h3> 
-                  <p>Categoria</p>
-                  <p>Valor: R$</p>
-                  <button>Comprar</button> 
+                    <h3>Titulo do produto1</h3> 
+                    <p>Categoria</p>
+                    <p>Valor: R$</p>
+                    <button>Comprar</button> 
                 </div>
                 <div>
                     <img src="./public/img/novidades/farcry.jpg" alt="img do produto2">
@@ -75,34 +76,40 @@
                     <p>Categoria</p>
                     <p>Valor: R$</p>
                     <button>Comprar</button> 
-                  </div>
-                  <div>
+                </div>
+                <div>
                     <img src="./public/img/novidades/horizon.jpg" alt="img do produto3">
                     <h3>Titulo do produto3</h3> 
                     <p>Categoria</p>
                     <p>Valor: R$</p>
                     <button>Comprar</button> 
-                  </div>
-            </div>
+                </div>
+
         </section>
         
     </main>
-    <footer>
-        <span>Beneficios</span>
-        <span>Contatos</span>
-        <span>Redes Sociais</span>
-        <ul>
-            <li>Garantia de qualidade</li>
-            <li>Melhor opção do mercado</li>
-            <li>Entrega para todo o Brasil</li>
-        </ul>
-        <img src="./public/img/icons/telefone.png" alt="icon-telefone">
-        <p>Telefone</p>
-        <img src="./public/img/icons/email.png" alt="icon-mail">
-        <p>E-mail</p>
-        <img src="./public/img/icons/facebook.png" alt="logo-facebook">
-        <img src="./public/img/icons/instagram.png" alt="logo-instagram">
-        <img src="./public/img/icons/whattsapp.png" alt="logo-whattsapp">
+    <footer class="rodape">
+        <div class="beneficios">
+            <h4>Beneficios</h4>
+            <ul>
+                <li>Garantia de qualidade</li>
+                <li>Melhor opção do mercado</li>
+                <li>Entrega para todo o Brasil</li>
+            </ul>
+        </div>
+        <div class="contatos">
+            <h4 >Contatos</h4>
+            <p>Telefone: (11) 00000-0000</p>
+            <p>E-mail: sac@pressstart.com.br</p>
+        </div>
+        <div class="redesSociais">
+            <h4 >Redes Sociais</h4>
+            <img src="./public/img/icons/facebook.png" alt="logo-facebook">
+            <img src="./public/img/icons/instagram.png" alt="logo-instagram">
+            <img src="./public/img/icons/whattsapp.png" alt="logo-whattsapp">
+        </div>
+        <img class="pacman" width="200px" src="./public/img/icons/pacman.png" alt="">
     </footer>
 </body>
 </html>
+
