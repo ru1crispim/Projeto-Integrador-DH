@@ -88,6 +88,39 @@ body {
     margin-right: 50px;
 }
 
+/* Carrosel */
+
+/* .intro img{
+    width: 800px;
+    height: 500px;
+}
+
+.intro{
+    width: 800px;
+    height: 500px;
+    outline: 2px solid black;
+    margin: 50px auto;
+    box-shadow: 10px 10px 10px 10px rgba(0,0, 0, 4);
+    overflow:hidden;
+}
+
+.intro ul{
+    display: flex;
+    list-style: none;
+    width: 2400px;
+    height: 500px;
+       
+}
+
+.intro li{
+    position: relative;
+    animation: slide 15s infinite ease-out;
+}
+
+@keyframes slide{
+    0%{left:0px};
+} */
+
 .populares{
     background-color: gray;
     border: 2px solid;
