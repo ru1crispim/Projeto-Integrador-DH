@@ -27,6 +27,7 @@
 
 .login {
     display: inline-block;
+    color: black;
     border: 2px none;
     text-align: center;
     padding: 10px;
@@ -41,7 +42,7 @@
     text-align: center;
     padding: 0px;
     margin: 5px 0px 5px 5px;
-    color: white;
+    color: black;
     box-sizing: border-box;
 
 }
