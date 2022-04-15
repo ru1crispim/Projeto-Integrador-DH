@@ -88,6 +88,15 @@ body {
     margin-right: 50px;
 }
 
+.article{
+    background-color: gray;
+    text-align: left;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding-right: 10px;
+    border-bottom: 1pc blue solid;
+}
+
 .recomendacoes{
     background-color: gray;
     border: 2px solid;
@@ -189,4 +198,5 @@ button{
     font-weight: bold;
     color: white;
     box-sizing: border-box;
+
 }
