@@ -1,5 +1,5 @@
 body {
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     background-image: url('//www.wallpapersun.com/wp-content/uploads/2021/01/Gaming-Wallpaper-2-715x536.jpg');
     background-attachment: fixed;
     opacity: 0.92;
@@ -61,7 +61,6 @@ list-style-type: none; /* Retirar o estilo da lista  */
 
 .navegacao img{
     width: 120px;
-    
     
 }
 
@@ -264,6 +263,7 @@ list-style-type: none; /* Retirar o estilo da lista  */
     text-align: center;
     background-color: black;
     
+    
 }
 
 .novidadesTitulo{
@@ -272,6 +272,9 @@ list-style-type: none; /* Retirar o estilo da lista  */
     box-sizing: border-box;
     text-align: center;
     }
+    .novidadesTitulo h2{
+        color: white;
+        }
 
 .novidadesCatalogo{
     display: flex;
