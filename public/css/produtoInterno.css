@@ -88,13 +88,40 @@ body {
     margin-right: 50px;
 }
 
-.article{
-    background-color: gray;
+.produto-principal{
+    background-color: white;
+    display: flex;
+    border: 2px solid;
     text-align: left;
-    margin-top: 15px;
-    margin-bottom: 15px;
-    padding-right: 10px;
-    border-bottom: 1pc blue solid;
+    justify-content: space-around;
+    flex-direction: row;
+    border-radius: 0px 80px 0px 80px;
+    box-sizing: border-box;
+    }
+
+.dadosDoProduto{
+    text-align: center;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+}
+
+.compartilhar{
+    background-color: white;
+}
+
+.precos-do-produto{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.grupo-compra{
+    width: 80%;
+    justify-content: space-between;
+    margin: 50px 50px 50px 50px;
 }
 
 .recomendacoes{
