@@ -197,6 +197,7 @@ list-style-type: none; /* Retirar o estilo da lista  */
 .populares img{
     width: 100px;
 }
+
 .usados{
     /* border: 1px solid black; */
     height: 60vh;
@@ -384,6 +385,17 @@ button{
 
 }
 
+/* Finalização de Pedido */
+
+.confirm-pedido{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: lightgreen;
+    height: 80vh;
+}
 
 
 
