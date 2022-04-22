@@ -1,0 +1,401 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url('//www.wallpapersun.com/wp-content/uploads/2021/01/Gaming-Wallpaper-2-715x536.jpg');
+    background-attachment: fixed;
+    opacity: 0.92;
+    box-sizing: border-box;
+}
+
+
+.cabecalho{
+    display: flex;
+    flex-direction: row;
+    /* border: 1px solid black; */
+    height: 10vh;
+    box-sizing: border-box;
+    justify-content: space-around;
+    box-sizing: border-box;
+    background: black;
+}
+
+.logoPressStart{
+    width: 180px;
+}
+.navegacao{
+    display: flex;
+    flex-direction: row;
+    
+    height: 10vh;
+    box-sizing: border-box;
+    width: 70%;
+    padding: 20px;
+    justify-content: flex-start;
+    box-sizing: border-box;
+    font-size: 15px;
+    
+
+}
+
+.navegacao ul {
+display: flex;
+flex-direction: row;
+list-style-type: none; /* Retirar o estilo da lista  */
+
+}
+
+.navegacao li a{
+    display: flex;
+    font-size: 20px;
+    font-weight: bold;
+    box-sizing: border-box;
+    margin-right: 150px;
+    color: yellow;
+    text-decoration: none;
+    
+  
+}
+.navegacao li a:hover{
+   background-color: lightblue;
+
+}
+
+.navegacao img{
+    width: 120px;
+    
+}
+
+.login{
+    display: flex;
+    flex-direction: row;
+    /* border: 1px solid black; */
+    padding: 15px;
+    height: 10vh;
+    width: 30%;
+        justify-content: flex-end;
+    box-sizing: border-box;
+}
+.login a{
+    display: flex;
+    /* border: 1px solid black; */
+    padding: 10px;
+    box-sizing: border-box;
+    color: white;    
+}
+.login img{
+    width: px;
+
+}
+
+.gallery{
+    border: 4px solid black;
+    width: 650px;
+    height: 360px;
+    background-color: black;
+    box-sizing: border-box;
+    overflow: hidden;
+    margin-left: 30%;
+    box-sizing: border-box;   
+}
+
+.gallery .fotosGallery{
+    display: flex;
+    width: 400%;
+    animation-name: animacao;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+
+}
+
+.gallery .fotosGallery img{
+    height: 38vh;
+    width: 25%;
+}
+
+
+
+.intro{
+    display: flex;
+    flex-direction: row;
+    /* border: 1px solid black; */
+    height: 50vh;
+    box-sizing: border-box;
+    justify-content: space-around;
+    background-color: white;
+    
+}
+.introA{
+    text-align: center;
+    font-size: 20px;
+    /* border: 1px solid black; */
+    width: 50%;
+    padding: 80px;
+    font-size: 30px;
+    box-sizing: border-box;
+    
+}
+.introB{
+    text-align: left;
+    font-size: 20px;
+    /* border: 1px solid black; */
+    margin: 10px;
+    width: 50%;
+    padding: px;
+    box-sizing: border-box;
+    text-align: center;
+}
+.introB img{
+    
+    width: 665px;
+    border-radius: 150px;
+}
+
+.intro button{
+    font-size: 40px;
+    color: white;
+    background-color: green;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.populares{
+
+    /* border: 1px solid black; */
+    height: 60vh;
+    box-sizing: border-box;
+    justify-content: center;
+    text-align: center;
+    background-color: black;
+    color: white;
+}
+
+.popularesTitulo{
+    /* border: 1px solid black; */
+    height: 10vh;
+    box-sizing: border-box;
+    text-align: center;
+    
+    }
+
+.popularesCatalogo{
+    display: flex;
+    /* border: 1px solid black; */
+    height: 40vh;
+    box-sizing: border-box;
+    text-align: center;
+    justify-content: center;
+    
+}
+.popularesCatalogo div{
+    border: 1px solid black;
+    border-radius: 30px;  
+    background-color: white;  
+    color: black;
+    margin: 20px;
+    padding: 10px;
+}
+
+.populares img{
+    width: 100px;
+}
+
+.usados{
+    /* border: 1px solid black; */
+    height: 60vh;
+    box-sizing: border-box;
+    justify-content: center;
+    text-align: center;
+    background-color: white;
+}
+
+.tituloUsados{
+    /* border: 1px solid black; */
+}
+.conteudoUsados{
+    display: flex;
+    /* border: 1px solid black; */
+    height: 60vh;
+    box-sizing: border-box;
+    justify-content: center;
+    text-align: center;
+    
+}
+
+.usadosA{
+    
+    /* border: 1px solid black; */
+    width: 50%;
+    height: 60vh;
+    box-sizing: border-box;
+    justify-content: center;
+    text-align: center;
+    
+}
+.usadosB{
+    /* border: 1px solid black; */
+    width: 50%;
+    height: 60vh;
+    padding: 70px;
+    box-sizing: border-box;
+    justify-content: center;
+    text-align: center;
+    font-size: 40px;
+    
+}
+
+.usados img{
+    width: 500px;
+    border-radius: 250px;
+}
+
+.usados button{
+    font-size: 40px;
+    color: white;
+    background-color: green;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.novidades{
+
+    /* border: 1px solid black; */
+    height: 60vh;
+    box-sizing: border-box;
+    justify-content: center;
+    text-align: center;
+    background-color: black;
+    
+    
+}
+
+.novidadesTitulo{
+    /* border: 1px solid black; */
+    height: 10vh;
+    box-sizing: border-box;
+    text-align: center;
+    }
+    .novidadesTitulo h2{
+        color: white;
+        }
+
+.novidadesCatalogo{
+    display: flex;
+    /* border: 1px solid black; */
+    height: 40vh;
+    box-sizing: border-box;
+    text-align: center;
+    justify-content: center;
+    
+}
+.novidadesCatalogo div{
+    /* border: 1px solid black;     */
+    border-radius: 30px;
+    background-color: white;
+    
+    margin: 20px;
+    padding: 10px;
+    
+}
+
+
+.novidades img{
+    width: 100px;
+}
+
+.rodape{
+    display: flex;
+    flex-direction: row;
+    /* border: 1px solid black; */
+    height: 20vh;
+    box-sizing: border-box;
+    justify-content:space-around;
+    background-color: white;
+}
+.rodapeChild{
+    /* border: 1px solid black; */
+    height: 20vh;
+    padding: 10px;
+    box-sizing: border-box;
+    font-size: 15px;
+}
+.rodape img{
+    width: 50px;
+}
+
+button{
+    color: white;
+    background-color: red;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+/* Pagina Usado */
+
+.usadoPrincipal{
+    display: flex;
+    flex-direction: column;
+    background-color: lightblue;
+    text-align: center;
+    justify-content: center;
+    height:70vh;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+/* .usadoPrincipal button{
+   margin-top: 10px;
+   margin-right: 10px;
+   padding: 10px;
+} */
+/* .usadoPrincipal input{
+   width: 300px;
+   height: 20px;
+   border-radius: 10px;
+ } */
+
+.usadoTexto{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.usadoTexto img{
+   width: 50px;
+}
+
+.usadoFormulario{
+    display: flex;
+    width: 100%;   
+    justify-content:center;
+    text-align: right;
+}
+.usadoFormulario input{
+    
+    
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+
+}
+.usadoFormulario button{
+    
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+
+}
+
+/* Finalização de Pedido */
+
+.confirm-pedido{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: lightgreen;
+    height: 80vh;
+}
+
+
+

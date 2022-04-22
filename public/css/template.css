@@ -1,0 +1,116 @@
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url('//www.wallpapersun.com/wp-content/uploads/2021/01/Gaming-Wallpaper-2-715x536.jpg');
+    background-attachment: fixed;
+    opacity: 0.92;
+    box-sizing: border-box;
+}
+
+
+.cabecalho{
+    display: flex;
+    flex-direction: row;
+    /* border: 1px solid black; */
+    height: 10vh;
+    box-sizing: border-box;
+    justify-content: space-around;
+    box-sizing: border-box;
+    background: black;
+}
+
+.logoPressStart{
+    width: 180px;
+}
+.navegacao{
+    display: flex;
+    flex-direction: row;
+    
+    height: 10vh;
+    box-sizing: border-box;
+    width: 70%;
+    padding: 20px;
+    justify-content: flex-start;
+    box-sizing: border-box;
+    font-size: 15px;
+    
+
+}
+
+.navegacao ul {
+display: flex;
+flex-direction: row;
+list-style-type: none; /* Retirar o estilo da lista  */
+
+}
+
+.navegacao li a{
+    display: flex;
+    font-size: 20px;
+    font-weight: bold;
+    box-sizing: border-box;
+    margin-right: 150px;
+    color: yellow;
+    text-decoration: none;
+    
+  
+}
+.navegacao li a:hover{
+   background-color: lightblue;
+
+}
+
+.navegacao img{
+    width: 120px;
+    
+}
+
+.login{
+    display: flex;
+    flex-direction: row;
+    /* border: 1px solid black; */
+    padding: 15px;
+    height: 10vh;
+    width: 30%;
+        justify-content: flex-end;
+    box-sizing: border-box;
+}
+.login a{
+    display: flex;
+    /* border: 1px solid black; */
+    padding: 10px;
+    box-sizing: border-box;
+    color: white;    
+}
+.login img{
+    width: px;
+
+}
+
+.rodape{
+    display: flex;
+    flex-direction: row;
+    /* border: 1px solid black; */
+    height: 20vh;
+    box-sizing: border-box;
+    justify-content:space-around;
+    background-color: white;
+}
+.rodapeChild{
+    /* border: 1px solid black; */
+    height: 20vh;
+    padding: 10px;
+    box-sizing: border-box;
+    font-size: 15px;
+}
+.rodape img{
+    width: 50px;
+}
+
+.conteudo{
+    display: flex;
+    flex-direction: row;
+    background-color: lightgreen;
+    height: 700px;
+}
+/* <!---ESCREVA AQUI SEU CSS--> */
