@@ -3,90 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - DH Games</title>
-    <link rel="stylesheet" href="public/css/index.css">
+    <title>Login - DH Games</title>
+    <link rel="stylesheet" href="public/css/login.css" type="text/css">
 </head>
 <body>
-    
     <header>
-    <img class="logoPressStart" src="./public/img/logo-loja-br.png" alt="logo-loja">
-    <nav class="navegacao">
-    <a href="">Inicio</a>
-    <a href="">Jogos</a>
-    <a href="">Contato</a>
-    <a href="">Orçamentos</a>
-    </nav>
-    <nav class="login">
-    <a href="">Entrar</a>
-    <a href="">Crie sua conta</a>
-    <a href=""><img src="./public/img/login.png" alt="login"></a>
-    </nav>
+        <img class="logoPressStart" src="./public/img/logo-loja-br.png" alt="logo-loja">
+        <nav class="navegacao">
+            <a href="">Inicio</a>
+            <a href="">Jogos</a>
+            <a href="">Contato</a>
+            <a href="">Orçamentos</a>
+        </nav>
+        <nav class="login">
+            <a href="">Entrar</a>
+            <a href="">Crie sua conta</a>
+            <a href=""><img src="./public/img/login.png" alt="login"></a>
+        </nav>
     </header>
     <main>
         <section class="intro">
-            <h1>Play Game</h1>
-            <p>Diversas opções de jogos para as principais plataformas.</p>
-            <button>Ver loja</button>
-            <img width="200" src="./public/img/intro/consoles.png" alt="jogos-diversos">
-        </section>
-        <section class="populares">
-            <h2>Mais populares</h2>
-        
-            <div>
-                <img src="./public/img/catalogo/populares/eldenRing.png" alt="img do produto1">
-                <h3>Titulo do produto1</h3> 
-                <p>Categoria</p>
-                <p>Valor: R$</p>
-                <button>Comprar</button> 
-            </div>
-            <div>
-                <img src="./public/img/catalogo/populares/gran turismo.png" alt="img do produto2">
-                <h3>Titulo do produto2</h3> 
-                <p>Categoria</p>
-                <p>Valor: R$</p>
-                <button>Comprar</button> 
-            </div>
-            <div>
-                <img src="./public/img/catalogo/populares/residentEvil.png" alt="img do produto3">
-                <h3>Titulo do produto3</h3> 
-                <p>Categoria</p>
-                <p>Valor: R$</p>
-                <button>Comprar</button> 
-            </div>
-
-        </section>
-        <section class="usados">
-        <h2>A Press Start compra seu usado</h2>
-            <img src="./public/img/usados/usados.png" alt="Produto usado">
-            <p>Solicite uma avaliação de seus jogos usados e acumule prontos para a compra de novos jogos</p>
-            <button>Solicitar avaliação</button>
-        </section>
-        <section class="novidades">
-            <h2>Novidades</h2>   
-                <div>
-                    <img src="./public/img/novidades/demonssouls.jpg" alt="img do produto1">
-                    <h3>Titulo do produto1</h3> 
-                    <p>Categoria</p>
-                    <p>Valor: R$</p>
-                    <button>Comprar</button> 
+            <div id="content">
+                <div id="historico">
+                    <p>Inicio > Cadastro</p>
                 </div>
-                <div>
-                    <img src="./public/img/novidades/farcry.jpg" alt="img do produto2">
-                    <h3>Titulo do produto2</h3> 
-                    <p>Categoria</p>
-                    <p>Valor: R$</p>
-                    <button>Comprar</button> 
+                <div id="cadastro">
+                    <div class="soucadastrado">
+                        <h2>Já sou cadastrado</h2>
+                        <input type="text" name="Login.Email" value placeholder="E-mail">
+                        <input type="text" name="Login.Senha" value placeholder="Senha">
+                        <button id="entrar">Entrar</button>
+                    </div>
+                <div class="naocadastrado">
+                    <h2>Não sou cadastrado</h2>
+                    <p>Cadastre-se agora em nossa loja, é seguro, rápido e fácil</p>
+                    <button id="entrar">Clique e Cadastre-se</button>
                 </div>
-                <div>
-                    <img src="./public/img/novidades/horizon.jpg" alt="img do produto3">
-                    <h3>Titulo do produto3</h3> 
-                    <p>Categoria</p>
-                    <p>Valor: R$</p>
-                    <button>Comprar</button> 
-                </div>
-
-        </section>
-        
+            </div>
+      </section>
     </main>
     <footer class="rodape">
         <div class="beneficios">

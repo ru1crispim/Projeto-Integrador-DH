@@ -11,6 +11,7 @@
     margin: 5px 5px 5px 5px;
     box-sizing: border-box;
 }
+
 .navegacao a {
     display: inline-block;
     border: 2px solid;
@@ -24,7 +25,6 @@
     background-color: red;
 }
 
-
 .login {
     display: inline-block;
     border: 2px none;
@@ -33,7 +33,6 @@
     margin: 5px 5px 5px 400px;
     box-sizing: border-box;
 }
-
 
 .login a {
     display: inline-block;
@@ -45,10 +44,10 @@
     box-sizing: border-box;
 
 }
+
 .login img {
     width: 40px;
 }
-
 
 body {
     width: 98%;
@@ -61,7 +60,6 @@ body {
 
 }
 
-
 .intro{
     background-color: black;
     border: 2px solid;
@@ -73,138 +71,11 @@ body {
     
 }
 
-.intro img{
-    width: 400px;
-    border-radius: 0px 80px 0px 80px;
-    box-sizing: border-box;
-    max-width: 100%;
-
-}
-
 .intro button{
     display: inline-block;
     font-size: 20px;
     padding: 10px 30px;
     margin-right: 50px;
-}
-
-.populares{
-    background-color: gray;
-    border: 2px solid;
-    text-align: center;
-    color: white;
-    border-radius: 80px 0px 80px 0px;
-    box-sizing: border-box;
-}
-
-.populares div{
-    display:inline-block;
-    background-color: white;
-    border: 2px none;
-    text-align: center;
-    margin: 10px 10px 10px 10px;
-    color: black;
-    border-radius: 20px;
-    box-sizing: border-box;
-    
-}
-
-.usados{
-    background-color: white;
-    border: 2px solid;
-    text-align: center;
-    color: black;
-    font-size: 25px;
-    border-radius: 0px 80px 0px 80px;
-}
-
-.usados button{
-    display: inline-block;
-    font-size: 20px;
-    padding: 10px 30px;
-    margin-right: 50px;
-    margin-bottom: 20px;
-}
-
-.usados img{
-    width: 500px;
-    border-radius: 50px;
-    border-radius: 0px 80px 0px 80px;
-    max-width: 100%;
-
-}
-
-.novidades{
-    background-color: black;
-    border: 2px solid;
-    text-align: center;
-    color: white;
-    border-radius: 80px 0px 80px 0px;
-    box-sizing: border-box;
-}
-
-.novidades div{
-    display:inline-block;
-    background-color: white;
-    border: 2px none;
-    text-align: center;
-    margin: 10px 10px 10px 10px;
-    color: black;
-    border-radius: 20px;
-    box-sizing: border-box;
-}
-
-.rodape{
-    background-color: white;
-    border: 2px solid;
-    text-align: center;
-    border-radius: 0px 80px 0px 80px;
-    box-sizing: border-box;
-}
-.rodape .contatos{
-    display: inline-block;
-    background-color: white;
-    border: 2px none;
-    box-sizing: border-box;
-    max-width: 100%;
-      max-width: 100%;
-}
-
-.rodape .redesSociais{
-    display: inline-block;
-    background-color: white;
-    border: 2px none;
-    margin-left: 500px;
-    box-sizing: border-box;
-    max-width: 100%;
-}
-.rodape .beneficios{
-    display: inline-block;
-    background-color: white;
-    border: 2px none;
-    margin: 0px 500px 0px 0px;
-    box-sizing: border-box;
-}
-
-.populares img{
-    width: 100px;
-    max-width: 100%;
-}
-.novidades img{
-    width: 100px;
-    max-width: 100%;
-}
-footer img{
-    width: 20px;
-    max-width: 100%;
-}
-
-.pacman{
-    display: block;
-    width: 100px;
-    margin-left: 50%;
-    border: 1px solid white;
-    max-width: 100%;
 }
 
 button{
@@ -218,4 +89,93 @@ button{
     color: white;
     box-sizing: border-box;
 
+}
+
+.rodape{
+    background-color: white;
+    border: 2px solid;
+    text-align: center;
+    border-radius: 0px 80px 0px 80px;
+    box-sizing: border-box;
+}
+
+.rodape .contatos{
+    display: inline-block;
+    background-color: white;
+    border: 2px none;
+    box-sizing: border-box;
+    max-width: 100%;
+    max-width: 100%;
+}
+
+.rodape .redesSociais{
+    display: inline-block;
+    background-color: white;
+    border: 2px none;
+    margin-left: 500px;
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+.rodape .beneficios{
+    display: inline-block;
+    background-color: white;
+    border: 2px none;
+    margin: 0px 500px 0px 0px;
+    box-sizing: border-box;
+}
+
+footer img{
+    width: 20px;
+    max-width: 100%;
+}
+
+.pacman{
+    display: block;
+    width: 100px;
+    margin-left: 50%;
+    border: 1px solid white;
+    max-width: 100%;
+}
+
+#historico{
+    background-color: orange;
+    height: 40px;
+    width: 300px;
+    text-align: left;
+    display: block;
+    font-size: 20px;
+    margin: 0px 50px;
+}
+
+#cadastro{
+    display: inline-block;
+    font-size: 20px;
+    background-color: blue;
+    height: 420px;
+    width: 1110px;
+    border-radius: 50px 50px 50px 50px;
+    margin:20px;
+    position: relative;
+
+}
+
+.soucadastrado{
+    display: inline-block;
+    text-align: center;
+    background-color: yellow;
+    height: 320px;
+    width: 510px;
+    border-radius: 50px 50px 50px 50px;
+    margin: 10px 10px 10px 10px;
+}
+
+.naocadastrado{
+    display: inline-block;
+    text-align: center;
+    background-color: green;
+    height: 320px;
+    width: 510px;
+    border-radius: 50px 50px 50px 50px;
+    margin: 10px 10px 10px 10px;
 }
