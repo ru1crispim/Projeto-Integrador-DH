@@ -207,9 +207,10 @@ list-style-type: none; /* Retirar o estilo da lista  */
     background-color: white;
 }
 
-.tituloUsados{
-    /* border: 1px solid black; */
-}
+/* .tituloUsados{
+    border: 1px solid black;
+} */
+
 .conteudoUsados{
     display: flex;
     /* border: 1px solid black; */
