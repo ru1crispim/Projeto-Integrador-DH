@@ -15,9 +15,9 @@
         <a href=""><img class="logoPressStart" src="./public/img/logo-loja-br.png" alt="logo-loja"></a>
         <div class="navegacao">
             <ul>
-                <li><a href="www.google.com">Inicio</a></li>
+                <li><a href="homepage.html">Inicio</a></li>
                 <li><a href="wwww.google.com">Jogos</a></li>
-                <li><a href="wwww.google.com">Contato</a></li>
+                <li><a href="#contato">Contato</a></li>
                 <li><a href="paginaUsado.html">Orçamentos</a></li>              
             </ul>
         </div>
@@ -29,10 +29,11 @@
     
     </header>
     <main>
-        <div class="video">
+        <a href="https://web.whatsapp.com/send?phone=5521972275757" target="_blank"><img class="whattsapp" src="./public/img/icons/whattsapp.png" alt=""></a>
+        <!-- <div class="video">
             <video src="./public/img/carrosel/home/img-1.mp4" type="video/mp4" width="1200px" autoplay loop></video>
-        </div>
-    <!-- <div class="carrossel">
+        </div> -->
+    <div class="carrossel">
         <div class="parent"> 
                 <div class="imagens">                  
                     <img src="./public/img/carrosel/home/img-1.jpg" alt="">
@@ -40,7 +41,7 @@
                     <img src="./public/img/carrosel/home/img-3.jpg" alt="">
                 </div>
         </div>
-    </div> -->
+    </div>
         <section class="intro">
             <div class="introA">
             <h1>Press Start</h1>
@@ -56,6 +57,13 @@
               <h2>Mais populares</h2>
             </div>
         <div class="popularesCatalogo">
+            <div>
+                <img src="./public/img/catalogo/populares/mass-effect-legendary.jpg" alt="img do produto1">
+                <h3>Titulo do produto1</h3> 
+                <p>Categoria</p>
+                <p>Valor: R$</p>
+                <button><a href="./produtoInterno.html">Comprar</a></button> 
+            </div>
             <div>
                 <img src="./public/img/catalogo/populares/eldenRing.png" alt="img do produto1">
                 <h3>Titulo do produto1</h3> 
@@ -77,13 +85,6 @@
                 <p>Valor: R$</p>
                 <button>Comprar</button> 
             </div>
-            <div>
-                <img src="./public/img/catalogo/populares/residentEvil.png" alt="img do produto3">
-                <h3>Titulo do produto3</h3> 
-                <p>Categoria</p>
-                <p>Valor: R$</p>
-                <button>Comprar</button> 
-            </div>
         </div>
         </section>
         <section class="usados">
@@ -93,7 +94,7 @@
                 <img src="./public/img/usados/usados.png" alt="Produto usado">
             </div>
             <div class="usadosB"> <p>Solicite uma avaliação de seus jogos usados e acumule prontos para a compra de novos jogos</p>
-                <button>Solicitar avaliação</button>
+                <button><a href="paginaUsado.html">Solicitar avaliação</a></button>
             </div>
             </div>
             
@@ -136,7 +137,7 @@
         </div>
         </section>
     </main>
-    <footer class="rodape">
+    <footer class="rodape" id="contato">
         <div class="rodapeChild">
             <h4>Beneficios</h4>
             <ul>

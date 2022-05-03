@@ -16,10 +16,14 @@ body {
     justify-content: space-around;
     box-sizing: border-box;
     background: black;
+    /* position: fixed; */
+    top: 0px;
+    width: 100%;
 }
 
 .logoPressStart{
-    width: 180px;
+    width: 100%;
+    height: 100%;
 }
 .navegacao{
     display: flex;
@@ -90,6 +94,14 @@ list-style-type: none; /* Retirar o estilo da lista  */
     flex-direction: row;
     justify-content: center;
 }
+
+.whattsapp{
+    position: fixed;
+    right:40px;
+    top: 100px;
+
+}
+
 @keyframes carrossel{
     0%{margin-left: 0px;}
     20%{margin-left: 0px;}
@@ -344,31 +356,25 @@ button{
     border-radius: 10px;
     padding: 5px;
 }
+a{
+    color: white;
+    /* background-color: red;
+    border-radius: 10px;
+    padding: 5px; */
+}
 
 /* Pagina Usado */
 
 .usadoPrincipal{
     display: flex;
     flex-direction: column;
-    background-color: lightblue;
-    text-align: center;
     justify-content: center;
-    height:70vh;
-    padding: 10px;
+    align-items: center;
+    text-align: center;
+    background-color: lightblue;
+    height: 100vh;
     box-sizing: border-box;
 }
-
-/* .usadoPrincipal button{
-   margin-top: 10px;
-   margin-right: 10px;
-   padding: 10px;
-} */
-/* .usadoPrincipal input{
-   width: 300px;
-   height: 20px;
-   border-radius: 10px;
- } */
-
 .usadoTexto{
     display: flex;
     flex-direction: row;
@@ -382,10 +388,12 @@ button{
 
 .usadoFormulario{
     display: flex;
+    flex-direction: row;
     width: 100%;   
     justify-content:center;
-    text-align: right;
+    align-items: center;
 }
+
 .usadoFormulario input{
     
     
@@ -413,6 +421,87 @@ button{
     background-color: lightgreen;
     height: 80vh;
 }
+
+
+/* Pagina painel do usuario */
+
+.painelUsuario{
+    display: flex;
+    flex-direction: row;
+}
+.caixa-1{
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    height: 80vh;
+    background-color: white;
+    text-align: center;
+    border-right: 1px dashed black;
+    border-bottom: 1px solid black;
+    box-sizing: border-box;
+}
+.caixa-1 img{
+    align-self: center;
+    width: 200px;
+    border-radius: 100px;
+    margin-top: 20px;
+}
+
+.caixa-1 button{
+    align-self: center;
+    width: 200px;
+    border-radius: 100px;
+    margin-bottom: 10px;
+}
+.caixa-2{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    height: 80vh;
+    background-color: blue;
+}
+.caixa-2 .caixa-2-1{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 20vh;
+    background-color: white;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+
+.caixa-2 .caixa-2-2{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 60vh;
+    background-color: white;
+    border-bottom: 1px solid black;
+}
+.caixa-2 .caixa-2-2 h2{
+    background-color: black;
+    color: white;
+    width: 90%;
+    align-self: center;
+}
+.caixa-2 .caixa-2-2 table{
+    align-self: center;
+    background-color: black;
+    color: white;
+    text-align: center;
+    width: 90%;
+}
+
+/* @media (max-width:390px){
+    {
+        
+    }
+} */
+
+
+
 
 
 
