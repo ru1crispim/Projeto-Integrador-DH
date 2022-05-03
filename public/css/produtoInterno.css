@@ -127,11 +127,11 @@ list-style-type: none; /* Retirar o estilo da lista  */
 }
 
 .produto-principal img{
-    width: 480px; 
-    height: 380px;
+    width: 350px; 
+    /* height: 380px; */
     box-sizing: border-box;
     padding: 20px 0px 0px 0px;
-    border-radius: 30px;
+    /* border-radius: 30px; */
 }
 
 .dadosDoProduto{

@@ -13,10 +13,10 @@
         <a href=""><img class="logoPressStart" src="./public/img/logo-loja-br.png" alt="logo-loja"></a>
         <div class="navegacao">
             <ul>
-                <li><a href="www.google.com">Inicio</a></li>
+                <li><a href="homepage.html">Inicio</a></li>
                 <li><a href="wwww.google.com">Jogos</a></li>
-                <li><a href="wwww.google.com">Contato</a></li>
-                <li><a href="wwww.google.com">Orçamentos</a></li>              
+                <li><a href="#contato">Contato</a></li>
+                <li><a href="paginaUsado.html">Orçamentos</a></li>             
             </ul>
         </div>
         <div class="login">
@@ -33,7 +33,6 @@
                 <h1>Avalie meu usado!</h1>
            </div>
            <div class="usadoInstrucoes">
-            <h2>Etapa 1</h2>
             <p>Para avaliação dos seus itens, precisamos de algumas informações. Complete os campos abaixo:</p>
             </div>
             
@@ -52,8 +51,39 @@
                     <label for="cidade">Cidade</label>
                     <input type="text" name="cidade" id="cidade">
                     <br>
+                </form>
+                <form action="">
+                    <label for="produto">Qual produto deseja vender:</label>
+                    <input type="text" name="produto" id="produto">
+                    <br>
+                    <label for="produto">Quantidade</label>
+                    <input type="number" name="produto" id="produto">
+                    <br>
+                    <label for="produto">Estado do produto:</label>
+                    <br>
+                    <input type="radio" name="produto" id="produtoCcx"><label for="produtoCcx">Produto funcionando,completo com caixa</label>
+                    <br>
+                    <input type="radio" name="produto" id="produtoScx"><label for="produtoScx">Produto funcionando,completo sem caixa</label>
+                    <br>
+                    <input type="radio" name="produto" id="produtoIf"><label for="produtoIf">Produto funcionando com itens faltantes, especifique nos comentários</label>
+                    <br>
+                    <input type="radio" name="produto" id="produtoP"><label for="produtoP">Produto com problemas, especifique nos comentários</label>
+                    <br>
+                    <input type="radio" name="produto" id="produtoOu"><label for="produtoOu">Outro, especifique nos comentários</label>
+                    <br>
+                    <label for="comentarios"> Deseja adicionar algum comentário (opcional)</label>
+                    <br>
+                </form>
+                <form action="">
+                    <textarea name="comentarios" id="comentarios" cols="30" rows="10" placeholder="Adicione seus comentários"></textarea>
+                    <br>
+                    <label for="imagem"> Clique abaixo para adicionar uma foto (opcional)</label>
+                    <br>
+                    <input type="file" name="imagem" id="imagem">
+                    <br>
                     <button>Voltar</button>
                     <button>Próxima etapa</button>
+                    
                 </form>
                 
         </div>
@@ -63,7 +93,7 @@
         </div>
        </section>
     </main>
-    <footer class="rodape">
+    <footer class="rodape" id="contato">
         <div class="rodapeChild">
             <h4>Beneficios</h4>
             <ul>
