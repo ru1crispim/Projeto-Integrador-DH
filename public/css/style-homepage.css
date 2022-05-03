@@ -2,7 +2,11 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     background-image: url('//www.wallpapersun.com/wp-content/uploads/2021/01/Gaming-Wallpaper-2-715x536.jpg');
     background-attachment: fixed;
+<<<<<<< HEAD
     opacity: 0.92;
+=======
+    opacity: 0.97;
+>>>>>>> 5750d8267f9de90bf225b09d587dcc93d2ff082d
     box-sizing: border-box;
 }
 
@@ -16,10 +20,21 @@ body {
     justify-content: space-around;
     box-sizing: border-box;
     background: black;
+<<<<<<< HEAD
 }
 
 .logoPressStart{
     width: 180px;
+=======
+    /* position: fixed; */
+    top: 0px;
+    width: 100%;
+}
+
+.logoPressStart{
+    width: 100%;
+    height: 100%;
+>>>>>>> 5750d8267f9de90bf225b09d587dcc93d2ff082d
 }
 .navegacao{
     display: flex;
@@ -85,6 +100,7 @@ list-style-type: none; /* Retirar o estilo da lista  */
     width: px;
 
 }
+<<<<<<< HEAD
 
 .gallery{
     border: 4px solid black;
@@ -109,6 +125,59 @@ list-style-type: none; /* Retirar o estilo da lista  */
 .gallery .fotosGallery img{
     height: 38vh;
     width: 25%;
+=======
+.video{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.whattsapp{
+    position: fixed;
+    right:40px;
+    top: 100px;
+
+}
+
+@keyframes carrossel{
+    0%{margin-left: 0px;}
+    20%{margin-left: 0px;}
+    40%{margin-left: -1200px;}
+    60%{margin-left: -1200px;}
+    80%{margin-left: -2400px;}
+    100%{margin-left: -2400px;}
+}
+
+.carrossel{
+    margin: 5px 0px 5px 0px;
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+
+.parent{
+    display: flex;
+    flex-direction: row;
+    width: 1200px;
+    height: 480px;
+    background-color: red;
+    overflow: hidden;
+
+}
+.parent img{
+    width: 1200px;
+    height: 480px;
+}
+
+.imagens{
+    display: flex;
+    flex-direction: row;
+    animation-name: carrossel;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+>>>>>>> 5750d8267f9de90bf225b09d587dcc93d2ff082d
 }
 
 
@@ -207,9 +276,12 @@ list-style-type: none; /* Retirar o estilo da lista  */
     background-color: white;
 }
 
+<<<<<<< HEAD
 /* .tituloUsados{
     border: 1px solid black;
 } */
+=======
+>>>>>>> 5750d8267f9de90bf225b09d587dcc93d2ff082d
 
 .conteudoUsados{
     display: flex;
@@ -328,12 +400,22 @@ button{
     border-radius: 10px;
     padding: 5px;
 }
+<<<<<<< HEAD
+=======
+a{
+    color: white;
+    /* background-color: red;
+    border-radius: 10px;
+    padding: 5px; */
+}
+>>>>>>> 5750d8267f9de90bf225b09d587dcc93d2ff082d
 
 /* Pagina Usado */
 
 .usadoPrincipal{
     display: flex;
     flex-direction: column;
+<<<<<<< HEAD
     background-color: lightblue;
     text-align: center;
     justify-content: center;
@@ -353,6 +435,15 @@ button{
    border-radius: 10px;
  } */
 
+=======
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: lightblue;
+    height: 100vh;
+    box-sizing: border-box;
+}
+>>>>>>> 5750d8267f9de90bf225b09d587dcc93d2ff082d
 .usadoTexto{
     display: flex;
     flex-direction: row;
@@ -366,10 +457,19 @@ button{
 
 .usadoFormulario{
     display: flex;
+<<<<<<< HEAD
     width: 100%;   
     justify-content:center;
     text-align: right;
 }
+=======
+    flex-direction: row;
+    width: 100%;   
+    justify-content:center;
+    align-items: center;
+}
+
+>>>>>>> 5750d8267f9de90bf225b09d587dcc93d2ff082d
 .usadoFormulario input{
     
     
@@ -399,4 +499,88 @@ button{
 }
 
 
+<<<<<<< HEAD
+=======
+/* Pagina painel do usuario */
+
+.painelUsuario{
+    display: flex;
+    flex-direction: row;
+}
+.caixa-1{
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    height: 80vh;
+    background-color: white;
+    text-align: center;
+    border-right: 1px dashed black;
+    border-bottom: 1px solid black;
+    box-sizing: border-box;
+}
+.caixa-1 img{
+    align-self: center;
+    width: 200px;
+    border-radius: 100px;
+    margin-top: 20px;
+}
+
+.caixa-1 button{
+    align-self: center;
+    width: 200px;
+    border-radius: 100px;
+    margin-bottom: 10px;
+}
+.caixa-2{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    height: 80vh;
+    background-color: blue;
+}
+.caixa-2 .caixa-2-1{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 20vh;
+    background-color: white;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+
+.caixa-2 .caixa-2-2{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 60vh;
+    background-color: white;
+    border-bottom: 1px solid black;
+}
+.caixa-2 .caixa-2-2 h2{
+    background-color: black;
+    color: white;
+    width: 90%;
+    align-self: center;
+}
+.caixa-2 .caixa-2-2 table{
+    align-self: center;
+    background-color: black;
+    color: white;
+    text-align: center;
+    width: 90%;
+}
+
+/* @media (max-width:390px){
+    {
+        
+    }
+} */
+
+
+
+
+
+>>>>>>> 5750d8267f9de90bf225b09d587dcc93d2ff082d
 
