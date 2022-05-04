@@ -2,7 +2,11 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     background-image: url('//www.wallpapersun.com/wp-content/uploads/2021/01/Gaming-Wallpaper-2-715x536.jpg');
     background-attachment: fixed;
+<<<<<<< HEAD
+    opacity: 0.92;
+=======
     opacity: 0.97;
+>>>>>>> 5750d8267f9de90bf225b09d587dcc93d2ff082d
     box-sizing: border-box;
 }
 
@@ -16,6 +20,12 @@ body {
     justify-content: space-around;
     box-sizing: border-box;
     background: black;
+<<<<<<< HEAD
+}
+
+.logoPressStart{
+    width: 180px;
+=======
     /* position: fixed; */
     top: 0px;
     width: 100%;
@@ -24,6 +34,7 @@ body {
 .logoPressStart{
     width: 100%;
     height: 100%;
+>>>>>>> 5750d8267f9de90bf225b09d587dcc93d2ff082d
 }
 .navegacao{
     display: flex;
@@ -89,6 +100,32 @@ list-style-type: none; /* Retirar o estilo da lista  */
     width: px;
 
 }
+<<<<<<< HEAD
+
+.gallery{
+    border: 4px solid black;
+    width: 650px;
+    height: 360px;
+    background-color: black;
+    box-sizing: border-box;
+    overflow: hidden;
+    margin-left: 30%;
+    box-sizing: border-box;   
+}
+
+.gallery .fotosGallery{
+    display: flex;
+    width: 400%;
+    animation-name: animacao;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+
+}
+
+.gallery .fotosGallery img{
+    height: 38vh;
+    width: 25%;
+=======
 .video{
     display: flex;
     flex-direction: row;
@@ -140,6 +177,7 @@ list-style-type: none; /* Retirar o estilo da lista  */
     animation-duration: 20s;
     animation-iteration-count: infinite;
     animation-direction: alternate;
+>>>>>>> 5750d8267f9de90bf225b09d587dcc93d2ff082d
 }
 
 
@@ -238,6 +276,12 @@ list-style-type: none; /* Retirar o estilo da lista  */
     background-color: white;
 }
 
+<<<<<<< HEAD
+/* .tituloUsados{
+    border: 1px solid black;
+} */
+=======
+>>>>>>> 5750d8267f9de90bf225b09d587dcc93d2ff082d
 
 .conteudoUsados{
     display: flex;
@@ -356,18 +400,42 @@ button{
     border-radius: 10px;
     padding: 5px;
 }
+<<<<<<< HEAD
+=======
 a{
     color: white;
     /* background-color: red;
     border-radius: 10px;
     padding: 5px; */
 }
+>>>>>>> 5750d8267f9de90bf225b09d587dcc93d2ff082d
 
 /* Pagina Usado */
 
 .usadoPrincipal{
     display: flex;
     flex-direction: column;
+<<<<<<< HEAD
+    background-color: lightblue;
+    text-align: center;
+    justify-content: center;
+    height:70vh;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+/* .usadoPrincipal button{
+   margin-top: 10px;
+   margin-right: 10px;
+   padding: 10px;
+} */
+/* .usadoPrincipal input{
+   width: 300px;
+   height: 20px;
+   border-radius: 10px;
+ } */
+
+=======
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -375,6 +443,7 @@ a{
     height: 100vh;
     box-sizing: border-box;
 }
+>>>>>>> 5750d8267f9de90bf225b09d587dcc93d2ff082d
 .usadoTexto{
     display: flex;
     flex-direction: row;
@@ -388,12 +457,19 @@ a{
 
 .usadoFormulario{
     display: flex;
+<<<<<<< HEAD
+    width: 100%;   
+    justify-content:center;
+    text-align: right;
+}
+=======
     flex-direction: row;
     width: 100%;   
     justify-content:center;
     align-items: center;
 }
 
+>>>>>>> 5750d8267f9de90bf225b09d587dcc93d2ff082d
 .usadoFormulario input{
     
     
@@ -423,6 +499,8 @@ a{
 }
 
 
+<<<<<<< HEAD
+=======
 /* Pagina painel do usuario */
 
 .painelUsuario{
@@ -504,4 +582,5 @@ a{
 
 
 
+>>>>>>> 5750d8267f9de90bf225b09d587dcc93d2ff082d
 
