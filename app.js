@@ -8,5 +8,4 @@ app.get("/contatos",(req,res)=>res.send("Pagina contatos"));
 
 app.use("/products", rotasProdutos);
 
-// Criando um servidor
 app.listen(4000,()=>console.log("Servidor rodando na porta 4000"))
