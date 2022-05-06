@@ -1,3 +1,5 @@
+// Controlador de produtos
+
 const Product =require("../models/Products.model")
 module.exports = {
     create: (req,res)=>{
@@ -13,3 +15,5 @@ module.exports = {
         res.send("alterando um produto");
     },
 }
+
+// Controlador de produtos

@@ -15,7 +15,7 @@ header{
     box-sizing: border-box;
     justify-content: space-around;
     box-sizing: border-box;
-    background: black;
+    /* background: black; */
     /* position: fixed; */
     top: 0px;
     width: 100%;
@@ -160,7 +160,7 @@ list-style-type: none; /* Retirar o estilo da lista  */
     /* border: 1px solid black; */
     width: 50%;
     padding: 80px;
-    font-size: 30px;
+    font-size: 50px;
     box-sizing: border-box;
     
 }
@@ -267,7 +267,7 @@ list-style-type: none; /* Retirar o estilo da lista  */
     box-sizing: border-box;
     justify-content: center;
     text-align: center;
-    font-size: 40px;
+    font-size: 60px;
     
 }
 
@@ -346,7 +346,7 @@ footer{
     box-sizing: border-box;
     font-size: 15px;
 }
-.footer img{
+.header img{
     width: 50px;
 }
 
