@@ -7,7 +7,7 @@ body {
 }
 
 
-.cabecalho{
+header{
     display: flex;
     flex-direction: row;
     /* border: 1px solid black; */
@@ -25,7 +25,7 @@ body {
     width: 100%;
     height: 100%;
 }
-.navegacao{
+.navigation{
     display: flex;
     flex-direction: row;
     
@@ -40,14 +40,14 @@ body {
 
 }
 
-.navegacao ul {
+.navigation ul {
 display: flex;
 flex-direction: row;
 list-style-type: none; /* Retirar o estilo da lista  */
 
 }
 
-.navegacao li a{
+.navigation li a{
     display: flex;
     font-size: 20px;
     font-weight: bold;
@@ -58,12 +58,12 @@ list-style-type: none; /* Retirar o estilo da lista  */
     
   
 }
-.navegacao li a:hover{
+.navigation li a:hover{
    background-color: lightblue;
 
 }
 
-.navegacao img{
+.navigation img{
     width: 120px;
     
 }
@@ -111,7 +111,7 @@ list-style-type: none; /* Retirar o estilo da lista  */
     100%{margin-left: -2400px;}
 }
 
-.carrossel{
+.carousel{
     margin: 5px 0px 5px 0px;
     display: flex;
     justify-content: center;
@@ -133,7 +133,7 @@ list-style-type: none; /* Retirar o estilo da lista  */
     height: 480px;
 }
 
-.imagens{
+.images{
     display: flex;
     flex-direction: row;
     animation-name: carrossel;
@@ -188,7 +188,7 @@ list-style-type: none; /* Retirar o estilo da lista  */
     padding: 10px;
 }
 
-.populares{
+.popular{
 
     /* border: 1px solid black; */
     height: 60vh;
@@ -199,7 +199,7 @@ list-style-type: none; /* Retirar o estilo da lista  */
     color: white;
 }
 
-.popularesTitulo{
+.popularTitles{
     /* border: 1px solid black; */
     height: 10vh;
     box-sizing: border-box;
@@ -207,7 +207,7 @@ list-style-type: none; /* Retirar o estilo da lista  */
     
     }
 
-.popularesCatalogo{
+.popularCatalog{
     display: flex;
     /* border: 1px solid black; */
     height: 40vh;
@@ -216,7 +216,7 @@ list-style-type: none; /* Retirar o estilo da lista  */
     justify-content: center;
     
 }
-.popularesCatalogo div{
+.popularCatalog div{
     border: 1px solid black;
     border-radius: 30px;  
     background-color: white;  
@@ -225,11 +225,11 @@ list-style-type: none; /* Retirar o estilo da lista  */
     padding: 10px;
 }
 
-.populares img{
+.popular img{
     width: 100px;
 }
 
-.usados{
+.used{
     /* border: 1px solid black; */
     height: 60vh;
     box-sizing: border-box;
@@ -239,7 +239,7 @@ list-style-type: none; /* Retirar o estilo da lista  */
 }
 
 
-.conteudoUsados{
+.usedContent{
     display: flex;
     /* border: 1px solid black; */
     height: 60vh;
@@ -249,7 +249,7 @@ list-style-type: none; /* Retirar o estilo da lista  */
     
 }
 
-.usadosA{
+.usedA{
     
     /* border: 1px solid black; */
     width: 50%;
@@ -259,7 +259,7 @@ list-style-type: none; /* Retirar o estilo da lista  */
     text-align: center;
     
 }
-.usadosB{
+.usedB{
     /* border: 1px solid black; */
     width: 50%;
     height: 60vh;
@@ -271,12 +271,12 @@ list-style-type: none; /* Retirar o estilo da lista  */
     
 }
 
-.usados img{
+.used img{
     width: 500px;
     border-radius: 250px;
 }
 
-.usados button{
+.used button{
     font-size: 40px;
     color: white;
     background-color: green;
@@ -284,7 +284,7 @@ list-style-type: none; /* Retirar o estilo da lista  */
     padding: 10px;
 }
 
-.novidades{
+.news{
 
     /* border: 1px solid black; */
     height: 60vh;
@@ -296,7 +296,7 @@ list-style-type: none; /* Retirar o estilo da lista  */
     
 }
 
-.novidadesTitulo{
+.newTitles{
     /* border: 1px solid black; */
     height: 10vh;
     box-sizing: border-box;
@@ -306,7 +306,7 @@ list-style-type: none; /* Retirar o estilo da lista  */
         color: white;
         }
 
-.novidadesCatalogo{
+.catalogNews{
     display: flex;
     /* border: 1px solid black; */
     height: 40vh;
@@ -315,7 +315,7 @@ list-style-type: none; /* Retirar o estilo da lista  */
     justify-content: center;
     
 }
-.novidadesCatalogo div{
+.catalogNews div{
     /* border: 1px solid black;     */
     border-radius: 30px;
     background-color: white;
@@ -326,11 +326,11 @@ list-style-type: none; /* Retirar o estilo da lista  */
 }
 
 
-.novidades img{
+.news img{
     width: 100px;
 }
 
-.rodape{
+footer{
     display: flex;
     flex-direction: row;
     /* border: 1px solid black; */
@@ -339,14 +339,14 @@ list-style-type: none; /* Retirar o estilo da lista  */
     justify-content:space-around;
     background-color: white;
 }
-.rodapeChild{
+.footerChild{
     /* border: 1px solid black; */
     height: 20vh;
     padding: 10px;
     box-sizing: border-box;
     font-size: 15px;
 }
-.rodape img{
+.footer img{
     width: 50px;
 }
 
