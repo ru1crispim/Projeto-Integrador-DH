@@ -8,6 +8,5 @@
 ## Yago Felix
 ## Daniel Carvalho
 ## Gabriel Bicaleto
-## Vitor H. Jorge
-
+## Vitor H.
 
