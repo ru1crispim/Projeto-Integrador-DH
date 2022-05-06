@@ -1,0 +1,507 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url('//www.wallpapersun.com/wp-content/uploads/2021/01/Gaming-Wallpaper-2-715x536.jpg');
+    background-attachment: fixed;
+    opacity: 0.97;
+    box-sizing: border-box;
+}
+
+
+header{
+    display: flex;
+    flex-direction: row;
+    /* border: 1px solid black; */
+    height: 10vh;
+    box-sizing: border-box;
+    justify-content: space-around;
+    box-sizing: border-box;
+    /* background: black; */
+    /* position: fixed; */
+    top: 0px;
+    width: 100%;
+}
+
+.logoPressStart{
+    width: 100%;
+    height: 100%;
+}
+.navigation{
+    display: flex;
+    flex-direction: row;
+    
+    height: 10vh;
+    box-sizing: border-box;
+    width: 70%;
+    padding: 20px;
+    justify-content: flex-start;
+    box-sizing: border-box;
+    font-size: 15px;
+    
+
+}
+
+.navigation ul {
+display: flex;
+flex-direction: row;
+list-style-type: none; /* Retirar o estilo da lista  */
+
+}
+
+.navigation li a{
+    display: flex;
+    font-size: 20px;
+    font-weight: bold;
+    box-sizing: border-box;
+    margin-right: 150px;
+    color: yellow;
+    text-decoration: none;
+    
+  
+}
+.navigation li a:hover{
+   background-color: lightblue;
+
+}
+
+.navigation img{
+    width: 120px;
+    
+}
+
+.login{
+    display: flex;
+    flex-direction: row;
+    /* border: 1px solid black; */
+    padding: 15px;
+    height: 10vh;
+    width: 30%;
+        justify-content: flex-end;
+    box-sizing: border-box;
+}
+.login a{
+    display: flex;
+    /* border: 1px solid black; */
+    padding: 10px;
+    box-sizing: border-box;
+    color: white;    
+}
+.login img{
+    width: px;
+
+}
+.video{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.whattsapp{
+    position: fixed;
+    right:40px;
+    top: 500px;
+
+}
+
+@keyframes carrossel{
+    0%{margin-left: 0px;}
+    20%{margin-left: 0px;}
+    40%{margin-left: -1200px;}
+    60%{margin-left: -1200px;}
+    80%{margin-left: -2400px;}
+    100%{margin-left: -2400px;}
+}
+
+.carousel{
+    margin: 5px 0px 5px 0px;
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+
+.parent{
+    display: flex;
+    flex-direction: row;
+    width: 1200px;
+    height: 480px;
+    background-color: red;
+    overflow: hidden;
+
+}
+.parent img{
+    width: 1200px;
+    height: 480px;
+}
+
+.images{
+    display: flex;
+    flex-direction: row;
+    animation-name: carrossel;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+
+
+.intro{
+    display: flex;
+    flex-direction: row;
+    /* border: 1px solid black; */
+    height: 50vh;
+    box-sizing: border-box;
+    justify-content: space-around;
+    background-color: white;
+    
+}
+.introA{
+    text-align: center;
+    font-size: 20px;
+    /* border: 1px solid black; */
+    width: 50%;
+    padding: 80px;
+    font-size: 50px;
+    box-sizing: border-box;
+    
+}
+.introB{
+    text-align: left;
+    font-size: 20px;
+    /* border: 1px solid black; */
+    margin: 10px;
+    width: 50%;
+    padding: px;
+    box-sizing: border-box;
+    text-align: center;
+}
+.introB img{
+    
+    width: 665px;
+    border-radius: 150px;
+}
+
+.intro button{
+    font-size: 40px;
+    color: white;
+    background-color: green;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.popular{
+
+    /* border: 1px solid black; */
+    height: 60vh;
+    box-sizing: border-box;
+    justify-content: center;
+    text-align: center;
+    background-color: black;
+    color: white;
+}
+
+.popularTitles{
+    /* border: 1px solid black; */
+    height: 10vh;
+    box-sizing: border-box;
+    text-align: center;
+    
+    }
+
+.popularCatalog{
+    display: flex;
+    /* border: 1px solid black; */
+    height: 40vh;
+    box-sizing: border-box;
+    text-align: center;
+    justify-content: center;
+    
+}
+.popularCatalog div{
+    border: 1px solid black;
+    border-radius: 30px;  
+    background-color: white;  
+    color: black;
+    margin: 20px;
+    padding: 10px;
+}
+
+.popular img{
+    width: 100px;
+}
+
+.used{
+    /* border: 1px solid black; */
+    height: 60vh;
+    box-sizing: border-box;
+    justify-content: center;
+    text-align: center;
+    background-color: white;
+}
+
+
+.usedContent{
+    display: flex;
+    /* border: 1px solid black; */
+    height: 60vh;
+    box-sizing: border-box;
+    justify-content: center;
+    text-align: center;
+    
+}
+
+.usedA{
+    
+    /* border: 1px solid black; */
+    width: 50%;
+    height: 60vh;
+    box-sizing: border-box;
+    justify-content: center;
+    text-align: center;
+    
+}
+.usedB{
+    /* border: 1px solid black; */
+    width: 50%;
+    height: 60vh;
+    padding: 70px;
+    box-sizing: border-box;
+    justify-content: center;
+    text-align: center;
+    font-size: 60px;
+    
+}
+
+.used img{
+    width: 500px;
+    border-radius: 250px;
+}
+
+.used button{
+    font-size: 40px;
+    color: white;
+    background-color: green;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.news{
+
+    /* border: 1px solid black; */
+    height: 60vh;
+    box-sizing: border-box;
+    justify-content: center;
+    text-align: center;
+    background-color: black;
+    
+    
+}
+
+.newTitles{
+    /* border: 1px solid black; */
+    height: 10vh;
+    box-sizing: border-box;
+    text-align: center;
+    }
+    .novidadesTitulo h2{
+        color: white;
+        }
+
+.catalogNews{
+    display: flex;
+    /* border: 1px solid black; */
+    height: 40vh;
+    box-sizing: border-box;
+    text-align: center;
+    justify-content: center;
+    
+}
+.catalogNews div{
+    /* border: 1px solid black;     */
+    border-radius: 30px;
+    background-color: white;
+    
+    margin: 20px;
+    padding: 10px;
+    
+}
+
+
+.news img{
+    width: 100px;
+}
+
+footer{
+    display: flex;
+    flex-direction: row;
+    /* border: 1px solid black; */
+    height: 20vh;
+    box-sizing: border-box;
+    justify-content:space-around;
+    background-color: white;
+}
+.footerChild{
+    /* border: 1px solid black; */
+    height: 20vh;
+    padding: 10px;
+    box-sizing: border-box;
+    font-size: 15px;
+}
+.header img{
+    width: 50px;
+}
+
+button{
+    color: white;
+    background-color: red;
+    border-radius: 10px;
+    padding: 5px;
+}
+a{
+    color: white;
+    /* background-color: red;
+    border-radius: 10px;
+    padding: 5px; */
+}
+
+/* Pagina Usado */
+
+.usadoPrincipal{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: lightblue;
+    height: 100vh;
+    box-sizing: border-box;
+}
+.usadoTexto{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.usadoTexto img{
+   width: 50px;
+}
+
+.usadoFormulario{
+    display: flex;
+    flex-direction: row;
+    width: 100%;   
+    justify-content:center;
+    align-items: center;
+}
+
+.usadoFormulario input{
+    
+    
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+
+}
+.usadoFormulario button{
+    
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+
+}
+
+/* Finalização de Pedido */
+
+.confirm-pedido{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: lightgreen;
+    height: 80vh;
+}
+
+
+/* Pagina painel do usuario */
+
+.painelUsuario{
+    display: flex;
+    flex-direction: row;
+}
+.caixa-1{
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    height: 80vh;
+    background-color: white;
+    text-align: center;
+    border-right: 1px dashed black;
+    border-bottom: 1px solid black;
+    box-sizing: border-box;
+}
+.caixa-1 img{
+    align-self: center;
+    width: 200px;
+    border-radius: 100px;
+    margin-top: 20px;
+}
+
+.caixa-1 button{
+    align-self: center;
+    width: 200px;
+    border-radius: 100px;
+    margin-bottom: 10px;
+}
+.caixa-2{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    height: 80vh;
+    background-color: blue;
+}
+.caixa-2 .caixa-2-1{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 20vh;
+    background-color: white;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+
+.caixa-2 .caixa-2-2{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 60vh;
+    background-color: white;
+    border-bottom: 1px solid black;
+}
+.caixa-2 .caixa-2-2 h2{
+    background-color: black;
+    color: white;
+    width: 90%;
+    align-self: center;
+}
+.caixa-2 .caixa-2-2 table{
+    align-self: center;
+    background-color: black;
+    color: white;
+    text-align: center;
+    width: 90%;
+}
+
+/* @media (max-width:390px){
+    {
+        
+    }
+} */
+
+
+
+
+
+
