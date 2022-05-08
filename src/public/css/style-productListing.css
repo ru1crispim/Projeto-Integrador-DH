@@ -7,7 +7,7 @@ ody {
 }
 
 
-.cabecalho{
+.top-bar{
     display: flex;
     flex-direction: row;
     /* border: 1px solid black; */
@@ -21,7 +21,7 @@ ody {
 .logoPressStart{
     width: 180px;
 }
-.navegacao{
+.navigation{
     display: flex;
     flex-direction: row;
     
@@ -36,14 +36,14 @@ ody {
 
 }
 
-.navegacao ul {
+.navigation ul {
 display: flex;
 flex-direction: row;
 list-style-type: none; /* Retirar o estilo da lista  */
 
 }
 
-.navegacao li a{
+.navigation li a{
     display: flex;
     font-size: 20px;
     font-weight: bold;
@@ -54,12 +54,12 @@ list-style-type: none; /* Retirar o estilo da lista  */
     
     
 }
-.navegacao li a:hover{
+.navigation li a:hover{
     background-color: lightblue;
 
 }
 
-.navegacao img{
+.navigation img{
     width: 120px;
     
 }
@@ -97,7 +97,7 @@ list-style-type: none; /* Retirar o estilo da lista  */
     box-sizing: border-box;   
 }
 
-.gallery .fotosGallery{
+.gallery .pictures{
     display: flex;
     width: 400%;
     animation-name: animacao;
@@ -106,13 +106,13 @@ list-style-type: none; /* Retirar o estilo da lista  */
 
 }
 
-.gallery .fotosGallery img{
+.gallery .pictures img{
     height: 38vh;
     width: 25%;
 }
 
 
-.jogos{
+.games{
 
     /* border: 1px solid black; */
     height: 90vh;
@@ -124,7 +124,7 @@ list-style-type: none; /* Retirar o estilo da lista  */
 }
 
 
-.jogosTitulo{
+.gamesTitles{
     /* border: 1px solid black; */
     height: 15vh;
     box-sizing: border-box;
@@ -134,7 +134,7 @@ list-style-type: none; /* Retirar o estilo da lista  */
     font-size: 20px;
     }
 
-.jogosCatalogo{
+.gamesCatalog{
     display: flex;
     /* border: 1px solid black; */
     height: 70vh;
@@ -143,7 +143,7 @@ list-style-type: none; /* Retirar o estilo da lista  */
     justify-content: center;
     
 }
-.jogosCatalogo div{
+.gamesCatalog div{
     border: 1px solid black;
     border-radius: 30px;  
     background-color: #d3d3d3; 
@@ -153,12 +153,12 @@ list-style-type: none; /* Retirar o estilo da lista  */
     background-image: url(https://thumbs.dreamstime.com/b/aplica%C3%A7%C3%A3o-do-fundo-do-jogo-d-projeto-do-vetor-73750606.jpg);
 }
 
-.jogos img{
+.games img{
     width: 100px;
     border-radius: 110px;
 }
 
-.jogos button{
+.games button{
     font-size: 15px;
     border-radius: 50px;
     background-color: white;
@@ -177,7 +177,7 @@ list-style-type: none; /* Retirar o estilo da lista  */
     color: black;
 }
 
-.consolesTitulo{
+.consoleTitle{
     height: 15vh;
     box-sizing: border-box;
     text-align: center;
@@ -186,7 +186,7 @@ list-style-type: none; /* Retirar o estilo da lista  */
     font-size: 20px;
 }
 
-.consolesCatalogos{
+.consoleCatalog{
     display: flex;
     height: 70vh;
     box-sizing: border-box;
@@ -194,7 +194,7 @@ list-style-type: none; /* Retirar o estilo da lista  */
     justify-content:space-around;
 }
 
-.consolesCatalogos div{
+.consoleCatalog div{
     border: 1px solid black;
     width: 110vw;
     border-radius: 30px;
@@ -217,7 +217,7 @@ list-style-type: none; /* Retirar o estilo da lista  */
     color: white;
     border: 2px solid white;
 }
-.acessorios{
+.acessories{
 
     /* border: 1px solid black; */
     height: 90vh;
@@ -229,7 +229,7 @@ list-style-type: none; /* Retirar o estilo da lista  */
 }
 
 
-.acessoriosTitulo{
+.acessoriesTitle{
     /* border: 1px solid black; */
     height: 15vh;
     box-sizing: border-box;
@@ -239,7 +239,7 @@ list-style-type: none; /* Retirar o estilo da lista  */
     font-size: 20px;
     }
 
-.acessoriosCatalogo{
+.acessoriesCatalog{
     display: flex;
     /* border: 1px solid black; */
     height: 70vh;
@@ -248,7 +248,7 @@ list-style-type: none; /* Retirar o estilo da lista  */
     justify-content: center;
     
 }
-.acessoriosCatalogo div{
+.acessoriesCatalog div{
     border: 1px solid black;
     border-radius: 30px;  
     background-color: #d3d3d3; 
@@ -258,12 +258,12 @@ list-style-type: none; /* Retirar o estilo da lista  */
     background-image: url(https://thumbs.dreamstime.com/b/aplica%C3%A7%C3%A3o-do-fundo-do-jogo-d-projeto-do-vetor-73750606.jpg);
 }
 
-.acessorios img{
+.acessories img{
     width: 200px;
     border-radius: 110px;
 }
 
-.acessorios button{
+.acessories button{
     font-size: 18px;
     border-radius: 70px;
     background-color: white;
@@ -271,7 +271,7 @@ list-style-type: none; /* Retirar o estilo da lista  */
     border: 2px solid black;
 }
 
-.propaganda{
+.advertising{
     height: 15vh;
     box-sizing: border-box;
     justify-content: center;
@@ -280,7 +280,7 @@ list-style-type: none; /* Retirar o estilo da lista  */
     color: black;
 }
 
-.propagandaTitulo{
+.advertisingTitle{
     /* border: 1px solid black; */
     height: 3vh;
     box-sizing: border-box;
@@ -291,7 +291,7 @@ list-style-type: none; /* Retirar o estilo da lista  */
     color: white;
 }
 
-.propagandaConteudo{
+.advertisingNew{
     display: flex;
     /* border: 1px solid black; */
     height: 70vh;
@@ -301,7 +301,7 @@ list-style-type: none; /* Retirar o estilo da lista  */
 }
 
 
-.propagandaCOnteudo div{
+/*.propagandaCOnteudo div{
     border: 1px solid black;
     width: 110vw;
     border-radius: 30px;
@@ -309,13 +309,14 @@ list-style-type: none; /* Retirar o estilo da lista  */
     color: black;
     margin: 20px;
     padding: 10px;
-}
-.propaganda img{
+}*/
+
+.advertising img{
     width: 200px;
     
 }
 
-.propagandaSegundoTitulo{
+.comeCheck{
     height: 15vh;
     box-sizing: border-box;
     text-align: center;
@@ -326,7 +327,7 @@ list-style-type: none; /* Retirar o estilo da lista  */
     color: white;
 }
 
-.rodape{
+.baseboard{
     display: flex;
     flex-direction: row;
     /* border: 1px solid black; */
@@ -335,14 +336,14 @@ list-style-type: none; /* Retirar o estilo da lista  */
     justify-content:space-around;
     background-color: white;
 }
-.rodapeChild{
+.baseboardChild{
     /* border: 1px solid black; */
     height: 20vh;
     padding: 10px;
     box-sizing: border-box;
     font-size: 15px;
 }
-.rodape img{
+.baseboard img{
     width: 50px;
 }
 
@@ -355,7 +356,7 @@ button{
 
 /* Pagina Usado */
 
-.usadoPrincipal{
+/*.usadoPrincipal{
     display: flex;
     flex-direction: column;
     background-color: lightblue;
@@ -364,5 +365,4 @@ button{
     height:70vh;
     padding: 10px;
     box-sizing: border-box;
-}
-
+}*/
