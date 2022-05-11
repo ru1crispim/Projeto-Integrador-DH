@@ -7,7 +7,7 @@ body {
 }
 
 
-.cabecalho{
+.container{
     display: flex;
     flex-direction: row;
     /* border: 1px solid black; */
@@ -22,7 +22,7 @@ body {
 .logoPressStart{
     width: 180px;
 }
-.navegacao{
+.container-pages{
     display: flex;
     flex-direction: row;    
     height: 10vh;
@@ -34,13 +34,13 @@ body {
     font-size: 15px;
 }
 
-.navegacao ul {
+.container-pages ul {
 display: flex;
 flex-direction: row;
 list-style-type: none; /* Retirar o estilo da lista  */
 }
 
-.navegacao li a{
+.container-pages li a{
     display: flex;
     font-size: 20px;
     font-weight: bold;
@@ -50,17 +50,17 @@ list-style-type: none; /* Retirar o estilo da lista  */
     text-decoration: none;  
 }
 
-.navegacao li a:hover{
+.container-pages li a:hover{
    background-color: lightblue;
 
 }
 
-.navegacao img{
+.container-pages img{
     width: 120px;
     
 }
 
-.login{
+.container-login{
     display: flex;
     flex-direction: row;
     /* border: 1px solid black; */
@@ -71,7 +71,7 @@ list-style-type: none; /* Retirar o estilo da lista  */
     box-sizing: border-box;
 }
 
-.login a{
+.container-login a{
     display: flex;
     /* border: 1px solid black; */
     padding: 10px;
@@ -79,43 +79,12 @@ list-style-type: none; /* Retirar o estilo da lista  */
     color: white;    
 }
 
-.login img{
+.container-login img{
     width: px;
 
 }
 
-.rodape{
-    display: flex;
-    flex-direction: row;
-    /* border: 1px solid black; */
-    height: 20vh;
-    box-sizing: border-box;
-    justify-content:space-around;
-    border-radius: 0px 80px 0px 80px;
-    background-color: white;
-}
-
-.rodapeChild{
-    /* border: 1px solid black; */
-    height: 20vh;
-    padding: 10px;
-    box-sizing: border-box;
-    font-size: 15px;
-}
-
-.rodape img{
-    width: 50px;
-    cursor: pointer;
-}
-
-.conteudo{
-    display: flex;
-    flex-direction: row;
-    background-color: lightgreen;
-    height: 700px;
-}
-
-.produtos{
+.products{
     background-color: white;
     display: flex;
     border: 2px solid;
@@ -126,7 +95,7 @@ list-style-type: none; /* Retirar o estilo da lista  */
     box-sizing: border-box;
 }
 
-.produto-principal img{
+.main-product img{
     width: 350px; 
     /* height: 380px; */
     box-sizing: border-box;
@@ -134,7 +103,7 @@ list-style-type: none; /* Retirar o estilo da lista  */
     /* border-radius: 30px; */
 }
 
-.dadosDoProduto{
+.product-data{
     text-align: center;
     width: 40%;
     display: flex;
@@ -149,72 +118,17 @@ list-style-type: none; /* Retirar o estilo da lista  */
     font-size: 9px;
 }
 
-.compartilhar{
+/* .share{
     background-color: white;
-}
+} */
 
-.precos-do-produto{
-    width: 40%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.grupo-compra{
+.buy{
     width: 80%;
     justify-content: space-between;
     margin: 50px 50px 50px 50px;
 }
 
-.recomendacoes{
-    background-color: gray;
-    border: 2px solid;
-    text-align: center;
-    color: white;
-    border-radius: 80px 0px 80px 0px;
-    box-sizing: border-box;
-}
-
-.recomendacoes div{
-    display:inline-block;
-    background-color: white;
-    border: 2px none;
-    text-align: center;
-    margin: 10px 10px 10px 10px;
-    color: black;
-    border-radius: 20px;
-    box-sizing: border-box;
-}
-
-.recomendacoes button{
-    margin-bottom: 3%;
-    cursor: pointer;
-}
-
-.descricao{
-    background-color: white;
-    border: 2px solid;
-    text-align: center;
-    text-justify:inter-word;
-    color: black;
-    font-size: 25px;
-    border-radius: 0px 80px 0px 80px;
-    padding: 15px 5px 15px 5px;
-}
-
-.especificacoes{
-    background-color: black;
-    border: 2px solid;
-    text-align: justify;
-    text-justify: inter-word;
-    color: white;
-    border-radius: 80px 0px 80px 0px;
-    box-sizing: border-box;
-    padding-top: 2%;
-}
-
-.fotos-secundarias img{
+.secondary-photos img{
     display: inline-block;
     width: 100px;
     height: 100px;
@@ -225,4 +139,75 @@ list-style-type: none; /* Retirar o estilo da lista  */
     color: black;
     border-radius: 10px;
     box-sizing: border-box;
+}
+
+.recommendations{
+    background-color: gray;
+    border: 2px solid;
+    text-align: center;
+    color: white;
+    border-radius: 80px 0px 80px 0px;
+    box-sizing: border-box;
+}
+
+.recommendations div{
+    display:inline-block;
+    background-color: white;
+    border: 2px none;
+    text-align: center;
+    margin: 10px 10px 10px 10px;
+    color: black;
+    border-radius: 20px;
+    box-sizing: border-box;
+}
+
+.recommendations button{
+    margin-bottom: 3%;
+    cursor: pointer;
+}
+
+.description{
+    background-color: white;
+    border: 2px solid;
+    text-align: center;
+    text-justify:inter-word;
+    color: black;
+    font-size: 25px;
+    border-radius: 0px 80px 0px 80px;
+    padding: 15px 5px 15px 5px;
+}
+
+.specifications{
+    background-color: black;
+    border: 2px solid;
+    text-align: justify;
+    text-justify: inter-word;
+    color: white;
+    border-radius: 80px 0px 80px 0px;
+    box-sizing: border-box;
+    padding-top: 2%;
+}
+
+.footer{
+    display: flex;
+    flex-direction: row;
+    /* border: 1px solid black; */
+    height: 20vh;
+    box-sizing: border-box;
+    justify-content:space-around;
+    border-radius: 0px 80px 0px 80px;
+    background-color: white;
+}
+
+.footer-child{
+    /* border: 1px solid black; */
+    height: 20vh;
+    padding: 10px;
+    box-sizing: border-box;
+    font-size: 15px;
+}
+
+.footer img{
+    width: 50px;
+    cursor: pointer;
 }
