@@ -1,6 +1,6 @@
 const indexController = {
     index:(req,res)=>{
-        res.send('Essa é a homepage');
+        res.render('index');
     }
 }
 
