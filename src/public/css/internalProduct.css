@@ -67,7 +67,7 @@ list-style-type: none; /* Retirar o estilo da lista  */
     padding: 15px;
     height: 10vh;
     width: 30%;
-        justify-content: flex-end;
+    justify-content: flex-end;
     box-sizing: border-box;
 }
 
