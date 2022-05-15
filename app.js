@@ -1,26 +1,15 @@
-// const express= require("express");
-// const rotasProdutos = require("./src/routes/products.route");
-// let app = express();
-
-
-// app.get("/",(req,res)=>res.send("Olá Mundo!"));
-// app.get("/contatos",(req,res)=>res.send("Pagina contatos"));
-
-// app.use("/products", rotasProdutos);
-
-// app.listen(4000,()=>console.log("Servidor rodando na porta 4000"))
-
-// 
-
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
-// var indexRouter = require('./routes/index');
-// var usersRouter = require('./routes/users');
-var contatoRouter = require('./src/routes/contact');
+var indexRouter = require('./src/routes/index');
+var usersRouter = require('./src/routes/user');
+var contactRouter = require('./src/routes/contact')
+var chartRouter = require('./src/routes/chart')
+var productsRouter = require('./src/routes/products')
+var usedProductsRouter= require('./src/routes/used')
 
 var app = express();
 
@@ -34,13 +23,12 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-// app.use('/', indexRouter);
-// app.use('/users', usersRouter);
-app.use('/contato',contatoRouter);
-app.use('/',(req,res)=>{
-  res.send ("Bem vindo");
-});
-
+app.use(indexRouter);
+app.use(usersRouter);
+app.use(contactRouter);
+app.use(chartRouter);
+app.use(productsRouter);
+app.use(usedProductsRouter);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));

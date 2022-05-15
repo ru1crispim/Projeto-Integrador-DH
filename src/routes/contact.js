@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
-const contatoController = require('../controllers/contactController');
+const contactController = require('../controllers/contactController');
 
-router.get('/contato',contatoController.contato);
+router.get('/contato',contactController.contact);
 
 module.exports=router;

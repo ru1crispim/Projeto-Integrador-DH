@@ -1,6 +1,6 @@
 const contactController = {
-    contato:(req,res)=>{
-        res.render('contact');
+    contact:(req,res)=>{
+        res.send('Essa é a pagina de contato');
     }
 }
 module.exports=contactController;
