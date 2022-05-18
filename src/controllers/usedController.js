@@ -1,6 +1,6 @@
 const usedProductController = {
     usedProducts:(req,res)=>{
-        res.send('Essa é a pagina de produtos usados');
+        res.render('usedPage');
     }
 }
 module.exports=usedProductController;

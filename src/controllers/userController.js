@@ -1,6 +1,9 @@
 const userController = {
     userName:(req,res)=>{
-        res.send('Essa é a pagina de Login');
+        res.render('userPanel');
+    },
+    login:(req,res)=>{
+        res.render('login'); // atributo para logar no site
     }
 }
 module.exports=userController;
