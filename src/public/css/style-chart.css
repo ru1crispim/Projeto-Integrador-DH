@@ -1,0 +1,232 @@
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url('//www.wallpapersun.com/wp-content/uploads/2021/01/Gaming-Wallpaper-2-715x536.jpg');
+    background-attachment: fixed;
+    opacity: 0.92;
+    box-sizing: border-box;
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+    /* border: 1px solid black; */
+    height: 10vh;
+    box-sizing: border-box;
+    justify-content: space-around;
+    box-sizing: border-box;
+    /* background: black; */
+    /* position: fixed; */
+    top: 0px;
+    width: 100%;
+}
+
+.logoPressStart{
+    width: 100%;
+    height: 100%;
+}
+
+.navigation ul {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none; /* Retirar o estilo da lista  */
+}
+
+.navigation li a{
+    display: flex;
+    font-size: 20px;
+    font-weight: bold;
+    box-sizing: border-box;
+    margin-right: 150px;
+    color: yellow;
+    text-decoration: none;
+}
+
+.navigation li a:hover{
+    background-color: lightblue;
+}
+
+.navigation img{
+    width: 120px;
+}
+
+.login{
+    display: flex;
+    flex-direction: row;
+    /* border: 1px solid black; */
+    padding: 15px;
+    height: 10vh;
+    width: 30%;
+    justify-content: flex-end;
+    box-sizing: border-box;
+}
+
+.login a{
+    display: flex;
+    /* border: 1px solid black; */
+    padding: 10px;
+    box-sizing: border-box;
+    color: white;    
+}
+.login img{
+    width: px;
+}
+
+.rodape{
+    display: flex;
+    flex-direction: row;
+    /* border: 1px solid black; */
+    height: 20vh;
+    box-sizing: border-box;
+    justify-content:space-around;
+    background-color: white;
+}
+
+.rodapeChild{
+    /* border: 1px solid black; */
+    height: 20vh;
+    padding: 10px;
+    box-sizing: border-box;
+    font-size: 15px;
+}
+
+.rodape img{
+    width: 30%;
+    box-sizing: border-box;
+}
+
+.conteudo{
+    display: flex;
+    flex-direction: row;
+    height: 700px;
+}
+
+
+img {
+    max-width: 120px;
+    display: flex;
+    justify-content: left;
+}
+
+.rodape{
+    display: flex;
+    flex-direction: row;
+    /* border: 1px solid black; */
+    height: 20vh;
+    box-sizing: border-box;
+    justify-content:space-around;
+    background-color: white;
+}
+.rodapeChild{
+    /* border: 1px solid black; */
+    height: 20vh;
+    padding: 10px;
+    box-sizing: border-box;
+    font-size: 15px;
+}
+
+.pai {
+    display: flex;
+    justify-content: center;
+    align-items:stretch;
+    position:relative;
+    height: 1000px;
+    max-height: 250px;
+    width: 100%;
+}
+
+.filho1 {
+    border: solid 1.2px black;
+    display:inline;
+    justify-content: space-between;
+    background-color: grey;
+    max-height: 250px;
+    width: 100%;
+    margin-top: 10px;
+    border-radius: 2.5%;
+}
+
+.h2 {
+    font-size: smaller;
+}
+
+.pai2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: inline;
+    align-items:stretch;
+    position:relative;
+    height: 350px;
+    max-height: 1000px;
+    width: 100%;
+}
+
+
+.filho2 {
+    border: solid 1.2px blue;
+    display: flex;
+    justify-content: space-between;
+    align-items: inline;
+    background-color: grey;
+    max-height: 250px;
+    width: 70%;
+    margin-top: 5px;
+}
+
+.resumo {
+    border: solid 1.2px blue;
+    display: flex;
+    justify-content: space-between;
+    background-color: grey;
+    max-height: 250px;
+    width: 30%;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+
+.images {
+    display: flex;
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+    justify-content: center;
+}
+
+.produto {
+    display: inline-block;
+    border: solid black 1.2px;
+    height: 150px;
+    justify-content: center;
+    margin-left: 10px;
+    border-radius: 10px;
+    background-color: whitesmoke;
+    opacity: 0.1px;
+    width: 150px;
+}
+
+.nome {
+    color: black;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-stretch: normal;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 5px;
+}
+
+.preco {
+    color: black;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-stretch: normal;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 25px;
+}
+
+.produtos {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 10px;
+}
