@@ -36,9 +36,8 @@
             <p>Para avaliação dos seus itens, precisamos de algumas informações. Complete os campos abaixo:</p>
             </div>
             
-            <div class="usadoFormulario">
-            
-                <form action="">
+            <div class="usadoFormulario">            
+                <form action="/produtosusados" method="post" enctype="multipart/form-data">
                     <label for="nomeCompleto">Nome Completo:</label>
                     <input type="text" name="nomeCompleto" id="nomeCompleto">
                     <br>
@@ -51,8 +50,6 @@
                     <label for="cidade">Cidade</label>
                     <input type="text" name="cidade" id="cidade">
                     <br>
-                </form>
-                <form action="">
                     <label for="produto">Qual produto deseja vender:</label>
                     <input type="text" name="produto" id="produto">
                     <br>
@@ -73,19 +70,15 @@
                     <br>
                     <label for="comentarios"> Deseja adicionar algum comentário (opcional)</label>
                     <br>
-                </form>
-                <form action="">
                     <textarea name="comentarios" id="comentarios" cols="30" rows="10" placeholder="Adicione seus comentários"></textarea>
                     <br>
                     <label for="imagem"> Clique abaixo para adicionar uma foto (opcional)</label>
                     <br>
                     <input type="file" name="imagem" id="imagem">
                     <br>
-                    <button>Voltar</button>
-                    <button>Próxima etapa</button>
-                    
-                </form>
-                
+                    <button type="button">Voltar</button>
+                    <button type="submit">Enviar</button>                    
+                </form>                
         </div>
         
 
