@@ -12,6 +12,7 @@ var productsRouter = require('./src/routes/products');
 var usedProductsRouter = require('./src/routes/used');
 var logMiddleware = require('./src/middlewares/logSite'); //Todas as rotas
 
+
 var app = express();
 
 // view engine setup
