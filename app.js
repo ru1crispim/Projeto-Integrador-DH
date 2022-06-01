@@ -10,6 +10,7 @@ var contactRouter = require('./src/routes/contact')
 var cartRouter = require('./src/routes/cart')
 var productsRouter = require('./src/routes/products')
 var usedProductsRouter= require('./src/routes/used')
+var logMiddleware = require('./middlewares/logSite')
 
 var app = express();
 
@@ -23,6 +24,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '/src/public')));
+app.use(logMiddleware);
 
 app.use(indexRouter);
 app.use(usersRouter);
