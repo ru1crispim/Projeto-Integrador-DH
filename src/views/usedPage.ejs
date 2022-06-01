@@ -36,9 +36,8 @@
             <p>Para avaliação dos seus itens, precisamos de algumas informações. Complete os campos abaixo:</p>
             </div>
             
-            <div class="usadoFormulario">
-            
-                <form action="">
+            <div class="usadoFormulario">            
+                <form action="/produtosusados" method="post" enctype="multipart/form-data">
                     <label for="nomeCompleto">Nome Completo:</label>
                     <input type="text" name="nomeCompleto" id="nomeCompleto">
                     <br>
@@ -77,10 +76,9 @@
                     <br>
                     <input type="file" name="imagem" id="imagem">
                     <br>
-                    <button>Voltar</button>
-                    <button>Próxima etapa</button>
-                </form>
-                
+                    <button type="button">Voltar</button>
+                    <button type="submit">Enviar</button>                    
+                </form>                
         </div>
         
 
