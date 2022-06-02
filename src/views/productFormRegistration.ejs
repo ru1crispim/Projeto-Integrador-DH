@@ -31,64 +31,32 @@
         <div class="formToCreate">
         <h2>Novo cadastro de produtos:</h2>
         <br>    
-                    <form action="/product" method="post">
+                    <form action="/createproduct" method="post">
                         <label for="">Nome do Produto:</label>
                         <br>
-                        <input type="text" name="nome"/>
+                        <input type="text" name="produtoNome"/>
                         <br>
                         <label for="">Categoria:</label>
                         <br>
-                        <input type="text" name="categoria"/>
+                        <input type="text" name="produtoCategoria"/>
                         <br>
                         <label for="">Valor do produto:</label>
                         <br>
-                        <input type="text" name="valor"/>
+                        <input type="text" name="produtoValor"/>
                         <br>
                         <label for="">Unidade de medida:</label>
                         <br>
-                        <input type="text" name="unidade"/>
+                        <input type="text" name="produtoUnidade"/>
                         <br>
                         <label for="">Quantidade:</label>
                         <br>
-                        <input type="number" name="quantidade"/>
+                        <input type="number" name="produtoQuantidade"/>
                         <br>
                         <button type="submit">Cadastrar</button>                    
                     </form> 
                 </div> 
-        
-        <div class="formToChange">
-            <h2>Alteração de cadastro:</h2>
-            <br>
-            <form action="/product" method="post">
-                <label for="">Nome do Produto:</label>
-                <br>
-                <input type="text" name="nome"/>
-                <br>
-                <label for="">Categoria:</label>
-                <br>
-                <input type="text" name="categoria"/>
-                <br>
-                <label for="">Valor do produto:</label>
-                <br>
-                <input type="text" name="valor"/>
-                <br>
-                <label for="">Unidade de medida:</label>
-                <br>
-                <input type="text" name="unidade"/>
-                <br>
-                <label for="">Saldo em estoque:</label>
-                <br>
-                <input type="number" name="quantidade"/>
-                <br>
-                <button type="submit">Salvar alterações</button>                    
-            </form> 
-        </div>
     </div>
 
-
-
-
-        
     <footer class="rodape">
         <div class="rodapeChild">
             <h4>Beneficios</h4>

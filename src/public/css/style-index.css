@@ -457,6 +457,17 @@ a{
     height: 80vh;
 }
 
+.confirm-cadastro{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: lightgray;
+    border-bottom: 1px solid;
+    height: 80vh;
+}
+
 
 /* Pagina painel do usuario */
 
