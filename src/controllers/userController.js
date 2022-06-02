@@ -14,5 +14,5 @@ const userController = {
         res.render('formLogin');
 }
 }
-module.exports = userController;
 
+module.exports = userController;

@@ -25,8 +25,7 @@ class Product{
     myProducts[findIndex].nome=this.nome
     myProducts[findIndex].valor=this.valor
         return myProducts;
-  }
-    
+  }    
 }
 
 module.exports = Product;
