@@ -5,10 +5,10 @@ const productController = require('../controllers/productController');
 
 const logDBMiddleware = require('../middlewares/logDB')
 
-router.get('/produtos',productController.products);
+router.get('/allproducts',productController.products);
 router.post('/product',productController.create);
 router.post('/product/:id',productController.update); //fazer put após método override
-router.get('/produtos2', (req, res)=>{
+router.get('/productform', (req, res)=>{
     return res.render("productForms")
 })
 

@@ -1,3 +1,5 @@
+const Users = require('../models/Users.model')
+
 const userController = {
     userName:(req,res)=>{
         res.render('userPanel');
@@ -7,6 +9,8 @@ const userController = {
     },
 
     cadastro:(req,res)=>{
+        const newUser = new Users() //criando instancia por meio da model
+        newUser.create(req.body)
         res.render('cadastroUsuario'); 
 },
 

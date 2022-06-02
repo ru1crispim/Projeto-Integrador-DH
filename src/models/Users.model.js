@@ -2,26 +2,21 @@ const myUsers=[];
 const uuid = require('uuid');
 
 class Users{
-    constructor(datas, id){
-      this.datas = datas;
-      this.id = id;
-    }
-    create(name, id){
-      Users.push({
-        name, 
-        id
+    create(datas){
+      myUsers.push({
+        ...datas, 
+        id: uuid.v4()
       })
    }
     list(){
-    return users
+      return myUsers
   }
-    update(id){
-      const findIndex = myUsers.findIndex(datas => datas.id===id);
-      if(findIndex<0){
+    update(id, datas){
+      const findIndex = myUsers.findIndex(user => user.id===id); //user = datas
+      if(findIndex < 0){
         return "Não encontrado";
     }
-      myUsers[findIndex].datas = this.datas
-      myUsers[findIndex].id = this.id
+      myUsers[findIndex] = {...datas}
         return myUsers;
   }    
     delete(id){
@@ -29,3 +24,5 @@ class Users{
     console.log('users', users)
   }
 }
+
+module.exports = Users;
