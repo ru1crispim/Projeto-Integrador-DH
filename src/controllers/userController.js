@@ -4,6 +4,10 @@ const userController = {
     },
     login:(req,res)=>{
         res.render('login'); // atributo para logar no site
-    }
+    },
+    cadastro:(req,res)=>{
+        res.render('cadastroUsuario'); 
 }
+}
+
 module.exports=userController;
