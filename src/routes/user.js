@@ -8,9 +8,10 @@ router.get('/usuario',userController.userName);
 
 router.get('/entrar', userController.login) // carrega a rota entrar , com a view login
 router.get('/formlogin', userController.formLogin);
+router.post('/formLogin/cadastrado', userController.cadastro);
 
 router.get('/entrar', userController.login); // carrega a rota entrar , com a view login
 
-router.get('/cadastrar',userController.cadastro);
+// router.get('/cadastrar',userController.cadastro);
 
 module.exports = router;

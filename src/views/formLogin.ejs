@@ -32,9 +32,9 @@
             </div>
             <div>
                 <h2 class="titulo">Meu Cadastro</h2>
-             </div>
+            </div>
         </div>
-        <form class="camposCadastro" method="post" action="/cadastroCliente">
+        <form class="camposCadastro" method="post" action="/formLogin/cadastrado">
             <fieldset class="grupoUm">
                 <span class="info"><strong> Dados pessoais:</strong></span>
                 <div class="campo">
@@ -49,12 +49,12 @@
                 <br>
                 <div class="campo">
                     <label for="nome">Data de Nascimento:</label>
-                    <input type="number" name="birthdate" size="40" maxlength="100" required>
+                    <input type="date" name="birthdate" size="40" maxlength="100" required>
                 </div>
                 <br>
                 <div class="campo">
                     <label for="nome" >Sexo:</label>
-                    <select>
+                    <select name="sexo">
                         <option value>Selecione</option>
                         <option value="F" reference="F">Feminino</option>
                         <option value="M" reference="M">Masculino</option>
@@ -89,32 +89,32 @@
                 <br>
                 <div class="campo">
                     <label for="nome">Endereço:</label>
-                    <input type="text" name="nome" size="40" maxlength="100" required>
+                    <input type="text" name="endereco" size="40" maxlength="100" required>
                 </div>
                 <br>
                 <div class="campo">
                     <label for="nome">Número:</label>
-                    <input type="text" name="nome" size="40" maxlength="100" required>
+                    <input type="text" name="enderecoNumber" size="40" maxlength="100" required>
                 </div>
                 <br>
                 <div class="campo">
                     <label for="nome">Complemento:</label>
-                    <input type="text" name="nome" size="40" maxlength="100" required>
+                    <input type="text" name="complemento" size="40" maxlength="100" required>
                 </div>
                 <br>
                 <div class="campo">
                     <label for="nome">Bairro:</label>
-                    <input type="text" name="nome" size="40" maxlength="100" required>
+                    <input type="text" name="bairro" size="40" maxlength="100" required>
                 </div>
                 <br>
                 <div class="campo">
                     <label for="nome">Cidade:</label>
-                    <input type="text" name="nome" size="40" maxlength="100" required>
+                    <input type="text" name="cidade" size="40" maxlength="100" required>
                 </div>
                 <br>
                 <div class="campo">
                     <label for="nome">Estado:</label>
-                <select class="select-state valid" id="AddOrSetAddress-0-State" name="AddOrSetAddress[0].State" data-required="true">
+                <select class="select-state valid" id="AddOrSetAddress-0-State" name="state" data-required="true">
                     <option value="">UF</option>
                     <option value="AC" reference="AC">AC</option>
                     <option value="AL" reference="AL">AL</option>
@@ -148,7 +148,7 @@
                 <br>
                 <div class="campo">
                     <label for="nome">Referência:</label>
-                    <input type="text" name="nome" size="40" maxlength="100" required>
+                    <input type="text" name="referencia" size="40" maxlength="100" required>
                 </div>
             </fieldset>
             <fieldset class="grupoTres">
@@ -175,7 +175,7 @@
 
         <div class="ofertas">
             <span>Inscreva-se e receba ofertas exclusivas!</span>
-            <form class="cadastrar">
+            <form class="cadastrar" action="formLogin/criar" method="post">
                 <input type="text" id="nome" name="nome" placeholder="Nome">
                 <input type="email" id="email" name="email" placeholder="E-mail">
                 <button>Cadastrar</button>
