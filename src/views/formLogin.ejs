@@ -13,15 +13,15 @@
         <a href=""><img class="logoPressStart" src="/img/logo-loja-br.png" alt="logo-loja"></a>
         <div class="navegacao">
             <ul>
-                <li><a href="homepage.html">Inicio</a></li>
-                <li><a href="listagemDeProdutos.html">Jogos</a></li>
-                <li><a href="#contato">Contato</a></li>
-                <li><a href="paginaUsado.html">Orçamentos</a></li>              
+                <li><a href="/index">Inicio</a></li>
+                <li><a href="/produtos">Jogos</a></li>
+                <li><a href="/contato">Contato</a></li>
+                <li><a href="/produtosusados">Orçamentos</a></li>              
             </ul>
         </div>
         <div class="login">
-            <a href="">Entrar</a>
-            <a href="">Crie sua conta</a>
+            <a href="/entrar">Entrar</a>
+            <a href="/formLogin">Crie sua conta</a>
             <a href="./login.html"><img src="/img/login.png" alt="login"></a>
         </div>
     
@@ -32,9 +32,15 @@
             </div>
             <div>
                 <h2 class="titulo">Meu Cadastro</h2>
-             </div>
+                <!-- <% if(typeof errors !== 'undefined') { %>
+                    <% for(let error in errors){ %>
+                        <%= error %>
+                        <%= errors[error].msg %>
+                    <% } %>
+                    <% } %> -->
+            </div>
         </div>
-        <form class="camposCadastro" method="post" action="/cadastroCliente">
+        <form class="camposCadastro" method="post" action="/formLogin/cadastrado">
             <fieldset class="grupoUm">
                 <span class="info"><strong> Dados pessoais:</strong></span>
                 <div class="campo">
@@ -49,12 +55,12 @@
                 <br>
                 <div class="campo">
                     <label for="nome">Data de Nascimento:</label>
-                    <input type="number" name="birthdate" size="40" maxlength="100" required>
+                    <input type="date" name="birthdate" size="40" maxlength="100" required>
                 </div>
                 <br>
                 <div class="campo">
                     <label for="nome" >Sexo:</label>
-                    <select>
+                    <select name="sexo">
                         <option value>Selecione</option>
                         <option value="F" reference="F">Feminino</option>
                         <option value="M" reference="M">Masculino</option>
@@ -89,32 +95,32 @@
                 <br>
                 <div class="campo">
                     <label for="nome">Endereço:</label>
-                    <input type="text" name="nome" size="40" maxlength="100" required>
+                    <input type="text" name="endereco" size="40" maxlength="100" required>
                 </div>
                 <br>
                 <div class="campo">
                     <label for="nome">Número:</label>
-                    <input type="text" name="nome" size="40" maxlength="100" required>
+                    <input type="text" name="enderecoNumber" size="40" maxlength="100" required>
                 </div>
                 <br>
                 <div class="campo">
                     <label for="nome">Complemento:</label>
-                    <input type="text" name="nome" size="40" maxlength="100" required>
+                    <input type="text" name="complemento" size="40" maxlength="100" required>
                 </div>
                 <br>
                 <div class="campo">
                     <label for="nome">Bairro:</label>
-                    <input type="text" name="nome" size="40" maxlength="100" required>
+                    <input type="text" name="bairro" size="40" maxlength="100" required>
                 </div>
                 <br>
                 <div class="campo">
                     <label for="nome">Cidade:</label>
-                    <input type="text" name="nome" size="40" maxlength="100" required>
+                    <input type="text" name="cidade" size="40" maxlength="100" required>
                 </div>
                 <br>
                 <div class="campo">
                     <label for="nome">Estado:</label>
-                <select class="select-state valid" id="AddOrSetAddress-0-State" name="AddOrSetAddress[0].State" data-required="true">
+                <select class="select-state valid" id="AddOrSetAddress-0-State" name="state" data-required="true">
                     <option value="">UF</option>
                     <option value="AC" reference="AC">AC</option>
                     <option value="AL" reference="AL">AL</option>
@@ -148,7 +154,7 @@
                 <br>
                 <div class="campo">
                     <label for="nome">Referência:</label>
-                    <input type="text" name="nome" size="40" maxlength="100" required>
+                    <input type="text" name="referencia" size="40" maxlength="100" required>
                 </div>
             </fieldset>
             <fieldset class="grupoTres">
@@ -175,7 +181,7 @@
 
         <div class="ofertas">
             <span>Inscreva-se e receba ofertas exclusivas!</span>
-            <form class="cadastrar">
+            <form class="cadastrar" action="" method="">
                 <input type="text" id="nome" name="nome" placeholder="Nome">
                 <input type="email" id="email" name="email" placeholder="E-mail">
                 <button>Cadastrar</button>

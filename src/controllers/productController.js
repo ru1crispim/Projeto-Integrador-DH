@@ -6,7 +6,7 @@ const {validationResult}= require('express-validator');
 
 const productController = {
     products:(req,res)=>{
-        res.render('product');
+        return res.render('product'); // /produtos
     },
     create:(req,res)=>{
         const errors =validationResult(req);

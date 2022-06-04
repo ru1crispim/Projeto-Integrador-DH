@@ -15,15 +15,15 @@
         <a href=""><img class="logoPressStart" src="/img/logo-loja-br.png" alt="logo-loja"></a>
         <div class="navegacao">
             <ul>
-                <li><a href="homepage.html">Inicio</a></li>
-                <li><a href="listagemDeProdutos.html">Jogos</a></li>
-                <li><a href="#contato">Contato</a></li>
-                <li><a href="paginaUsado.html">Orçamentos</a></li>              
+                <li><a href="/index">Inicio</a></li>
+                <li><a href="/produtos">Jogos</a></li>
+                <li><a href="/contato">Contato</a></li>
+                <li><a href="/produtosusados">Orçamentos</a></li>              
             </ul>
         </div>
         <div class="login">
-            <a href="">Entrar</a>
-            <a href="">Crie sua conta</a>
+            <a href="/entrar">Entrar</a>
+            <a href="/formLogin">Crie sua conta</a>
             <a href="./login.html"><img src="/img/login.png" alt="login"></a>
         </div>
     
@@ -36,12 +36,12 @@
                 <div class="cadastro">
                     <div class="soucadastrado">
                         <h2 class="escrito">Já sou cadastrado</h2>
-                        <form>
-                            <label for="login">Login:</label>
-                            <input type="text" id="login" name="login" placeholder="Digite seu Login">
+                        <form action="/usuariologado" method="post">
+                            <label for="login">Email:</label>
+                            <input type="email" id="login" name="Email" placeholder="Digite seu Email">
                             <br><br>
                             <label for="senha"> Senha:</label>
-                            <input type="password" id="senha" name="senha" placeholder="Digite sua Senha">
+                            <input type="password" id="senha" name="password" placeholder="Digite sua Senha">
                             <br><br>
                             <a href="/index.html" title="Entrar"> <!-- colocar caminho certo no href -->
                             <button type="submit" id="entrar">Entrar</button>
@@ -55,14 +55,14 @@
                 <div class="naocadastrado">
                     <h2 class="escrito">Não sou cadastrado</h2>
                     <p class="pncadastrado">Cadastre-se agora em nossa loja, é seguro, rápido e fácil</p>
-                    <a href="/finalizacaoPedido.html" title="Cadastre-se"> <!-- colocar caminho certo no href -->
+                    <a href="/formLogin" title="Cadastre-se"> <!-- colocar caminho certo no href -->
                         <button type="submit" id="Cadastre-se">Cadastre-se</button>
                         </a>
                 </div>
         </section>
         <div class="ofertas">
             <span>Inscreva-se e receba ofertas exclusivas!</span>
-            <form class="cadastrar">
+            <form class="cadastrar" action="entrar/formLogin" method="post">
                 <input type="text" id="nome" name="nome" placeholder="Nome">
                 <input type="email" id="email" name="email" placeholder="E-mail">
                 <button>Cadastrar</button>
