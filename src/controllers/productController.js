@@ -5,7 +5,7 @@ const produtosJson = path.join('produtos.json')
 
 const productController = {
     products:(req,res)=>{
-        res.render('product');
+        return res.render('product'); // /produtos
     },
     create:(req,res)=>{
         let {produtoNome,produtoCategoria,produtoValor,produtoUnidade,produtoQuantidade}=req.body;

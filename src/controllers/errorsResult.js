@@ -1,7 +1,7 @@
 const { validationResult } = require('express-validator');
 module.exports = {
     viewCadastro: (req, res) => {
-        return res.render('index');
+        return res.render('index'); // /index
     },
     salvarCadastro: (req, res) => {
         const errors = validationResult(req);
