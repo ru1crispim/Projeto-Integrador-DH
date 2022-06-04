@@ -25,13 +25,14 @@
             <a href="./login.html"><img src="/img/login.png" alt="login"></a>
         </div>
     </header>
-    
-    <div class="productsForm">
+
+    <main>
+        <div class="productsForm">
         
         <div class="formToCreate">
         <h2>Novo cadastro de produtos:</h2>
         <br>    
-                    <form action="/createproduct" method="post">
+                    <form action="/createproduct" method="post" enctype="multipart/form-data">
                         <label for="">Nome do Produto:</label>
                         <br>
                         <input type="text" name="produtoNome"/>
@@ -52,11 +53,18 @@
                         <br>
                         <input type="number" name="produtoQuantidade"/>
                         <br>
-                        <button type="submit">Cadastrar</button>                    
+                        <br>
+                        <label for="">Forneça a imagem do produto a ser cadastrado:</label>
+                        <br>
+                        <br>
+                        <input type="file" name="imgJogo"/>
+                        <br>
+                        <button type="submit">Cadastrar</button>  
+                                          
                     </form> 
                 </div> 
-    </div>
-
+        </div>
+    </main>
     <footer class="rodape">
         <div class="rodapeChild">
             <h4>Beneficios</h4>

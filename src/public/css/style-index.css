@@ -542,6 +542,20 @@ a{
 
 
 
+.viewProduct{
+    display: flex;
+    flex-direction: column;
+    background-color: lightgray;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+
+}
+.viewProduct td {
+    border: 1px solid black;
+}
+
+
 
 
 
