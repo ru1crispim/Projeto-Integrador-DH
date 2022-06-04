@@ -31,7 +31,19 @@
         
         <div class="formToCreate">
         <h2>Novo cadastro de produtos:</h2>
-        <br>    
+        <br>
+        <% if(typeof errors !== 'undefined'){ %>
+
+        <ul>
+            
+            <% for (let error in errors){ %>
+                <li>
+                    <b><%= error %></b>
+                    <%= errors[error].msg %>
+                </li>
+            <%} %>
+        </ul>
+        <% } %>  
                     <form action="/createproduct" method="post" enctype="multipart/form-data">
                         <label for="">Nome do Produto:</label>
                         <br>

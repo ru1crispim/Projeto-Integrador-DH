@@ -13,6 +13,7 @@ var productsRouter = require('./src/routes/products');
 var usedProductsRouter = require('./src/routes/used');
 var logMiddleware = require('./src/middlewares/logSite'); //Todas as rotas
 var methodOverride = require('method-override');
+var session = require('express-session');
 
 
 var app = express();
@@ -21,6 +22,12 @@ var app = express();
 // app.set('views', path.join(__dirname, 'views'));
 app.set('views',path.join(__dirname,'/src/views'));
 app.set('view engine', 'ejs');
+
+app.use(session({
+  secret:"projetoExpress",
+  resave:true,
+  saveUninitialized:true,
+}))
 
 app.use(logger('dev'));
 app.use(express.json());

@@ -5,8 +5,10 @@ const router = express.Router();
 const productController = require('../controllers/productController');
 const path = require('path');
 const multer = require('multer');
-
 const logDBMiddleware = require('../middlewares/logDB')
+const {body}= require('express-validator');
+
+
 
 router.get('/allproducts',productController.products);
 router.get('/product/settings',(req,res)=>{res.render('productSettings')});
@@ -22,6 +24,8 @@ router.get('/productform/update', (req, res)=>{
 
 // Rota para cadastro de produto + envio de arquivo (Multer)
 
+
+
 const multerStorage = multer.diskStorage({
     destination:(req,file,cb)=>{
         const folder = path.join(__dirname,'../public/productsImg');
@@ -32,9 +36,18 @@ const multerStorage = multer.diskStorage({
         cb(null,imageName);
     }
 });
-const upload = multer({storage:multerStorage})
+const upload = multer({storage:multerStorage}) //constante usada para incluir na rota do formulario para subir arquivo
 
-router.post('/createproduct',upload.single('imgJogo'),productController.create);
+const validacoes = [
+    body("produtoNome").notEmpty().withMessage('O nome não pode ser vazio!'),
+    body("produtoCategoria").notEmpty().withMessage('O nome não pode ser vazio!'),
+    body("produtoValor").notEmpty().withMessage('O nome não pode ser vazio!'),
+    body("produtoUnidade").notEmpty().withMessage('O nome não pode ser vazio!'),
+    body("produtoQuantidade").notEmpty().withMessage('O nome não pode ser vazio!'),
+
+]; //Validar informações do formulario
+
+router.post('/createproduct',upload.single('imgJogo'),validacoes,logDBMiddleware,productController.create);
 
 // Rotas para visualização e atualização de produtos
 
