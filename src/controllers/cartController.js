@@ -1,9 +1,9 @@
 const cartController = {
     cart:(req,res)=>{
-        res.render('cart');
+        return res.render('cart'); // /carrinho
     },
     orderCompletion:(req,res)=>{
-        res.render('orderCompletion'); // página de acompanhamento de pedido
+        return res.render('orderCompletion'); //  /meupedido
     }
 }
 module.exports = cartController;

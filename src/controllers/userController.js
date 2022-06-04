@@ -1,20 +1,24 @@
 const fs = require('fs');
 const path = require('path');
+const bcrypt = require('bcrypt');
+const {validationResult} = require('express-validator');
 
 const usuarioJson = path.join('usuarios.json');
 
 const userController = {
     userName:(req,res)=>{
-        res.render('userPanel');
+        return res.render('userPanel'); // /usuario
     },
+    
     login:(req,res)=>{
-        res.render('login'); // atributo para logar no site
+        return res.render('login'); // /entrar
     },
+    
     formLogin:(req,res)=>{
-        return res.render('formLogin')
+        return res.render('formLogin',)
     },
 
-    cadastro:(req,res)=>{
+    register:(req,res)=>{
     let {nome, 
         sobrenome, 
         birthdate, 
@@ -32,11 +36,36 @@ const userController = {
         email,
         password
         } = req.body; 
-        let dadosJson = JSON.stringify({nome, sobrenome, birthdate,sexo, CPF, number, CEP, endereco,state, enderecoNumber, complemento, bairro, cidade,referencia,email,password})
+        // console.log(req.body)
+
+        let senhaCriptografada = bcrypt.hashSync('password', 10);
+
+
+        let dadosJson = JSON.stringify({nome, sobrenome, birthdate,sexo, CPF, number, CEP, endereco,state, enderecoNumber, complemento, bairro, cidade,referencia,email,password:senhaCriptografada})
         fs.writeFileSync(usuarioJson, dadosJson)
-        res.redirect('/index')
+
+
+
+        res.redirect('/usuario')
+    },
+    
+    loginUser:(req,res)=>{
+        let {email, password} = req.body;
+
+        // let usuarioSalvo = fs.readFileSync(usuarioJson, {encoding: 'utf-8'});
+        // usuarioSalvo = JSON.parse(usuarioSalvo);
+
+        // if(email != usuarioSalvo.email){
+        //     return res.send('Usuário Inválido!')
+        // }
+
+        // if(!bcrypt.compareSync(password, usuarioSalvo.password)){
+        //     return res.send('Senha Inválida!') // Não está funcionando
+        // }
+
+        return res.redirect('/usuario',)}
     }
-}
+
 
 module.exports = userController;
 

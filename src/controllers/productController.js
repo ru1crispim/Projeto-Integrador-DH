@@ -2,7 +2,7 @@ const Product = require('../models/Products.model');
 
 const productController = {
     products:(req,res)=>{
-        res.render('product');
+        return res.render('product'); // /produtos
     },
     create:(req,res)=>{
         const name = req.body.nome

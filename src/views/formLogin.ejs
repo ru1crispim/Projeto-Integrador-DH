@@ -13,15 +13,15 @@
         <a href=""><img class="logoPressStart" src="/img/logo-loja-br.png" alt="logo-loja"></a>
         <div class="navegacao">
             <ul>
-                <li><a href="homepage.html">Inicio</a></li>
-                <li><a href="listagemDeProdutos.html">Jogos</a></li>
-                <li><a href="#contato">Contato</a></li>
-                <li><a href="paginaUsado.html">Orçamentos</a></li>              
+                <li><a href="/index">Inicio</a></li>
+                <li><a href="/produtos">Jogos</a></li>
+                <li><a href="/contato">Contato</a></li>
+                <li><a href="/produtosusados">Orçamentos</a></li>              
             </ul>
         </div>
         <div class="login">
-            <a href="">Entrar</a>
-            <a href="">Crie sua conta</a>
+            <a href="/entrar">Entrar</a>
+            <a href="/formLogin">Crie sua conta</a>
             <a href="./login.html"><img src="/img/login.png" alt="login"></a>
         </div>
     
@@ -32,6 +32,12 @@
             </div>
             <div>
                 <h2 class="titulo">Meu Cadastro</h2>
+                <!-- <% if(typeof errors !== 'undefined') { %>
+                    <% for(let error in errors){ %>
+                        <%= error %>
+                        <%= errors[error].msg %>
+                    <% } %>
+                    <% } %> -->
             </div>
         </div>
         <form class="camposCadastro" method="post" action="/formLogin/cadastrado">
@@ -175,7 +181,7 @@
 
         <div class="ofertas">
             <span>Inscreva-se e receba ofertas exclusivas!</span>
-            <form class="cadastrar" action="formLogin/criar" method="post">
+            <form class="cadastrar" action="" method="">
                 <input type="text" id="nome" name="nome" placeholder="Nome">
                 <input type="email" id="email" name="email" placeholder="E-mail">
                 <button>Cadastrar</button>
