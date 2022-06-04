@@ -2,12 +2,21 @@ const fs = require('fs');
 const path = require('path');
 const produtosJson = path.join('produtos.json')
 // const Product = require('../models/Products.model');
+const {validationResult}= require('express-validator');
 
 const productController = {
     products:(req,res)=>{
         res.render('product');
     },
     create:(req,res)=>{
+        const errors =validationResult(req);
+        if(!errors.isEmpty()){
+            console.log(errors.mapped());
+            return res.render('productFormRegistration',{errors:errors.mapped()});
+        }
+        if(!req.file){
+            res.send("Você deve enviar um arquivo!");
+        }
         let {produtoNome,produtoCategoria,produtoValor,produtoUnidade,produtoQuantidade}=req.body;
         let dadosJson = JSON.stringify({produtoNome,produtoCategoria,produtoValor,produtoUnidade,produtoQuantidade});
         fs.writeFileSync(produtosJson,dadosJson);
