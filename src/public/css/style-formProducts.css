@@ -154,6 +154,7 @@ button{
     box-sizing: border-box;
 }
 
+
 .productsForm{
     display: flex;
     flex-direction: row;
@@ -163,7 +164,8 @@ button{
     border: 1px solid white;
     box-sizing: border-box;
     margin: 10px;
-    height: 80vh;
+    height: 100vh;
+
 }
 
 .formToCreate{
@@ -178,6 +180,7 @@ button{
     width: 40%;
     background-color: gray;
     color: white;
+    border-radius: 20px;
 }
 
 .formToChange{
@@ -191,7 +194,23 @@ button{
     box-sizing: border-box;
     width: 40%;
     background-color: gray;
-    color: white;  
+    color: white;
+    border-radius: 20px;  
+}
+
+.formSettings{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border: 1px solid black;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    box-sizing: border-box;
+    width: 60%;
+    background-color: gray;
+    color: white;
+    border-radius: 20px;
 }
 
 form{
