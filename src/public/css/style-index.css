@@ -457,6 +457,17 @@ a{
     height: 80vh;
 }
 
+.confirm-cadastro{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: lightgray;
+    border-bottom: 1px solid;
+    height: 80vh;
+}
+
 
 /* Pagina painel do usuario */
 
@@ -529,6 +540,20 @@ a{
     width: 90%;
 }
 
+
+
+.viewProduct{
+    display: flex;
+    flex-direction: column;
+    background-color: lightgray;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+
+}
+.viewProduct td {
+    border: 1px solid black;
+}
 
 
 

@@ -12,6 +12,7 @@ var cartRouter = require('./src/routes/cart');
 var productsRouter = require('./src/routes/products');
 var usedProductsRouter = require('./src/routes/used');
 var logMiddleware = require('./src/middlewares/logSite'); //Todas as rotas
+var methodOverride = require('method-override');
 
 
 var app = express();
@@ -29,7 +30,6 @@ app.use(express.static(path.join(__dirname, '/src/public')));
 app.use(logMiddleware);
 app.use(methodOverride('_method'));
 
-app.use(logMiddleware);
 
 app.use(indexRouter);
 app.use(usersRouter);

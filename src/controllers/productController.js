@@ -1,23 +1,34 @@
-const Product = require('../models/Products.model');
+const fs = require('fs');
+const path = require('path');
+const produtosJson = path.join('produtos.json')
+// const Product = require('../models/Products.model');
 
 const productController = {
     products:(req,res)=>{
         return res.render('product'); // /produtos
     },
     create:(req,res)=>{
-        const name = req.body.nome
-        const valor = req.body.valor
-        const product = new Product(name, valor) //criar novo produto e mandar para o produto com "p"
-        product.save()
-        return res.send('produto criado')
+        let {produtoNome,produtoCategoria,produtoValor,produtoUnidade,produtoQuantidade}=req.body;
+        let dadosJson = JSON.stringify({produtoNome,produtoCategoria,produtoValor,produtoUnidade,produtoQuantidade});
+        fs.writeFileSync(produtosJson,dadosJson);
+        res.render('successfullProductRegistration');
     },
+    
     update: (req,res)=>{
-        const name = req.body.nome
-        const valor = req.body.valor
-        const id = req.params.id
-        const product = new Product(name, valor) //criar novo produto e mandar para o produto com "p"
-        product.update(id)
-        return res.send('produto alterado')
+               
+        // let {nomeProdutoCadastrado,categoriaProdutoCadastrado,valorProdutoCadastrado,unidadeProdutoCadastrado,saldoProdutoCadastrado}=req.body;
+        res.render('successfullProductChange');
+    },
+    view: (req,res)=>{
+        let registeredProduct = fs.readFileSync('produtos.json','utf-8');
+        let registeredProductJson = JSON.parse(registeredProduct);
+        console.log(registeredProductJson);
+        res.render('viewProduct',{produtoJson:registeredProductJson})
     }
-}
+
+
+
+    }
+
+
 module.exports=productController;
