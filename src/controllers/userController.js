@@ -40,13 +40,15 @@ const userController = {
 
         let senhaCriptografada = bcrypt.hashSync('password', 10);
 
-
         let dadosJson = JSON.stringify({nome, sobrenome, birthdate,sexo, CPF, number, CEP, endereco,state, enderecoNumber, complemento, bairro, cidade,referencia,email,password:senhaCriptografada})
         fs.writeFileSync(usuarioJson, dadosJson)
 
-
-
-        res.redirect('/usuario')
+        // validar pelo express-validator
+        const errors = validationResult(req);
+        if(!errors.isEmpty()){
+            console.log(errors.mapped());
+            return res.render('userRegistered', {errors:errors.mapped()})
+        } 
     },
     
     loginUser:(req,res)=>{
