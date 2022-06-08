@@ -16,7 +16,7 @@
         <div class="navegacao">
             <ul>
                 <li><a href="/index">Inicio</a></li>
-                <li><a href="/produtos">Jogos</a></li>
+                <li><a href="/allproducts">Jogos</a></li>
                 <li><a href="/contato">Contato</a></li>
                 <li><a href="/produtosusados">Orçamentos</a></li>              
             </ul>
@@ -38,10 +38,13 @@
                         <h2 class="escrito">Já sou cadastrado</h2>
                         <form action="/usuariologado" method="post">
                             <label for="login">Email:</label>
-                            <input type="email" id="login" name="Email" placeholder="Digite seu Email">
+                            <input type="email" id="login" name="email" placeholder="Digite seu Email" />
                             <br><br>
                             <label for="senha"> Senha:</label>
-                            <input type="password" id="senha" name="password" placeholder="Digite sua Senha">
+                            <input type="password" id="senha" name="password" placeholder="Digite sua Senha" />
+                            <br><br>
+                            <input type="checkbox" name="logado" id="" />
+                            <label for="">Manter logado?</label>
                             <br><br>
                             <a href="/index.html" title="Entrar"> <!-- colocar caminho certo no href -->
                             <button type="submit" id="entrar">Entrar</button>

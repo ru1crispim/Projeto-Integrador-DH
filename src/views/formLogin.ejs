@@ -14,7 +14,7 @@
         <div class="navegacao">
             <ul>
                 <li><a href="/index">Inicio</a></li>
-                <li><a href="/produtos">Jogos</a></li>
+                <li><a href="/allproducts">Jogos</a></li>
                 <li><a href="/contato">Contato</a></li>
                 <li><a href="/produtosusados">Orçamentos</a></li>              
             </ul>
@@ -32,12 +32,12 @@
             </div>
             <div>
                 <h2 class="titulo">Meu Cadastro</h2>
-                <!-- <% if(typeof errors !== 'undefined') { %>
+                <% if(typeof errors !== 'undefined') { %>
                     <% for(let error in errors){ %>
                         <%= error %>
                         <%= errors[error].msg %>
                     <% } %>
-                    <% } %> -->
+                    <% } %>
             </div>
         </div>
         <form class="camposCadastro" method="post" action="/formLogin/cadastrado">
@@ -45,17 +45,17 @@
                 <span class="info"><strong> Dados pessoais:</strong></span>
                 <div class="campo">
                     <label for="nome">Nome:</label>
-                    <input type="text" name="nome" size="40" maxlength="100" required>
+                    <input type="text" name="nome" size="40" maxlength="100" >
                 </div>
                 <br>
                 <div class="campo">
                     <label for="sobrenome">Sobrenome:</label>
-                    <input type="text" name="sobrenome" size="40" maxlength="100" required>
+                    <input type="text" name="sobrenome" size="40" maxlength="100" >
                 </div>
                 <br>
                 <div class="campo">
                     <label for="nome">Data de Nascimento:</label>
-                    <input type="date" name="birthdate" size="40" maxlength="100" required>
+                    <input type="date" name="birthdate" size="40" maxlength="100" >
                 </div>
                 <br>
                 <div class="campo">
@@ -70,12 +70,12 @@
                 <br>
                 <div class="campo">
                     <label for="nome">CPF:</label>
-                    <input type="number" name="CPF" size="40" maxlength="100" required>
+                    <input type="number" name="CPF" size="40" maxlength="100" >
                 </div>
                 <br>
                 <div class="campo">
                     <label for="nome">Telefone Celular:</label>
-                    <input type="number" name="number" size="40" maxlength="100" required>
+                    <input type="number" name="number" size="40" maxlength="100" >
                     <br>
                     <small>Ex: DDD + Telefone</small>
                 </div>
@@ -85,37 +85,37 @@
                 <span class="info"><strong> Endereço:</strong></span>
                 <div class="campo">
                     <label for="nome">Identificação:</label>
-                    <input type="text" name="nome" size="40" maxlength="100" required>
+                    <input type="text" name="nome" size="40" maxlength="100" >
                 </div>
                 <br>
                 <div class="campo">
                     <label for="nome">CEP:</label>
-                    <input type="number" name="CEP"size="40" maxlength="100" required>
+                    <input type="number" name="CEP"size="40" maxlength="100" >
                 </div>
                 <br>
                 <div class="campo">
                     <label for="nome">Endereço:</label>
-                    <input type="text" name="endereco" size="40" maxlength="100" required>
+                    <input type="text" name="endereco" size="40" maxlength="100" >
                 </div>
                 <br>
                 <div class="campo">
                     <label for="nome">Número:</label>
-                    <input type="text" name="enderecoNumber" size="40" maxlength="100" required>
+                    <input type="text" name="enderecoNumber" size="40" maxlength="100" >
                 </div>
                 <br>
                 <div class="campo">
                     <label for="nome">Complemento:</label>
-                    <input type="text" name="complemento" size="40" maxlength="100" required>
+                    <input type="text" name="complemento" size="40" maxlength="100" >
                 </div>
                 <br>
                 <div class="campo">
                     <label for="nome">Bairro:</label>
-                    <input type="text" name="bairro" size="40" maxlength="100" required>
+                    <input type="text" name="bairro" size="40" maxlength="100" >
                 </div>
                 <br>
                 <div class="campo">
                     <label for="nome">Cidade:</label>
-                    <input type="text" name="cidade" size="40" maxlength="100" required>
+                    <input type="text" name="cidade" size="40" maxlength="100" >
                 </div>
                 <br>
                 <div class="campo">
@@ -154,24 +154,24 @@
                 <br>
                 <div class="campo">
                     <label for="nome">Referência:</label>
-                    <input type="text" name="referencia" size="40" maxlength="100" required>
+                    <input type="text" name="referencia" size="40" maxlength="100" >
                 </div>
             </fieldset>
             <fieldset class="grupoTres">
                 <span class="info"><strong> Dados da conta:</strong></span>
                 <div class="campo">
                     <label for="email">Email</label>
-                    <input type="email" name="email" size="40" maxlength="100" required>
+                    <input type="email" name="email" size="40" maxlength="100" >
                 </div>
                 <br>
                 <div class="campo">
                     <label for="email">Senha:</label>
-                    <input type="password" name="password" size="14" maxlength="20" required>
+                    <input type="password" name="password" size="14" maxlength="20" >
                 </div>
                 <br>
                 <div class="campo">
                     <label for="email">Repita a Senha:</label>
-                    <input type="password" name="password" size="14" maxlength="20" required>
+                    <input type="password" name="repeatpassword" size="14" maxlength="20" >
                 </div>
                 <br>
                 <button type="submit" class="cadastraUsuario">Cadastrar</button>
