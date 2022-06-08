@@ -14,7 +14,7 @@ class Users{
     update(id, datas){
       const findIndex = myUsers.findIndex(user => user.id===id); //user = datas
       if(findIndex < 0){
-        return "Não encontrado";
+        return undefined;
     }
       myUsers[findIndex] = {...datas}
         return myUsers;

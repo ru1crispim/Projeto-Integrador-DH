@@ -566,4 +566,9 @@ a{
 
 }
 
+.container-contactus {
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+}
 /* pagina cadastrado */

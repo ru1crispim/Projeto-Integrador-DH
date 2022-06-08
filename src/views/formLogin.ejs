@@ -32,12 +32,12 @@
             </div>
             <div>
                 <h2 class="titulo">Meu Cadastro</h2>
-                <!-- <% if(typeof errors !== 'undefined') { %>
+                <% if(typeof errors !== 'undefined') { %>
                     <% for(let error in errors){ %>
                         <%= error %>
                         <%= errors[error].msg %>
                     <% } %>
-                    <% } %> -->
+                    <% } %>
             </div>
         </div>
         <form class="camposCadastro" method="post" action="/formLogin/cadastrado">
@@ -171,7 +171,7 @@
                 <br>
                 <div class="campo">
                     <label for="email">Repita a Senha:</label>
-                    <input type="password" name="password" size="14" maxlength="20" >
+                    <input type="password" name="repeatpassword" size="14" maxlength="20" >
                 </div>
                 <br>
                 <button type="submit" class="cadastraUsuario">Cadastrar</button>

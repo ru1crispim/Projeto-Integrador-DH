@@ -3,27 +3,30 @@ const router = express.Router();
 const multer = require('multer');
 const path = require('path');
 const userController = require('../controllers/userController');
+const auth = require('../middlewares/auth')
 const logDBMiddleware = require('../middlewares/logDB');
 const {body} = require('express-validator');
 
+
 //express-validator
 const validacoes = [
-    body("nome").isEmpty().withMessage(),
-    body("sobrenome").isEmpty().withMessage(),
-    body("birthdate").isEmpty().withMessage(),
-    body("sexo").isEmpty().withMessage(),
-    body("CPF").isEmpty().withMessage(),
-    body("number").isEmpty().withMessage(),
-    body("CEP").isEmpty().withMessage(),
-    body("endereco").isEmpty().withMessage(),
-    body("state").isEmpty().withMessage(),
-    body("enderecoNumber").isEmpty().withMessage(),
-    body("complemento").isEmpty().withMessage(),
-    body("bairro").isEmpty().withMessage(),
-    body("cidade").isEmpty().withMessage(),
-    body("referencia").isEmpty().withMessage(),
-    body("email").isEmail().isEmpty().withMessage('Você deve digitar um email válido'),
-    body("password").isLength({min: 5}).isEmpty().withMessage('A senha deve conter no mínimo 5 caracteres')
+    body("nome").notEmpty().withMessage(),
+    body("sobrenome").notEmpty().withMessage(),
+    body("birthdate").notEmpty().withMessage(),
+    body("sexo").notEmpty().withMessage(),
+    body("CPF").notEmpty().withMessage(),
+    body("number").notEmpty().withMessage(),
+    body("CEP").notEmpty().withMessage(),
+    body("endereco").notEmpty().withMessage(),
+    body("state").notEmpty().withMessage(),
+    body("enderecoNumber").notEmpty().withMessage(),
+    body("complemento").notEmpty().withMessage(),
+    body("bairro").notEmpty().withMessage(),
+    body("cidade").notEmpty().withMessage(),
+    body("referencia").notEmpty().withMessage(),
+    body("email").isEmail().notEmpty().withMessage('Você deve digitar um email válido'),
+    body("password").isLength({min: 5}).notEmpty().withMessage('A senha deve conter no mínimo 5 caracteres'),
+    body("repeatpassword").isLength({min: 5}).notEmpty().withMessage('A senha deve conter no mínimo 5 caracteres')
 ];
 //express-validator
 
@@ -45,7 +48,7 @@ const validacoes = [
 router.get('/usuario',userController.userName);
 
 router.get('/entrar',  userController.login) // carrega a rota entrar , com a view login
-router.get('/formlogin',validacoes, userController.formLogin);
+router.get('/formlogin', userController.formLogin);
 router.post('/formLogin/cadastrado', validacoes, userController.register);
 router.post('/usuariologado', userController.loginUser);
 
