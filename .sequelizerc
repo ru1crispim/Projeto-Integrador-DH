@@ -1,0 +1,10 @@
+// arquivo de configuração do sequelize
+
+const path = require('path');
+
+module.exports = {
+    'config' : path.resolve('config', 'database.js'), 
+    // 'models': path.resolve('models'),
+    'migrations-path':path.resolve(__dirname,'src','database','migrations'),
+    'models-path':path.resolve(__dirname,'src','models'),
+}

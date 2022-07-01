@@ -2,6 +2,8 @@ const fs = require('fs');
 const path = require('path');
 const bcrypt = require('bcrypt');
 const {validationResult} = require('express-validator');
+const db = require('../models');
+// const Usuarios = require('../models/Usuarios');
 
 const usuarioJson = path.join('usuarios.json');
 
@@ -13,13 +15,58 @@ const userController = {
     login:(req,res)=>{
         return res.render('login'); // /entrar
     },
+
+    listar: async (req,res)=>{
+        try{
+        const users = await db.Usuarios.findAll({
+            raw: true
+        })
+        console.log(users)
+        res.render('users/listUsers', {users})}
+        catch(err){
+            console.log(err)
+        }
+        
+    },
+    
+    directToEdit: async (req,res)=>{
+        try{
+        const {id} = req.params;
+
+        const user = await db.Usuarios.findByPk(id);
+        res.render('users/editUsers', {user})
+        }
+        catch(err){
+            console.log(err)
+        }
+    },
+
+    update: async(req,res)=>{
+        try{
+        const {id} = req.params;
+        const {nome, email, senha} = req.body;
+
+        const result = await db.Usuarios.update({
+            nome,
+            email,
+            senha
+        }, {
+            where:{
+                id:id
+            }
+        })
+        return res.redirect('/usuario/listar')
+    } 
+        catch(err){
+            console.log(err)
+        }
+    },
     
     formLogin:(req,res)=>{
         return res.render('formLogin')
     },
 
     register:(req,res)=>{
-
 
     let {nome, 
         sobrenome, 
@@ -58,6 +105,47 @@ const userController = {
         // validar pelo express-validator
         
     },
+
+
+    accesRegisterdB:(req,res)=>{
+        return res.render('users/regUsers')
+    },
+
+
+    registerDb: async(req,res)=>{
+        try{
+        const {nome, email, senha} = req.body;
+        const result = await db.Usuarios.create({
+            nome,
+            email,
+            senha
+        })
+        console.log(result)
+        return res.redirect("/usuario/listar");
+    }
+        catch(err){
+            console.log(err)
+        }
+    },
+
+
+    destroy: async(req,res)=>{
+        try{
+        const {id} = req.params;
+
+        const result = await db.Usuarios.destroy({
+            where:{
+                id:id
+            }
+        })
+        console.log(result);
+        return res.redirect('/usuario/listar')
+    }
+        catch(err){
+            console.log(err)
+        }
+    },
+
     
     loginUser:(req,res)=>{
         let {email, password, logado} = req.body;
