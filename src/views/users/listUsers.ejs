@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+    <% for(let i = 0; i < users.length; i++) { %>
+        <li>
+            <p>Email: <%= users[i].email %></p>
+            <p>Nome: <%= users[i].nome %></p>
+            <button><a href="/usuario/editar/<%= users[i].id %>">
+                Editar Usuario
+            </a></button>
+            <form action="/usuario/deletar/<%= users[i].id %>?_method=DELETE" method="post">
+                <button type="submit">Deletar Usuario</button>
+            </form>
+        </li>
+        <% } %>
+    </ul>
+    <button><a href="/usuario/cadastrar">Cadastrar novo Usuario</a></button>
+</body>
+</html>

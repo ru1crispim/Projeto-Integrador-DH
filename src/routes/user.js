@@ -52,7 +52,15 @@ router.get('/formlogin', userController.formLogin);
 router.post('/formLogin/cadastrado', validacoes, userController.register);
 router.post('/usuariologado', userController.loginUser);
 
+router.get('/usuario/listar', userController.listar);
 
+router.get('/usuario/editar/:id', userController.directToEdit);
+router.put('/usuario/editar/:id', userController.update);
+
+router.get('/usuario/cadastrar', userController.accesRegisterdB);
+router.post('/usuario/cadastrar', userController.registerDb);
+
+router.delete('/usuario/deletar/:id', userController.destroy)
 
 router.get('/entrar', userController.login); // carrega a rota entrar , com a view login
 

@@ -11,6 +11,7 @@ var contactRouter = require('./src/routes/contact');
 var cartRouter = require('./src/routes/cart');
 var productsRouter = require('./src/routes/products');
 var usedProductsRouter = require('./src/routes/used');
+var clientsM = require('./src/routes/clientsM');
 // var logMiddleware = require('./src/middlewares/logSite'); //Todas as rotas
 var methodOverride = require('method-override');
 var session = require('express-session');
@@ -47,6 +48,7 @@ app.use(contactRouter);
 app.use(cartRouter);
 app.use(productsRouter);
 app.use(usedProductsRouter);
+app.use(clientsM);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
