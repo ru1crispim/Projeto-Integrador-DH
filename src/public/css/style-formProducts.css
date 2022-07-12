@@ -152,6 +152,10 @@ button{
     font-weight: bold;
     color: white;
     box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
 }
 
 
@@ -224,7 +228,9 @@ form input{
 .menuManutencao{
     display: flex;
     flex-direction: row;
-    width: auto;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
 }
 .productsForm img{
     width:400px;

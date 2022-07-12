@@ -31,26 +31,30 @@
         <div class="formToChange">
             <h2>Alteração de cadastro:</h2>
             <br>
-            <form action="/updateproduct?_method=PUT" method="POST">
+            <form action="/productform/update/<%= products.id %>?_method=PUT" method="post">
                 <label for="">Nome do Produto:</label>
                 <br>
-                <input type="text" name="nomeProdutoCadastrado"/>
-                <br>
-                <label for="">Categoria:</label>
-                <br>
-                <input type="text" name="categoriaProdutoCadastrado"/>
+                <input type="text" name="nomeProdutoCadastrado" value="<%= products.nome %>"/>
                 <br>
                 <label for="">Valor do produto:</label>
                 <br>
-                <input type="text" name="valorProdutoCadastrado"/>
+                <input type="text" name="valorProdutoCadastrado" value="<%= products.valor %>"/>
                 <br>
-                <label for="">Unidade de medida:</label>
+                <label for="">Categoria:</label>
                 <br>
-                <input type="text" name="unidadeProdutoCadastrado"/>
+                <input type="text" name="categoriaProdutoCadastrado" value="<%= products.categoria %>"/>
+                <br>
+                <label for="">Descricao:</label>
+                <br>
+                <input type="text" name="descricaoProdutoCadastrado" value="<%= products.descricao %>"/>
                 <br>
                 <label for="">Saldo em estoque:</label>
                 <br>
-                <input type="number" name="saldoProdutoCadastrado"/>
+                <input type="number" name="saldoProdutoCadastrado" value="<%= products.quantidade %>"/>
+                <br>
+                <label for="">Console:</label>
+                <br>
+                <input type="text" name="consoleProdutoCadastrado" value="<%= products.console %>"/>
                 <br>
                 <button type="submit">Salvar alterações</button>                    
             </form> 

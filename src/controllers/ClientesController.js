@@ -36,7 +36,7 @@ const ClientesController = {
                 telefone,
                 data_nascimento: date
             })
-            console.log(result)
+            
             return res.redirect("/clientes");
         }
             catch(err){
