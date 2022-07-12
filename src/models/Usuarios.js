@@ -8,7 +8,7 @@
 module.exports = (sequelize, DataType)=>{
     const Usuarios = sequelize.define('Usuarios',{
         id:{
-            type:DataType.INTEGER,  // que tipo ele é
+            type:DataType.INTEGER,
             primaryKey:true,
             unique:true,
             autoIncrement:true
