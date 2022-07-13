@@ -30,25 +30,29 @@
     </header>
     <main>
     <div class="viewProduct">
-      <h1>Segue abaixo o produto cadastrado atualmente:</h1>
-  <table>
-      <tr>
-          <th><h2>Nome do produto</h2></th>
-          <th><h2>Categoria</h2></th>
-          <th><h2>Valor do produto</h2></th>
-          <th><h2>Quantidade</h2></th>
-      </tr>
-      <tr>
-          <td><h2><%= produtoJson.produtoNome %></h2></td>
-          <td><h2><%= produtoJson.produtoCategoria %></h2></td>
-          <td><h2><%= produtoJson.produtoValor %></h2></td>
-          <td><h2><%= produtoJson.produtoQuantidade %></h2></td>
-      </tr>
-      
-    </table>
-
+    <h2>Produtos Cadastrados</h2>
+    <div class="listProducts">
+    <ul>
+        <% for(let i = 0; i < products.length; i++) { %>
+            
+                <p>Nome: <%= products[i].nome %></p>
+                <p>Categoria: <%= products[i].categoria %></p>
+                <p>Valor: <%= products[i].valor %></p>
+                <p>Descrição: <%= products[i].descricao %></p>
+                <p>Quantidade: <%= products[i].quantidade %></p>
+                <p>Console: <%= products[i].console %></p>
+                <button><a href="/productform/update/<%= products[i].id %>">
+                    Editar Usuario
+                </a></button>
+                <form action="/product/deletar/<%= products[i].id %>?_method=DELETE" method="post">
+                    <button type="submit">Deletar Usuario</button>
+                </form>
+                
+            
+        <% } %>
+    </ul>
     </div>
-
+    </div>
     </main>
     <footer id="contact">
         <div class="footerChild">

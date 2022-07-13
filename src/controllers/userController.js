@@ -3,6 +3,7 @@ const path = require('path');
 const bcrypt = require('bcrypt');
 const {validationResult} = require('express-validator');
 const db = require('../models');
+const { password } = require('../configs/database');
 // const Usuarios = require('../models/Usuarios');
 
 const usuarioJson = path.join('usuarios.json');
@@ -119,8 +120,10 @@ const userController = {
             nome,
             email,
             senha
-        })
-        console.log(result)
+        });
+        let Criptopassword = bcrypt.hashSync(password, 10)
+
+        console.log(Criptopassword)
         return res.redirect("/usuario/listar");
     }
         catch(err){

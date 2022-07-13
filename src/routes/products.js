@@ -40,10 +40,11 @@ const upload = multer({storage:multerStorage}) //constante usada para incluir na
 
 const validacoes = [
     body("produtoNome").notEmpty().withMessage('O nome não pode ser vazio!'),
-    body("produtoCategoria").notEmpty().withMessage('O nome não pode ser vazio!'),
     body("produtoValor").notEmpty().withMessage('O nome não pode ser vazio!'),
-    body("produtoUnidade").notEmpty().withMessage('O nome não pode ser vazio!'),
+    body("produtoCategoria").notEmpty().withMessage('O nome não pode ser vazio!'),
+    body("produtoDescricao").notEmpty().withMessage('O nome não pode ser vazio!'),
     body("produtoQuantidade").notEmpty().withMessage('O nome não pode ser vazio!'),
+    body("produtoConsole").notEmpty().withMessage('O nome não pode ser vazio')
 
 ]; //Validar informações do formulario
 
@@ -51,8 +52,12 @@ router.post('/createproduct',upload.single('imgJogo'),validacoes,logDBMiddleware
 
 // Rotas para visualização e atualização de produtos
 
-router.put('/updateproduct',productController.update);
+router.get('/productform/update/:id', productController.directToUpdate);
+router.put('/productform/update/:id',productController.update);
+
 router.get('/product/view',productController.view);
+
+router.delete('/product/deletar/:id', productController.destroy);
 
 
 module.exports=router;
