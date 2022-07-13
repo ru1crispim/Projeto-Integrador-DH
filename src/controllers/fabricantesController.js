@@ -36,11 +36,19 @@ const fabricantesController = {
 
     remover: async(req,res)=>{
         try{
-            
+            const {id} = req.params;
+
+            const result = await db.Fabricantes.destroy({
+                where:{
+                    id:id
+                }
+            })
+            return res.redirect('/fabricantes')
         }
         catch(err){
             console.log(err);
         }
+        
     }
 }
 
