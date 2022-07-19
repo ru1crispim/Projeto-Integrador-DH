@@ -102,7 +102,7 @@ const userController = {
         let dadosJson = JSON.stringify({nome, sobrenome, birthdate,sexo, CPF, number, CEP, endereco,state, enderecoNumber, complemento, bairro, cidade,referencia,email,password:senhaCriptografada,repeatpassword:senhaCriptografada})
         fs.writeFileSync(usuarioJson, dadosJson)
 
-        return res.render('userRegistered')
+        return res.redirect('/index')
         // validar pelo express-validator
         
     },
