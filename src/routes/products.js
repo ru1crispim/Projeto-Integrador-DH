@@ -9,22 +9,7 @@ const logDBMiddleware = require('../middlewares/logDB')
 const {body}= require('express-validator');
 
 
-
-router.get('/allproducts',productController.products);
-router.get('/product/settings',(req,res)=>{res.render('productSettings')});
-
-
-router.get('/productform/registration', (req, res)=>{
-    return res.render("productFormRegistration")
-})
-router.get('/productform/update', (req, res)=>{
-    return res.render("productFormUpdate")
-})
-
-
 // Rota para cadastro de produto + envio de arquivo (Multer)
-
-
 
 const multerStorage = multer.diskStorage({
     destination:(req,file,cb)=>{
@@ -50,12 +35,25 @@ const validacoes = [
 
 router.post('/createproduct',upload.single('imgJogo'),validacoes,logDBMiddleware,productController.create);
 
+router.get('/product/settings',(req,res)=>{res.render('productSettings')});
+
+router.get('/productform/registration', (req, res)=>{
+    return res.render("productFormRegistration")
+})
+router.get('/productform/update', (req, res)=>{
+    return res.render("productFormUpdate")
+})
 // Rotas para visualização e atualização de produtos
 
 router.get('/productform/update/:id', productController.directToUpdate);
 router.put('/productform/update/:id',productController.update);
 
-router.get('/product/view',productController.view);
+router.get('/product/view',productController.viewAdmin);
+router.get('/allproducts', productController.viewProducts);
+router.get('/allproducts/detail/:id', productController.productDetail);
+router.get('/allproducts/categories', productController.viewCategories);
+router.get('/allproducts/search', productController.search);
+router.get('/allproducts/offers', productController.offers);
 
 router.delete('/product/deletar/:id', productController.destroy);
 

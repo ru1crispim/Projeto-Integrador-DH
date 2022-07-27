@@ -1,5 +1,3 @@
-const { STRING } = require("sequelize/types")
-
 module.exports = (sequelize, DataType)=>{
     const Ofertas = sequelize.define('Ofertas', {
         id: {

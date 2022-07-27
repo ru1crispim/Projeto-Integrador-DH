@@ -4,20 +4,21 @@ const bcrypt = require('bcrypt');
 const {validationResult} = require('express-validator');
 const db = require('../models');
 const { password } = require('../configs/database');
-// const Usuarios = require('../models/Usuarios');
+const Sequelize = require('sequelize');
+const Op = Sequelize.Op;
 
 const usuarioJson = path.join('usuarios.json');
 
 const userController = {
     userName:(req,res)=>{
-        return res.render('userPanel'); // /usuario
+        return res.render('userPanel', {user:req.session.user}); // /usuario
     },
     
     login:(req,res)=>{
         return res.render('login'); // /entrar
     },
 
-    listar: async (req,res)=>{
+    listar: async (req,res)=>{  // no painel de admin
         try{
         const users = await db.Usuarios.findAll({
             raw: true
@@ -29,14 +30,43 @@ const userController = {
         }
         
     },
+
     
-    directToEdit: async (req,res)=>{
+    directToEdit: async (req,res)=>{  // no painel de admin
         try{
         const {id} = req.params;
 
         const user = await db.Usuarios.findByPk(id);
         res.render('users/editUsers', {user})
         }
+        catch(err){
+            console.log(err)
+        }
+    },
+
+    
+    formLogin:(req,res)=>{
+        return res.render('formLogin')
+    },
+
+
+    accesRegisterdB:(req,res)=>{
+        return res.render('users/regUsers')
+    },
+
+    registerDb: async(req,res)=>{
+        try{
+        const {nome, email, password} = req.body;
+        let senhaCriptografada = bcrypt.hashSync(password, 10)
+        console.log({nome, email, password, senhaCriptografada})
+        const result = await db.Usuarios.create({
+            nome,
+            email,
+            senha:senhaCriptografada
+        });
+        console.log('olaola', result)
+        return res.redirect("/formLogin");
+    }
         catch(err){
             console.log(err)
         }
@@ -56,81 +86,12 @@ const userController = {
                 id:id
             }
         })
-        return res.redirect('/usuario/listar')
+        return res.redirect('/entrar/admin/centraladmin/usuario/listar')
     } 
         catch(err){
             console.log(err)
         }
     },
-    
-    formLogin:(req,res)=>{
-        return res.render('formLogin')
-    },
-
-    register:(req,res)=>{
-
-    let {nome, 
-        sobrenome, 
-        birthdate, 
-        sexo,
-        CPF, 
-        number, 
-        CEP, 
-        endereco, 
-        state,
-        enderecoNumber, 
-        complemento, 
-        bairro, 
-        cidade,
-        referencia,
-        email,
-        password,
-        repeatpassword
-        } = req.body; 
-
-        
-        const errors = validationResult(req);
-        console.log(errors)
-        if(!errors.isEmpty()){
-            // console.log('entrou no if');
-            return res.render('formLogin', {errors:errors.mapped()})
-        } 
-        
-        console.log({password})
-        let senhaCriptografada = bcrypt.hashSync(password, 10);
-
-        let dadosJson = JSON.stringify({nome, sobrenome, birthdate,sexo, CPF, number, CEP, endereco,state, enderecoNumber, complemento, bairro, cidade,referencia,email,password:senhaCriptografada,repeatpassword:senhaCriptografada})
-        fs.writeFileSync(usuarioJson, dadosJson)
-
-        return res.redirect('/index')
-        // validar pelo express-validator
-        
-    },
-
-
-    accesRegisterdB:(req,res)=>{
-        return res.render('users/regUsers')
-    },
-
-
-    registerDb: async(req,res)=>{
-        try{
-        const {nome, email, senha} = req.body;
-        const result = await db.Usuarios.create({
-            nome,
-            email,
-            senha
-        });
-        let Criptopassword = bcrypt.hashSync(password, 10)
-
-        console.log(Criptopassword)
-        return res.redirect("/usuario/listar");
-    }
-        catch(err){
-            console.log(err)
-        }
-    },
-
 
     destroy: async(req,res)=>{
         try{
@@ -142,46 +103,69 @@ const userController = {
             }
         })
         console.log(result);
-        return res.redirect('/usuario/listar')
+        return res.redirect('/entrar/admin/centraladmin/usuario/listar')
     }
         catch(err){
             console.log(err)
         }
     },
 
-    
-    loginUser:(req,res)=>{
-        let {email, password, logado} = req.body;
+    loginUser: async (req,res)=>{
+        const {email, password, logado} = req.body;
 
+        const user = await db.Usuarios.findOne({
+            where: {
+                email
+            }
+        })
 
-        let usuarioSalvo = fs.readFileSync(usuarioJson, {encoding: 'utf-8'});
-        usuarioSalvo = JSON.parse(usuarioSalvo);
-
-        if(email != usuarioSalvo.email){
-            console.log(email, usuarioSalvo.email)
-            return res.send('Usuário Inválido!')
+        if(!user){
+            return res.send('Usuário não encontrado')
         }
-        // console.log(bcrypt.compareSync('123456', usuarioSalvo.password))
-        // let senhaCerta = '123456'
-        // let senhaErrada = 'aaaaaa'
-        // const hash = bcrypt.hashSync(senhaCerta, 10)
-        // const teste1 = bcrypt.compareSync(senhaCerta, hash)
-        // const teste2 = bcrypt.compareSync(senhaErrada, hash)
-        // console.log(teste1)
-        // console.log(teste2)
-        console.log('Estou com os dados', {password, original:usuarioSalvo.password})
-        if(!bcrypt.compareSync(password, usuarioSalvo.password)){
-            // console.log(bcrypt.hashSync('password', 10), usuarioSalvo.password)
-            return res.send('Senha Inválida!') // Não está funcionando
+        const compare = bcrypt.compareSync(password, user.senha);
+        console.log({compare, password, xsenha:user.senha})
+        if(compare === false){
+            return res.send('Senha Inválida')
         }
-        req.session.usuario = usuarioSalvo
+
+        req.session.user = user
+        
 
         if(logado != undefined){
-            res.cookie('logado',usuarioSalvo.email,{maxAge: 600000}) // cookie
+            res.cookie('logado', user.email, {maxAge: 600000}) // cookie
         }
 
-        return res.redirect('/usuario')}
+        return res.redirect('/usuario')
+    },
+
+    AcessAdmin: (req,res)=>{
+        return res.render('admin/logAdmin')
+    },
+    
+    loginAdmin: async (req,res)=>{
+        try{
+        const {email, password} = req.body;
+        const admin = await db.Usuarios.findOne({
+            where:{
+                email: email
+            }
+        })
+        if(!admin){
+            return res.send('Login de administrador não encontrado!')
+        }
+        console.log(admin, 'fdsafdsfsfsdfsf')
+        const adminPassword = bcrypt.compareSync(password, admin.senha)
+        if(adminPassword === false){
+            return res.send('Senha de administrador inválida')
+        }
+        
+        return res.render('admin/centralAdmin')
     }
+    catch(err){
+        console.log(err)
+    }
+    }
+}
 
 
 module.exports = userController;
