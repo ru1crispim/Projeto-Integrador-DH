@@ -1,58 +1,28 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Order - DH Games</title>
-    <link rel="stylesheet" href="/css/style-index.css">
-    
-    
-</head>
-<body>
-    
-    <header>
-        <a href=""><img class="logoPressStart" src="/img/logo-loja-br.png" alt="logo-loja"></a>
-        <div class="navigation">
-            <ul>
-                <li><a href="/index">Inicio</a></li>
-                <li><a href="/allproducts">Jogos</a></li>
-                <li><a href="/contato">Contato</a></li>
-                <li><a href="/produtosusados">Orçamentos</a></li>              
-            </ul>
-        </div>
-        <div class="login">
-            <a href="/entrar">Entrar</a>
-            <a href="/formLogin">Crie sua conta</a>
-            <a href="./login.html"><img src="/img/login.png" alt="login"></a>
-        </div>
-    
-    </header>
+<%- include('./partials/head') %>
+<%- include('./partials/header') %>
+<link rel="stylesheet" href="/css/style-viewProduct.css">
     <main>
-    <div class="viewProduct">
-    <h2>Produtos Cadastrados</h2>
-    <div class="listProducts">
-    <ul>
+        <div class="gamesList">
+            <h2>Produtos Cadastrados</h2>
+            <ul>
         <% for(let i = 0; i < products.length; i++) { %>
-            
-                <p>Nome: <%= products[i].nome %></p>
-                <p>Categoria: <%= products[i].categoria %></p>
-                <p>Valor: <%= products[i].valor %></p>
-                <p>Descrição: <%= products[i].descricao %></p>
-                <p>Quantidade: <%= products[i].quantidade %></p>
-                <p>Console: <%= products[i].console %></p>
-                <button><a href="/productform/update/<%= products[i].id %>">
-                    Editar Usuario
-                </a></button>
-                <form action="/product/deletar/<%= products[i].id %>?_method=DELETE" method="post">
-                    <button type="submit">Deletar Usuario</button>
-                </form>
-                
-            
+            <li class="productsList">
+            <p>Nome: <%= products[i].nome %></p>
+            <p>Categoria: <%= products[i].categoria %></p>
+            <p>Valor: <%= products[i].valor %></p>
+            <p>Descrição: <%= products[i].descricao %></p>
+            <p>Quantidade: <%= products[i].quantidade %></p>
+            <p>Console: <%= products[i].console %></p>
+            <button><a href="/productform/update/<%= products[i].id %>">
+                Editar Produto
+            </a></button>
+            <form action="/product/deletar/<%= products[i].id %>?_method=DELETE" method="post">
+                <button type="submit">Deletar Produto</button>
+            </form>
+        </li>
         <% } %>
-    </ul>
-    </div>
-    </div>
+        </ul>
+        </div>
     </main>
     <footer id="contact">
         <div class="footerChild">
@@ -62,20 +32,6 @@
                 <li>Melhor opção do mercado</li>
                 <li>Entrega para todo o Brasil</li>
             </ul>
-        </div>
-        <div class="footerChild">
-            <h4 >Contatos</h4>
-            <p>Telefone: (11) 00000-0000</p>
-            <p>E-mail: sac@pressstart.com.br</p>
-        </div>
-        <div class="footerChild">
-            <h4 >Redes Sociais</h4>
-            <img src="/img/icons/facebook.png" alt="logo-facebook">
-            <img src="/img/icons/instagram.png" alt="logo-instagram">
-            <img src="/img/icons/whattsapp.png" alt="logo-whattsapp">
-
-        </div>
-
-    </footer>
+<%- include('./partials/footer') %>
 </body>
 </html>

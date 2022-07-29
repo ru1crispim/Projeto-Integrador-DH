@@ -8,18 +8,14 @@
 </head>
 <body>
     <main>
-        <form action="/usuario/editar/<%= user.id %>?_method=PUT" method="post">
+        <form action="/entrar/admin/centraladmin/usuario/editar/<%= user.id %>?_method=PUT" method="post">
     <div>
         <label for="nome">Nome</label>
         <input type="text" name="nome" id="nome" value="<%= user.nome %>" />
     </div>
     <div>
         <label for="email">Email</label>
-        <input type="email" name="email" id="email" />
-    </div>
-    <div>
-        <label for="password">Senha</label>
-        <input type="password" name="senha" id="senha" />
+        <input type="email" name="email" id="email" value="<%= user.email %>" />
     </div>
     <button type="submit">Salvar Alterações</button>
     </form>

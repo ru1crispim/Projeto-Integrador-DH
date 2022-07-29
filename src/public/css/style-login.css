@@ -176,11 +176,11 @@ list-style-type: none; /* Retirar o estilo da lista  */
     opacity: 0.9;
 }
 
-form,#senha,#login{
-    font-size: 20px;
+form,#senha,#login, #name{
+    font-size: 17px;
 }
 
-#login, #senha, #email, #nome{
+#login, #senha, #email, #nome, #name{
     border: solid 2px black;
     border-radius: 5%;
 }

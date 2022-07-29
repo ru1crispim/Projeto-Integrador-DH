@@ -4,29 +4,58 @@ const produtosJson = path.join('produtos.json')
 // const Product = require('../models/Products.model');
 const {validationResult}= require('express-validator');
 const db = require('../models');
+const Sequelize = require('sequelize');
+const Op = Sequelize.Op;
 
 const productController = {
-    products:(req,res)=>{
-        return res.render('product'); // /produtos
+
+    viewProducts: async (req,res)=>{
+        let {page=1} = req.query;
+        try{
+            const {count:total, rows:products} = await db.Produtos.findAndCountAll({
+                limit: 5,
+                offset: (page - 1) * 5
+            })
+            let totalPages = Math.round(total / 5)
+            console.log(totalPages)
+            res.render('product', {products, totalPages});
+        }
+        catch(err){
+            console.log(err);
+        }
     },
 
-    view: async (req,res)=>{
-            try{
-                const products = await db.Produtos.findAll({
-                    raw: true,
-                })
-                console.log(products);
-                res.render('viewProduct', {products});
-            }
-            catch(err){
-                console.log(err);
-            }
-        // let registeredProduct = fs.readFileSync('produtos.json','utf-8');
-        // let registeredProductJson = JSON.parse(registeredProduct);
-        // console.log(registeredProductJson);
-        // res.render('viewProduct',{produtoJson:registeredProductJson})
+    viewCategories: async (req,res)=>{
+        try{
+            const products = await db.Produtos.findAll({
+                raw: true
+            });
+            let categories = [];
+            // for(var i=0; i <products.length; i++){
+            //     if(products[i].categoria == 'rpg'){
+            //         categories.push(products[i])
+            //     }
+            // }
+            console.log(categories)
+            return res.render('productCategories', {products})
+        }
+        catch(err){
+            console.log(err)
+        }
     },
 
+    viewAdmin: async (req,res)=>{
+        try{
+            const products = await db.Produtos.findAll({
+                raw: true,
+            })
+            console.log(products);
+            res.render('viewProduct', {products});
+        }
+        catch(err){
+            console.log(err);
+        }
+    },
 
     list: async (req,res)=>{
         try{
@@ -41,7 +70,51 @@ const productController = {
         }
     },
 
-    create:async (req,res)=>{
+    productDetail: async (req,res)=>{
+        try{
+            let {id} = req.params;
+
+            let product = await db.Produtos.findOne({
+                where:{
+                    id
+                }
+            })
+            return res.render('productDetail', {product})
+        }
+        catch(err){
+            console.log(err)
+        }
+    },
+
+    search: async (req,res)=>{
+        try{
+            let {key} = req.query;
+            const products = await db.Produtos.findAll({
+                where:{
+                    nome:{
+                        [Op.like]:`%${key}%`
+                    }
+                }
+            })
+            console.log(key)
+            return res.render('product', {products})
+        }catch(err){
+        console.log(err)
+        }
+    },
+
+    offers: async (req,res)=>{
+        try{
+
+
+            return res.render('productOffers')
+        }
+        catch(err){
+            console.log(err);
+        }
+    },
+
+    create:async (req,res,next)=>{
         try{
         const errors =validationResult(req);
         if(!errors.isEmpty()){
@@ -51,8 +124,6 @@ const productController = {
         if(!req.file){
             res.send("Você deve enviar um arquivo!");
         }
-        // let dadosJson = JSON.stringify({produtoNome,produtoCategoria,produtoValor,produtoUnidade,produtoQuantidade});
-        // fs.writeFileSync(produtosJson,dadosJson);
 
         const {produtoNome, produtoValor, produtoCategoria, produtoDescricao, produtoQuantidade,produtoConsole} = req.body;
 
@@ -126,8 +197,11 @@ const productController = {
         }
     },
 
-
+    offers: (req,res)=>{
+        
     }
+
+}
 
 
 module.exports=productController;

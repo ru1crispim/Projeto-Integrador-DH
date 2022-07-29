@@ -12,15 +12,15 @@
         <li>
             <p>Email: <%= users[i].email %></p>
             <p>Nome: <%= users[i].nome %></p>
-            <button><a href="/usuario/editar/<%= users[i].id %>">
+            <button><a href="/entrar/admin/centraladmin/usuario/editar/<%= users[i].id %>">
                 Editar Usuario
             </a></button>
-            <form action="/usuario/deletar/<%= users[i].id %>?_method=DELETE" method="post">
+            <form action="/entrar/admin/centraladmin/usuario/deletar/<%= users[i].id %>?_method=DELETE" method="post">
                 <button type="submit">Deletar Usuario</button>
             </form>
         </li>
         <% } %>
     </ul>
-    <button><a href="/usuario/cadastrar">Cadastrar novo Usuario</a></button>
+    <button><a href="/entrar">Cadastrar novo Usuario</a></button>
 </body>
 </html>

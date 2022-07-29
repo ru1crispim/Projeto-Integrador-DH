@@ -1,368 +1,51 @@
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    background-image: url('//www.wallpapersun.com/wp-content/uploads/2021/01/Gaming-Wallpaper-2-715x536.jpg');
-    background-attachment: fixed;
-    opacity: 0.92;
-    box-sizing: border-box;
-}
 
 
-.top-bar{
+main {
     display: flex;
-    flex-direction: row;
-    /* border: 1px solid black; */
-    height: 10vh;
-    box-sizing: border-box;
-    justify-content: space-around;
-    box-sizing: border-box;
-    background: black;
-}
-
-.logoPressStart{
-    width: 180px;
-}
-.navigation{
-    display: flex;
-    flex-direction: row;
-    
-    height: 10vh;
-    box-sizing: border-box;
-    width: 70%;
-    padding: 20px;
     justify-content: flex-start;
-    box-sizing: border-box;
+    background-color: rgb(80, 39, 117);
+    opacity: 0.9;
+}
+
+tr {
+    padding: 10px;
     font-size: 15px;
-    
-
+    color: white;
 }
 
-.navigation ul {
-display: flex;
-flex-direction: row;
-list-style-type: none; /* Retirar o estilo da lista  */
-
-}
-
-.navigation li a{
-    display: flex;
-    font-size: 20px;
-    font-weight: bold;
-    box-sizing: border-box;
-    margin-right: 150px;
-    color: yellow;
-    text-decoration: none;
-    
-    
-}
-.navigation li a:hover{
-    background-color: lightblue;
-
-}
-
-.navigation img{
-    width: 120px;
-    
-}
-
-.login{
-    display: flex;
-    flex-direction: row;
-    /* border: 1px solid black; */
+th {
     padding: 15px;
-    height: 10vh;
-    width: 30%;
-        justify-content: flex-end;
-    box-sizing: border-box;
-}
-.login a{
-    display: flex;
-    /* border: 1px solid black; */
-    padding: 10px;
-    box-sizing: border-box;
-    color: white;    
-}
-.login img{
-    width: px;
-
 }
 
-.gallery{
-    border: 4px solid black;
-    width: 650px;
-    height: 360px;
-    background-color: black;
-    box-sizing: border-box;
-    overflow: hidden;
-    margin-left: 30%;
-    box-sizing: border-box;   
-}
-
-.gallery .pictures{
-    display: flex;
-    width: 400%;
-    animation-name: animacao;
-    animation-duration: 20s;
-    animation-iteration-count: infinite;
-
-}
-
-.gallery .pictures img{
-    height: 38vh;
-    width: 25%;
-}
-
-
-.games{
-
-    /* border: 1px solid black; */
-    height: 90vh;
-    box-sizing: border-box;
-    justify-content: center;
-    text-align: center;
-    background-color: black;
-    color: white;
-}
-
-
-.gamesTitles{
-    /* border: 1px solid black; */
-    height: 15vh;
-    box-sizing: border-box;
-    text-align: center;
-    border: 2px solid;
-    font-family: 'impact';
-    font-size: 20px;
-    }
-
-.gamesCatalog{
-    display: flex;
-    /* border: 1px solid black; */
-    height: 70vh;
-    box-sizing: border-box;
-    text-align: center;
-    justify-content: center;
-    
-}
-.gamesCatalog div{
-    border: 1px solid black;
-    border-radius: 30px;  
-    background-color: #d3d3d3; 
-    color: black;
-    margin: 20px;
-    padding: 10px;
-    background-image: url(https://thumbs.dreamstime.com/b/aplica%C3%A7%C3%A3o-do-fundo-do-jogo-d-projeto-do-vetor-73750606.jpg);
-}
-
-.games img{
-    width: 100px;
-    border-radius: 110px;
-}
-
-.games button{
+ul{
     font-size: 15px;
-    border-radius: 50px;
-    background-color: white;
-    color: black;
-    border: 2px solid black;
+    color: white;
 }
 
-.consoles{
-    
-    /* border: 1px solid black; */
-    height: 90vh;
-    box-sizing: border-box;
-    justify-content: center;
-    text-align: center;
-    background-color: white;
-    color: black;
-}
-
-.consoleTitle{
-    height: 15vh;
-    box-sizing: border-box;
-    text-align: center;
-    border: 2px solid;
-    font-family: 'Impact';
-    font-size: 20px;
-}
-
-.consoleCatalog{
-    display: flex;
-    height: 70vh;
-    box-sizing: border-box;
-    text-align:center;
-    justify-content:space-around;
-}
-
-.consoleCatalog div{
-    border: 1px solid black;
-    width: 110vw;
-    border-radius: 30px;
-    background-color: #d3d3d3; 
-    color: black;
-    margin: 20px;
+.th {
     padding: 10px;
-    background-image: url(https://thumbs.dreamstime.com/b/aplica%C3%A7%C3%A3o-do-fundo-do-jogo-d-projeto-do-vetor-73750606.jpg);
 }
 
-.consoles img{
-    width: 200px;
-    border-radius: 200px;
-}
-
-.consoles button{
-    font-size: 20px;
-    border-radius: 50px;
-    background-color: black;
-    color: white;
-    border: 2px solid white;
-}
-.acessories{
-
-    /* border: 1px solid black; */
-    height: 90vh;
-    box-sizing: border-box;
-    justify-content: center;
-    text-align: center;
-    background-color: black;
-    color: white;
-}
-
-
-.acessoriesTitle{
-    /* border: 1px solid black; */
-    height: 15vh;
-    box-sizing: border-box;
-    text-align: center;
-    border: 2px solid;
-    font-family: 'impact';
-    font-size: 20px;
-    }
-
-.acessoriesCatalog{
+.pagination {
     display: flex;
-    /* border: 1px solid black; */
-    height: 70vh;
-    box-sizing: border-box;
-    text-align: center;
-    justify-content: center;
-    
-}
-.acessoriesCatalog div{
-    border: 1px solid black;
-    border-radius: 30px;  
-    background-color: #d3d3d3; 
-    color: black;
-    margin: 20px;
-    padding: 10px;
-    background-image: url(https://thumbs.dreamstime.com/b/aplica%C3%A7%C3%A3o-do-fundo-do-jogo-d-projeto-do-vetor-73750606.jpg);
-}
-
-.acessories img{
-    width: 200px;
-    border-radius: 110px;
-}
-
-.acessories button{
-    font-size: 18px;
-    border-radius: 70px;
-    background-color: white;
-    color: black;
-    border: 2px solid black;
-}
-
-.advertising{
-    height: 15vh;
-    box-sizing: border-box;
-    justify-content: center;
-    text-align: center;
-    background-color: white;
-    color: black;
-}
-
-.advertisingTitle{
-    /* border: 1px solid black; */
-    height: 3vh;
-    box-sizing: border-box;
-    text-align: center;
-    border: 2px solid;
-    font-family: 'impact';
-    font-size: 20px;
-    color: white;
-}
-
-.advertisingNew{
-    display: flex;
-    /* border: 1px solid black; */
-    height: 70vh;
-    box-sizing: border-box;
-    text-align: center;
+    flex-direction:row;
     justify-content: center;
 }
-
-
-/*.propagandaCOnteudo div{
-    border: 1px solid black;
-    width: 110vw;
-    border-radius: 30px;
-    background-color: #d3d3d3; 
-    color: black;
-    margin: 20px;
-    padding: 10px;
-}*/
-
-.advertising img{
-    width: 200px;
-    
-}
-
-.comeCheck{
-    height: 15vh;
-    box-sizing: border-box;
-    text-align: center;
-    border: 2px solid;
-    font-family:Arial, Helvetica, sans-serif;
-    font-size: 20px;
-    background-color: black;
-    color: white;
-}
-
-.baseboard{
-    display: flex;
-    flex-direction: row;
-    /* border: 1px solid black; */
-    height: 20vh;
-    box-sizing: border-box;
-    justify-content:space-around;
-    background-color: white;
-}
-.baseboardChild{
-    /* border: 1px solid black; */
-    height: 20vh;
-    padding: 10px;
-    box-sizing: border-box;
-    font-size: 15px;
-}
-.baseboard img{
-    width: 50px;
-}
-
-button{
-    color: white;
-    background-color: red;
-    border-radius: 10px;
+.page-item {
     padding: 5px;
 }
 
-/* Pagina Usado */
 
-/*.usadoPrincipal{
+.li_games {
     display: flex;
     flex-direction: column;
-    background-color: lightblue;
-    text-align: center;
-    justify-content: center;
-    height:70vh;
+    color: white;
+    font-size: 15px;
+    border: 2px;
     padding: 10px;
-    box-sizing: border-box;
-}*/
+}
+
+.pacman {
+    display: flex;
+
+}
