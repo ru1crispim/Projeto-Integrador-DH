@@ -4,13 +4,13 @@ module.exports = {
   async up (queryInterface, Sequelize) {
     await queryInterface.createTable('Ofertas', {
       id: {
-        type:DataType.INTEGER,
+        type:Sequelize.INTEGER,
         primaryKey:true,
         autoIncrement:true
       },
-      active:true,
-      inactive:false, //como alterar para true or false
-      discount:DataType.STRING
+      active:Sequelize.BOOLEAN,
+      inactive:Sequelize.BOOLEAN, //como alterar para true or false
+      discount:Sequelize.STRING
     },{
     timestamps: false
     })

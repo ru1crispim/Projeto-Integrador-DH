@@ -1,22 +1,24 @@
 'use strict';
 
+const { sequelize } = require("../../models");
+
 module.exports = {
   async up (queryInterface, Sequelize) {
     await queryInterface.createTable('Clientes', { id:{
-      type:DataType.INTEGER, 
+      type:Sequelize.INTEGER, 
       primaryKey:true,
       unique:true,
       autoIncrement:true
   },
-  nome:DataType.STRING,  
-  sobrenome: DataType.STRING,
+  nome:Sequelize.STRING,  
+  sobrenome: Sequelize.STRING,
   email:{
-      type:DataType.STRING,
+      type:Sequelize.STRING,
       allowNull:false  
   },
-  cpf: DataType.INTEGER,
-  telefone: DataType.INTEGER,
-  data_nascimento:DataType.DATE
+  cpf: Sequelize.INTEGER,
+  telefone: Sequelize.INTEGER,
+  data_nascimento:Sequelize.DATE
     }, {
       timestamps: false
       });

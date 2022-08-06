@@ -1,11 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Listar Clientes</title>
-</head>
+<!-- http://localhost:3000/clientes    rota para acessar essa pagina não está funcionando a rota -->
+
+<%- include('../partials/head') %>
+<%- include('../partials/header') %>
+<link rel="stylesheet" href="/css/view/clientes/style-listClients.css">;
 <body>
     <ul>
     <% for(let i = 0; i < users.length; i++) { %>
@@ -27,5 +24,6 @@
         <% } %>
     </ul>
     <button><a href="/clientes/cadastrar">Cadastrar novo Usuario</a></button>
+<%- include('../partials/footer') %>
 </body>
 </html>

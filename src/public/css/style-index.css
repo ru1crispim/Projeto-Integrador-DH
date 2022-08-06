@@ -351,6 +351,7 @@ footer{
     box-sizing: border-box;
     justify-content:space-around;
     background-color: white;
+    margin: 10px;
 }
 .footerChild{
     /* border: 1px solid black; */
