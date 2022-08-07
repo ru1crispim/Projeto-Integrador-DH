@@ -8,10 +8,11 @@ module.exports = (sequelize, DataType)=>{
         },
         nome:DataType.STRING,   
         categoria: DataType.STRING,
-        valor:DataType.INTEGER,
+        valor:DataType.DECIMAL,
         descricao: DataType.STRING,
         quantidade: DataType.INTEGER,
-        console: DataType.STRING
+        console: DataType.STRING,
+        imagem:DataType.STRING
     }, {
         
         timestamps:false 

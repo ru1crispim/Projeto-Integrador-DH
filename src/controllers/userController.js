@@ -155,7 +155,7 @@ const userController = {
         }
         console.log(admin, 'fdsafdsfsfsdfsf')
         const adminPassword = bcrypt.compareSync(password, admin.senha)
-        if(adminPassword === false){
+        if(!adminPassword){
             return res.send('Senha de administrador inválida')
         }
         

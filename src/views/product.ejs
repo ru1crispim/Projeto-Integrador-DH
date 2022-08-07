@@ -1,6 +1,8 @@
 
 <%- include('./partials/head') %>
 <link rel="stylesheet" href="/css/style-productListing.css">
+
+<script src="/javascript/cart.js"></script>
 <%- include('./partials/header') %>
 <body>
     <main>
@@ -18,18 +20,34 @@
                             <th scope="col" class="th">Nome</th>
                             <th scope="col" class="th">Categoria</th>
                             <th scope="col" class="th">Valor</th>
-                            <th scope="col" class="th">Descrição</th>
-                            <th scope="col" class="th">Console</th>
+                            <!-- <th scope="col" class="th">Descrição</th>
+                            <th scope="col" class="th">Console</th> -->
                             <th scope="col" class="th">Ações</th>
+                            <th scope="col" class="th">Comprar</th>
                         </tr>
                     </thead>
                     <tbody>
                         <% for(let i = 0; i < products.length; i++) { %>
                             <tr>
-                                <th scope="row"><%= products[i].nome %></th>
-                                <th scope="col"><%= products[i].categoria %></th>
-                                <th scope="col"><%= products[i].valor %></th>
-                                <th scope="col"><a href="/allproducts/detail/<%= products[i].id %>" target="_blank">Ver Dados</a></th>
+                                <td scope="row"><%= products[i].nome %></td>
+                                <td scope="col"><%= products[i].categoria %></td>
+                                <td scope="col"><%= products[i].valor %></td>
+                                <td scope="col"><a href="/allproducts/detail/<%= products[i].id %>" target="_blank">Ver Dados</a></td>
+                                <td>
+                                    <button 
+                                        type="button"
+                                        onclick="handleAddCart({
+                                            id: <%= products[i].id %>, 
+                                            name:'<%= products[i].nome %>', 
+                                            value: <%= products[i].valor %>, 
+                                            genre: '<%= products[i].categoria %>', 
+                                            description: '<%= products[i].descricao %>', 
+                                            image: '<%= products[i].imagem %>'
+                                        })"
+                                    >
+                                        Adicionar ao Carrinho
+                                    </button>
+                                </td>
                             </tr>
                         <% } %>
                     </tbody>
