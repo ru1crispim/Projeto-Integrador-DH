@@ -1,0 +1,17 @@
+#jogosrpg{
+    display: none;
+}
+
+#jogosfps{
+    display: none;
+}
+
+main{
+    font-size: 20px;
+    background-color: aquamarine;
+    opacity: 0.9;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

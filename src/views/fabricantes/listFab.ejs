@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fabricantes</title>
+</head>
+<body>
+    <ul>
+    <% for(let i = 0; i < developers.length; i++) { %>
+        <ol>
+            <p>Nome: <%= developers[i].nome %></p>
+            <form action="/fabricantes/deletar/<%= developers[i].id %>?_method=DELETE" method="post">
+                <button type="submit">Deletar Usuario</button>
+            </form>
+        </ol>
+        <% } %>
+    </ul>
+    <button><a href="fabricantes/cadastrar">Cadastrar novo Fabricante</a></button>
+</body>
+</html>

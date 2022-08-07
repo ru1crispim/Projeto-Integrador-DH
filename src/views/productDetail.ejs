@@ -1,0 +1,24 @@
+
+<%- include('./partials/head') %>
+<link rel="stylesheet" href="/css/style-productListing.css">
+<%- include('./partials/header') %>
+<body>
+    <main>
+        <div class="games">
+            <h1>Informações do Produto</h1>
+                <ul>
+                    <li><%= product.nome %></li>
+                    <li><%= product.categoria %></li>
+                    <li><%= product.valor %></li>
+                    <li><%= product.descricao %></li>
+                    <li><%= product.quantidade %></li>
+                    <li><%= product.console %></li>
+                    <li>
+                        <img src="/productsImg/<%= product.imagem %>" alt="">
+                    </li>
+                </ul>
+        </div>
+    </main>
+<%- include('./partials/footer') %>
+</body>
+</html>

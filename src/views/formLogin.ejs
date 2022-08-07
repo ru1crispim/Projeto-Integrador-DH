@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro</title>
     <link rel="stylesheet" href="/css/style-formLogin.css">
+    <script src="/javascript/zipCodeUsers.js" defer></script>
 </head>
 <body>
     
@@ -90,12 +91,12 @@
                 <br>
                 <div class="campo">
                     <label for="nome">CEP:</label>
-                    <input type="number" name="CEP"size="40" maxlength="100" >
+                    <input type="number" name="CEP"size="40" maxlength="100" id="cep" >
                 </div>
                 <br>
                 <div class="campo">
                     <label for="nome">Endereço:</label>
-                    <input type="text" name="endereco" size="40" maxlength="100" >
+                    <input type="text" name="endereco" size="40" maxlength="100" id="endereco">
                 </div>
                 <br>
                 <div class="campo">
@@ -110,17 +111,18 @@
                 <br>
                 <div class="campo">
                     <label for="nome">Bairro:</label>
-                    <input type="text" name="bairro" size="40" maxlength="100" >
+                    <input type="text" name="bairro" size="40" maxlength="100" id="bairro">
                 </div>
                 <br>
                 <div class="campo">
                     <label for="nome">Cidade:</label>
-                    <input type="text" name="cidade" size="40" maxlength="100" >
+                    <input type="text" name="cidade" size="40" maxlength="100" id="cidade">
                 </div>
                 <br>
                 <div class="campo">
                     <label for="nome">Estado:</label>
-                <select class="select-state valid" id="AddOrSetAddress-0-State" name="state" data-required="true">
+                    <input type="text" name="state" size="40" maxlength="100" id="estado">
+                <!-- <select class="select-state valid" id="AddOrSetAddress-0-State" name="state" data-required="true">
                     <option value="">UF</option>
                     <option value="AC" reference="AC">AC</option>
                     <option value="AL" reference="AL">AL</option>
@@ -149,7 +151,7 @@
                     <option value="SP" reference="SP">SP</option>
                     <option value="SE" reference="SE">SE</option>
                     <option value="TO" reference="TO">TO</option>
-                    </select>
+                    </select> -->
                 </div>
                 <br>
                 <div class="campo">

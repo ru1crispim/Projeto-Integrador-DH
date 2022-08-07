@@ -1,0 +1,50 @@
+<%- include('./partials/head') %>
+<%- include('./partials/header') %>
+<link rel="stylesheet" href="/css/style-productCategories.css">
+<body>
+    <main>
+        <h1>Categorias</h1>
+        <div id="rpg">
+        <p>RPG - 
+        <hr><span id="textorpg">Conheça nossos jogos de RPG</span>
+        <span id="jogosrpg">
+            <% let categories = []; %>
+            <% for(var i=0; i < products.length; i++ ){ %>
+                <% if(products[i].categoria == 'rpg'){ %>
+                <% categories.push(products[i]) %>
+                    <p>Nome: <%= products[i].nome %></p>
+                    <p>Categoria: <%= products[i].categoria %></p>
+                    <p>Valor: <%= products[i].valor %></p>
+                    <p>Descrição: <%= products[i].descricao %></p>
+                    <p>Console: <%= products[i].console %></p>
+                    <br>
+                <% } %>
+            <% } %>
+        <hr> Adquira já o seu!</span> 
+    </p>
+    <button id="mostrarJogosrpg" onclick="mostrarJogosRPG()">Mostrar Jogos</button>
+    <br></div>
+    <div id="fps">
+    <p>FPS - 
+    <hr><span id="textofps">Conheça nossos jogos de FPS</span>
+    <span id="jogosfps">
+            <% for(var i=0; i < products.length; i++ ){ %>
+                <% if(products[i].categoria == 'fps'){ %>
+                <% categories.push(products[i]) %>
+                    <p>Nome: <%= products[i].nome %></p>
+                    <p>Categoria: <%= products[i].categoria %></p>
+                    <p>Valor: <%= products[i].valor %></p>
+                    <p>Descrição: <%= products[i].descricao %></p>
+                    <p>Console: <%= products[i].console %></p>
+                    <br>
+                <% } %>
+            <% } %>
+    <hr> Adquira já o seu!</span> 
+</p>
+<button id="mostrarJogosfps" onclick="mostrarJogosFPS()">Mostrar Jogos</button>
+<hr></div>
+    </main>
+
+<script src="/javascript/productCategories.js"></script>
+<%- include('./partials/footer') %>
+</body>

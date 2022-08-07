@@ -45,24 +45,20 @@ const validacoes = [
 //multer
 
 
-router.get('/usuario',userController.userName);
+router.get('/usuario', auth, userController.userName);
 
 router.get('/entrar',  userController.login) // carrega a rota entrar , com a view login
+router.post('/entrar/registrado', userController.registerDb);
 router.get('/formlogin', userController.formLogin);
-router.post('/formLogin/cadastrado', validacoes, userController.register);
 router.post('/usuariologado', userController.loginUser);
 
-router.get('/usuario/listar', userController.listar);
-
-router.get('/usuario/editar/:id', userController.directToEdit);
-router.put('/usuario/editar/:id', userController.update);
-
-router.get('/usuario/cadastrar', userController.accesRegisterdB);
-router.post('/usuario/cadastrar', userController.registerDb);
-
-router.delete('/usuario/deletar/:id', userController.destroy)
-
-router.get('/entrar', userController.login); // carrega a rota entrar , com a view login
+router.get('/entrar/admin', userController.AcessAdmin);
+router.post('/entrar/admin/centralAdmin', userController.loginAdmin);
+router.get('/entrar/admin/centraladmin/usuario/listar', userController.listar);
+router.get('/entrar/admin/centraladmin/usuario/editar/:id', userController.directToEdit);
+router.put('/entrar/admin/centraladmin/usuario/editar/:id', userController.update);
+router.delete('/entrar/admin/centraladmin/usuario/deletar/:id', userController.destroy)
+ // carrega a rota entrar , com a view login
 
 // router.get('/cadastrar',userController.cadastro);
 

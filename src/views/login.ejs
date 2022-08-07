@@ -57,15 +57,23 @@
                     </div>
                 <div class="naocadastrado">
                     <h2 class="escrito">Não sou cadastrado</h2>
+                    <form action="/entrar/registrado" method="post">
+                        <label for="nome">Nome:</label>
+                        <input type="text" name="nome" id="name" placeholder="Digite seu nome Completo">
+                        <label for="login">Email:</label>
+                        <input type="email" id="login" name="email" placeholder="Digite seu Email" />
+                        <br><br>
+                        <label for="senha"> Senha:</label>
+                        <input type="password" id="senha" name="password" placeholder="Digite sua Senha" />
                     <p class="pncadastrado">Cadastre-se agora em nossa loja, é seguro, rápido e fácil</p>
-                    <a href="/formLogin" title="Cadastre-se"> <!-- colocar caminho certo no href -->
                         <button type="submit" id="Cadastre-se">Cadastre-se</button>
                         </a>
+                    </form>
                 </div>
         </section>
         <div class="ofertas">
             <span>Inscreva-se e receba ofertas exclusivas!</span>
-            <form class="cadastrar" action="entrar/formLogin" method="post">
+            <form class="cadastrar" action="#" method="post">
                 <input type="text" id="nome" name="nome" placeholder="Nome">
                 <input type="email" id="email" name="email" placeholder="E-mail">
                 <button>Cadastrar</button>
