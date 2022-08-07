@@ -66,7 +66,8 @@ list-style-type: none; /* Retirar o estilo da lista  */
   
 }
 .navigation li a:hover{
-   background-color: lightblue;
+   
+   transform: scale(1.5);
 
 }
 
@@ -96,6 +97,11 @@ list-style-type: none; /* Retirar o estilo da lista  */
     width: px;
 
 }
+.login a:hover{
+   
+    transform: scale(1.5);
+ 
+ }
 .video{
     display: flex;
     flex-direction: row;
@@ -235,6 +241,18 @@ list-style-type: none; /* Retirar o estilo da lista  */
     padding: 10px;
 }
 
+.popularCatalog div:hover{
+   background-color: lightblue;
+   transform: scale(1.5);
+
+}
+
+.catalogNews div:hover{
+    background-color: lightblue;
+    transform: scale(1.5);
+ 
+ }
+
 .popular img{
     width: 100px;
 }
@@ -316,7 +334,7 @@ list-style-type: none; /* Retirar o estilo da lista  */
     box-sizing: border-box;
     text-align: center;
     }
-    .novidadesTitulo h2{
+    .newTitles h2{
         color: white;
         }
 
