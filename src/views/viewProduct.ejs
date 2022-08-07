@@ -8,11 +8,8 @@
         <% for(let i = 0; i < products.length; i++) { %>
             <li class="productsList">
             <p>Nome: <%= products[i].nome %></p>
-            <p>Categoria: <%= products[i].categoria %></p>
             <p>Valor: <%= products[i].valor %></p>
-            <p>Descrição: <%= products[i].descricao %></p>
             <p>Quantidade: <%= products[i].quantidade %></p>
-            <p>Console: <%= products[i].console %></p>
             <button><a href="/productform/update/<%= products[i].id %>">
                 Editar Produto
             </a></button>

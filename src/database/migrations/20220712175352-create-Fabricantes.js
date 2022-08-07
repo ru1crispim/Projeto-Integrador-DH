@@ -4,11 +4,11 @@ module.exports = {
   async up (queryInterface, Sequelize) {
     await queryInterface.createTable('Fabricantes', {
       id:{
-          type:DataType.INTEGER, 
+          type:Sequelize.INTEGER, 
           primaryKey:true,
           autoIncrement:true
       },
-      nome:DataType.STRING
+      nome:Sequelize.STRING
     }, {
       timestamps: false
     });

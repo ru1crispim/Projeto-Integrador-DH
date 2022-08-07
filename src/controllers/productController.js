@@ -16,7 +16,7 @@ const productController = {
                 limit: 5,
                 offset: (page - 1) * 5
             })
-            let totalPages = Math.round(total / 5)
+            let totalPages = Math.round(total / 5);
             console.log(totalPages)
             res.render('product', {products, totalPages});
         }
@@ -88,16 +88,19 @@ const productController = {
 
     search: async (req,res)=>{
         try{
-            let {key} = req.query;
-            const products = await db.Produtos.findAll({
+            
+            let {page=1, key} = req.query;
+            const {count:total, rows:products} = await db.Produtos.findAndCountAll({
+                limit: 5,
+                offset: (page - 1) * 5,
                 where:{
                     nome:{
                         [Op.like]:`%${key}%`
                     }
                 }
             })
-            console.log(key)
-            return res.render('product', {products})
+            let totalPages = Math.round(total / 5);
+            return res.render('product', {products, totalPages})
         }catch(err){
         console.log(err)
         }
@@ -124,7 +127,8 @@ const productController = {
         if(!req.file){
             res.send("Você deve enviar um arquivo!");
         }
-
+        const {originalname, filename} = req.file
+        console.log({originalname, filename});
         const {produtoNome, produtoValor, produtoCategoria, produtoDescricao, produtoQuantidade,produtoConsole} = req.body;
 
         const result = await db.Produtos.create({
@@ -133,7 +137,8 @@ const productController = {
             categoria: produtoCategoria,
             descricao: produtoDescricao,
             quantidade: produtoQuantidade,
-            console: produtoConsole
+            console: produtoConsole,
+            imagem: filename
         });
 
         res.render('successfullProductRegistration');
