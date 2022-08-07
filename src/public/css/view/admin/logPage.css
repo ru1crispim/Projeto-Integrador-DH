@@ -47,7 +47,7 @@ form {
     padding-bottom: 15px;
 }
 
-#nome, #password {
+#email, #password {
     border: solid 2px black;
     border-radius: 6px;
     width: 250px;

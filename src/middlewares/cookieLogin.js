@@ -1,13 +1,19 @@
 const fs = require('fs')
 const path = require('path')
-const cookieLogin = (req, res, next)=>{
-    if(req.cookies.logado != undefined && req.session.usuario == null || undefined){
-        let email = req.cookies.logado;
-        let usuario = JSON.parse(fs.readFileSync(path.join('usuarios.json'), {encoding:'utf-8'}))
+const db = require('../models')
 
-        if(usuario.email == email){
-            req.session.usuario = usuario
-        } //login de usuário recuperando do arquivo.json
+const cookieLogin = async (req, res, next)=>{
+    if(req.cookies.logado != undefined && req.session.user == null || undefined){
+        let email = req.cookies.logado;
+        let user = await db.Usuarios.findOne({
+            where: {
+                email: email
+            }
+        })
+        console.log(user)
+        if(user.email == email){
+            req.session.user = user
+        }
     }
     next();
 
