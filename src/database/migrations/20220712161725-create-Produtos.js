@@ -11,10 +11,11 @@ module.exports = {
       },
       nome:Sequelize.STRING,   
       categoria: Sequelize.STRING,
-      valor:Sequelize.INTEGER,
+      valor:Sequelize.DECIMAL,
       descricao: Sequelize.STRING,
       quantidade: Sequelize.INTEGER,
-      console: Sequelize.STRING
+      console: Sequelize.STRING,
+      imagem: Sequelize.STRING
   }, {
       
       timestamps:false 
