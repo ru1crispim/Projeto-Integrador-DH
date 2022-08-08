@@ -1,3 +1,5 @@
+// Codigo referente ao Carrinho
+
 const KEYCART = '@games:cart'
 
 function handleAddCart ({id, name, value, genre, description, image}) {
