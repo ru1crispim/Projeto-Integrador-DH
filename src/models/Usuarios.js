@@ -1,10 +1,3 @@
-// const {Sequelize, DataType} = require('sequelize');
-// const databaseConfig = require('../configs/database');
-
-// const connection =  new Sequelize(databaseConfig);
-
-
-
 module.exports = (sequelize, DataType)=>{
     const Usuarios = sequelize.define('Usuarios',{
         id:{

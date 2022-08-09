@@ -6,8 +6,7 @@ module.exports = (sequelize, DataType)=>{
             autoIncrement:true
         },
         active:true,
-        inactive:false, //como alterar para true or false
-        discount:DataType.STRING
+        discount:DataType.FLOAT
     },{
         timestamps:false
     }) 
