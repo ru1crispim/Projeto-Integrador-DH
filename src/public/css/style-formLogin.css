@@ -137,9 +137,9 @@ list-style-type: none; /* Retirar o estilo da lista  */
 }
 
 .cadastraUsuario{
-    position: absolute;
-    margin-top: 160px;
+    margin-top: 120px;
     width: 10rem;
+    height: 50px;
 }
 
 button{
@@ -153,9 +153,6 @@ button{
     color: white;
     box-sizing: border-box;
 }
-
-
-
 
 
 

@@ -203,7 +203,12 @@ const productController = {
     },
 
     offers: (req,res)=>{
-        
+        try{
+            return res.render('productOffers')
+        }
+        catch(err){
+            console.log(err)
+        }
     }
 
 }
