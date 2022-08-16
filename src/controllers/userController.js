@@ -158,6 +158,8 @@ const userController = {
         if(!adminPassword){
             return res.send('Senha de administrador inválida')
         }
+
+        // comentado da da linha 147 a 160 para tela centralAdmin abrir no navegador
         
         return res.render('admin/centralAdmin')
     }
