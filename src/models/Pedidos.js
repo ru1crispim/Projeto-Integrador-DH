@@ -5,12 +5,12 @@ module.exports = (sequelize, DataType) => {
             primaryKey: true,
             autoIncrement: true
         },
-            numero_pedido: DataType.INTERGER,
-            tipo_pagamento: DataType.STRING,
             valor_total: DataType.FLOAT,
-            endereco: DataType.STRING
+            endereco_cobranca: DataType.STRING,
+            endereco_entrega: DataType.STRING,
+            codigo_status: true
     },{
         timestamps: false
-    })
+    }) //relacionamento com clientes_id, clientes_usuarios_id, endereco_id
     return Pedidos;
 }

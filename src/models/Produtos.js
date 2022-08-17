@@ -7,15 +7,14 @@ module.exports = (sequelize, DataType)=>{
             autoIncrement:true
         },
         nome:DataType.STRING,   
-        categoria: DataType.STRING,
         valor:DataType.DECIMAL,
+        categoria: DataType.STRING,
         descricao: DataType.STRING,
         quantidade: DataType.INTEGER,
         console: DataType.STRING,
         imagem:DataType.STRING
-    }, {
-        
+    },{        
         timestamps:false 
-    })
+    }) //relacionamento com pedidos_id, fabricantes_id, ofertas_id
     return Produtos; 
 }

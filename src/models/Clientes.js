@@ -15,9 +15,9 @@ module.exports = (sequelize, DataType)=>{
         cpf: DataType.INTEGER,
         telefone: DataType.INTEGER,
         data_nascimento:DataType.DATE
-    }, {
+    },{
         
         timestamps:false 
-    })
+    }) //relacionamento com usuario_id
     return Clientes; 
 }

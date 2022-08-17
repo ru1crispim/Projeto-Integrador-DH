@@ -6,15 +6,14 @@ module.exports = (sequelize, DataType)=>{
             unique:true,
             autoIncrement:true
         },
-        nome:DataType.STRING,   
         email:{
             type:DataType.STRING,
             allowNull:false  
         },
-        senha:DataType.STRING
-    }, {
-        
+        senha:DataType.STRING,
+        admin: false
+    },{      
         timestamps:false 
-    })
+    }) 
     return Usuarios; 
 }
