@@ -7,6 +7,9 @@ module.exports = (sequelize, DataType) =>{
         }
     },{
         timestamps: false
-    }) //relacionamento com pedidos_id, produtos_id, produtos_pedidos_id
+    }) 
+        ItemPedido.associate = (models) => {
+            ItemPedido.belongsTo(models.Pedido)
+    }
     return ItemPedido
 }
