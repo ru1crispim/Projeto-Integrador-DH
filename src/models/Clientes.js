@@ -18,6 +18,28 @@ module.exports = (sequelize, DataType)=>{
     },{
         
         timestamps:false 
-    }) //relacionamento com usuario_id
+    }) 
+        Clientes.associate = (models) => {
+            Clientes.hasOne(models.Usuarios,{
+                foreignKey: 'id'
+            })
+        }
+        Clientes.belongsTo(Usuarios);
+
+        Clientes.associate = (models) => {
+            Clientes.hasMany(models.Enderecos,{
+                foreignKey: 'id'
+            })
+        Clientes.belongsToMany(Enderecos, {through:'Pedidos'}) 
+        }
+
+        Clientes.associate = (models) => {
+            Clientes.hasMany(models.Pedidos,{
+                foreignKey: 'id'
+            })
+        Clientes.belongsToMany(Pedidos, {through: 'Usuarios'}) 
+        }
+
+
     return Clientes; 
 }

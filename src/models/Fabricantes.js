@@ -9,5 +9,11 @@ module.exports = (sequelize, DataType)=>{
     }, {
         timestamps:false 
     })
+        Fabricantes.associate = (models) => {
+            Fabricantes.hasMany(models.Produtos,{
+            foreignKey: 'id'
+        })
+        Fabricantes.belongsToMany(Produtos, {through: 'ItemPedido'})
+}
     return Fabricantes; 
 }

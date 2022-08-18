@@ -10,5 +10,11 @@ module.exports = (sequelize, DataType)=>{
     },{
         timestamps:false
     }) 
+        Ofertas.associate = (models) => {
+            Ofertas.hasMany(models.Produtos,{
+            foreignKey: 'id'
+        })
+        Ofertas.belongsToMany(Produtos, {through: 'ItemPedido'})
+    }
     return Ofertas
 }

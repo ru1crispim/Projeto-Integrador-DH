@@ -15,6 +15,12 @@ module.exports = (sequelize, DataType)=>{
         imagem:DataType.STRING
     },{        
         timestamps:false 
-    }) //relacionamento com pedidos_id, fabricantes_id, ofertas_id
+    }) 
+        Produtos.associate = (models) => {
+            Produtos.hasMany(models.ItemPedido,{
+            foreignKey: 'id'
+        })
+        ItemPedido.belongsToMany(Produtos, {through: 'Pedidos'})
+    }
     return Produtos; 
 }
