@@ -8,8 +8,8 @@ module.exports = (sequelize, DataType) =>{
     },{
         timestamps: false
     }) 
-        ItemPedido.associate = (models) => {
-            ItemPedido.belongsTo(models.Pedido)
-    }
+    //     ItemPedido.associate = (models) => {
+    //         ItemPedido.belongsTo(models.Pedido)
+    // }
     return ItemPedido
 }

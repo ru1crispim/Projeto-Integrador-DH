@@ -15,17 +15,18 @@ module.exports = (sequelize, DataType)=>{
         bairro: DataType.STRING,
         cidade: DataType.STRING,
         estado: DataType.STRING,
-        referencia: DataType.STRING
+        referencia: DataType.STRING,
+        pedidos_id: DataType.INTERGER
     },{
         timestamps: false   
     }) 
-        Endereco.associate = (models) => {
-            Endereco.hasOne(models.Pedidos, {
-                foreignKey: 'Endereco_id'
-            })
-        Endereco.belongsTo(models.Pedidos)
+        // Endereco.associate = (models) => {
+        //     Endereco.hasOne(models.Pedidos, {
+        //         foreignKey: 'Endereco_id'
+        //     })
+        // Endereco.belongsTo(models.Pedidos)
 
-        Endereco.belongsTo(models.Clientes)
-        }
+        // Endereco.belongsTo(models.Clientes)
+        // }
     return Endereco
     }

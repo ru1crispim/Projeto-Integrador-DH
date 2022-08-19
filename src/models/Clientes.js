@@ -14,22 +14,25 @@ module.exports = (sequelize, DataType)=>{
         },
         cpf: DataType.INTEGER,
         telefone: DataType.INTEGER,
-        data_nascimento:DataType.DATE
+        data_nascimento:DataType.DATE,
+        usuario_id: DataType.INTERGER,
+        endereco_id: DataType.INTERGER,
+        pedidos_id: DataType.INTEGER
     },{
         
         timestamps:false 
     }) 
-        Clientes.associate = (models) => {
-            Clientes.hasOne(models.Usuarios,{
-                foreignKey: 'Usuarios_id'
-            })
-            Clientes.hasMany(models.Endereco,{
-                foreignKey: 'Clientes_id'
-            })
-            Clientes.hasMany(models.Pedidos,{
-                foreignKey: 'Clientes_id'
-            })
-        }       
+        // Clientes.associate = (models) => {
+        //     Clientes.hasOne(models.Usuarios,{
+        //         foreignKey: 'Usuarios_id'
+        //     })        
+        //     Clientes.hasMany(models.Endereco,{
+        //         foreignKey: 'Clientes_id'
+        //     })
+        //     Clientes.hasMany(models.Pedidos,{
+        //         foreignKey: 'Clientes_id'
+        //     })
+        // }       
 
     return Clientes; 
 }

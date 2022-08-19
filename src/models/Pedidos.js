@@ -5,17 +5,18 @@ module.exports = (sequelize, DataType) => {
             primaryKey: true,
             autoIncrement: true
         },
-            valor_total: DataType.FLOAT,
-            endereco_cobranca: DataType.STRING,
-            endereco_entrega: DataType.STRING,
-            codigo_status: true
+        valor_total: DataType.FLOAT,
+        endereco_cobranca: DataType.STRING,
+        endereco_entrega: DataType.STRING,
+        codigo_status: true,
+        ItemPedido_id: DataType.INTEGER
     },{
         timestamps: false
     })
-        Pedidos.associate = (models) => {
-            Pedidos.hasMany(models.ItemPedido,{
-            foreignKey: 'Pedidos_id'
-        })
-    }      
+    //     Pedidos.associate = (models) => {
+    //         Pedidos.hasMany(models.ItemPedido,{
+    //         foreignKey: 'Pedidos_id'
+    //     })
+    // }      
     return Pedidos;
 }

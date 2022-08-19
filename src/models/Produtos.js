@@ -12,17 +12,18 @@ module.exports = (sequelize, DataType)=>{
         descricao: DataType.STRING,
         quantidade: DataType.INTEGER,
         console: DataType.STRING,
-        imagem:DataType.STRING
+        imagem:DataType.STRING,
+        itemPedido_id: DataType.INTEGER
     },{        
         timestamps:false 
     }) 
-        Produtos.associate = (models) => {
-            Produtos.belongsTo(models.ItemPedido,{
-            foreignKey: 'Produtos_id'
-        })
+    //     Produtos.associate = (models) => {
+    //         Produtos.belongsTo(models.ItemPedido,{
+    //         foreignKey: 'Produtos_id'
+    //     })
         
-        Fabricantes.belongsToMany(models.Produtos)
-        Produtos.belongsToMany(models.Ofertas)
-    }
+    //     Fabricantes.belongsToMany(models.Produtos)
+    //     Produtos.belongsToMany(models.Ofertas)
+    // }
     return Produtos; 
 }

@@ -6,14 +6,15 @@ module.exports = (sequelize, DataType)=>{
             autoIncrement:true
         },
         active:true,
-        discount:DataType.FLOAT
+        discount:DataType.FLOAT,
+        produtos_id: DataType.INTERGER
     },{
         timestamps:false
     }) 
-        Ofertas.associate = (models) => {
-            Ofertas.hasMany(models.Produtos,{
-            foreignKey: 'Produtos_Ofertas1_id'
-        })
-    }
+    //     Ofertas.associate = (models) => {
+    //         Ofertas.hasMany(models.Produtos,{
+    //         foreignKey: 'Produtos_Ofertas1_id'
+    //     })
+    // }
     return Ofertas
 }
