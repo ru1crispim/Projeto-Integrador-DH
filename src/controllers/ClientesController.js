@@ -44,6 +44,7 @@ const ClientesController = {
                 console.log(err)
             }
     },
+
     DirectToUpdate: async (req,res)=>{
         try{
         const {id} = req.params;
@@ -55,6 +56,7 @@ const ClientesController = {
             console.log(err)
         }
     },
+
     update: async(req,res)=>{
         try{
             const {id} = req.params;
