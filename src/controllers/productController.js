@@ -199,6 +199,10 @@ const productController = {
     }
         catch(err){
             console.log(err)
+<<<<<<< HEAD
+    }
+}
+=======
         }
     },
 
@@ -206,7 +210,7 @@ const productController = {
         
     }
 
+>>>>>>> parent of ee96458 (Alterações CSS homepage)
 }
 
-
-module.exports=productController;
+module.exports=productController

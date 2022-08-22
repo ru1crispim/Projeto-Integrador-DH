@@ -10,22 +10,9 @@
 </head>
 <body>
     
-    <header class="cabecalho">
-        <a href=""><img class="logoPressStart" src="/img/logo-loja-br.png" alt="logo-loja"></a>
-        <div class="navegacao">
-            <ul>
-                <li><a href="/index">Inicio</a></li>
-                <li><a href="/allproducts">Jogos</a></li>
-                <li><a href="/contato">Contato</a></li>
-                <li><a href="/produtosusados">Orçamentos</a></li>              
-            </ul>
-        </div>
-        <div class="login">
-            <a href="/entrar">Entrar</a>
-            <a href="/formLogin">Crie sua conta</a>
-            <a href="./login.html"><img src="/img/login.png" alt="login"></a>
-        </div>
-    
+    <header>
+        <%- include('./partials/head') %>
+        <%- include('./partials/header') %>
     </header>
         <div class="superior">
             <div class="historico">
@@ -41,25 +28,29 @@
                     <% } %>
             </div>
         </div>
-        <form class="camposCadastro" method="post" action="/formLogin/cadastrado">
-            <fieldset class="grupoUm">
+        
+        
+        <form method="post" action="/clientes/cadastrar">
+            <div class="mainForm">
+            <div class="grupoUm">
+            <fieldset>
                 <span class="info"><strong> Dados pessoais:</strong></span>
-                <div class="campo">
+                
                     <label for="nome">Nome:</label>
                     <input type="text" name="nome" size="40" maxlength="100" >
-                </div>
+                
                 <br>
-                <div class="campo">
+                
                     <label for="sobrenome">Sobrenome:</label>
                     <input type="text" name="sobrenome" size="40" maxlength="100" >
-                </div>
+                
                 <br>
-                <div class="campo">
+                
                     <label for="nome">Data de Nascimento:</label>
-                    <input type="date" name="birthdate" size="40" maxlength="100" >
-                </div>
+                    <input type="date" name="date" size="40" maxlength="100" >
+                
                 <br>
-                <div class="campo">
+                
                     <label for="nome" >Sexo:</label>
                     <select name="sexo">
                         <option value>Selecione</option>
@@ -67,120 +58,75 @@
                         <option value="M" reference="M">Masculino</option>
                         <option value="N" reference="N">Não Informado</option>
                     </select>
-                </div>
+                
                 <br>
-                <div class="campo">
+                
                     <label for="nome">CPF:</label>
-                    <input type="number" name="CPF" size="40" maxlength="100" >
-                </div>
+                    <input type="number" name="cpf" size="40" maxlength="100" >
+                
                 <br>
-                <div class="campo">
+                
                     <label for="nome">Telefone Celular:</label>
-                    <input type="number" name="number" size="40" maxlength="100" >
+                    <input type="number" name="telefone" size="40" maxlength="100" >
                     <br>
                     <small>Ex: DDD + Telefone</small>
-                </div>
+                
                 <br>
             </fieldset>
-            <fieldset class="grupoDois">
+            </div>
+            <div class="grupoDois">
+            <fieldset>
                 <span class="info"><strong> Endereço:</strong></span>
-                <div class="campo">
-                    <label for="nome">Identificação:</label>
-                    <input type="text" name="nome" size="40" maxlength="100" >
-                </div>
                 <br>
-                <div class="campo">
+            
                     <label for="nome">CEP:</label>
                     <input type="number" name="CEP"size="40" maxlength="100" id="cep" >
-                </div>
+            
                 <br>
-                <div class="campo">
+            
                     <label for="nome">Endereço:</label>
                     <input type="text" name="endereco" size="40" maxlength="100" id="endereco">
-                </div>
+            
                 <br>
-                <div class="campo">
+            
                     <label for="nome">Número:</label>
                     <input type="text" name="enderecoNumber" size="40" maxlength="100" >
-                </div>
+            
                 <br>
-                <div class="campo">
+            
                     <label for="nome">Complemento:</label>
                     <input type="text" name="complemento" size="40" maxlength="100" >
-                </div>
+            
                 <br>
-                <div class="campo">
+            
                     <label for="nome">Bairro:</label>
                     <input type="text" name="bairro" size="40" maxlength="100" id="bairro">
-                </div>
+            
                 <br>
-                <div class="campo">
+            
                     <label for="nome">Cidade:</label>
                     <input type="text" name="cidade" size="40" maxlength="100" id="cidade">
-                </div>
+            
                 <br>
-                <div class="campo">
+            
                     <label for="nome">Estado:</label>
                     <input type="text" name="state" size="40" maxlength="100" id="estado">
-                <!-- <select class="select-state valid" id="AddOrSetAddress-0-State" name="state" data-required="true">
-                    <option value="">UF</option>
-                    <option value="AC" reference="AC">AC</option>
-                    <option value="AL" reference="AL">AL</option>
-                    <option value="AP" reference="AP">AP</option>
-                    <option value="AM" reference="AM">AM</option>
-                    <option value="BA" reference="BA">BA</option>
-                    <option value="CE" reference="CE">CE</option>
-                    <option value="DF" reference="DF">DF</option>
-                    <option value="ES" reference="ES">ES</option>
-                    <option value="GO" reference="GO">GO</option>
-                    <option value="MA" reference="MA">MA</option>
-                    <option value="MT" reference="MT">MT</option>
-                    <option value="MS" reference="MS">MS</option>
-                    <option value="MG" reference="MG">MG</option>
-                    <option value="PA" reference="PA">PA</option>
-                    <option value="PB" reference="PB">PB</option>
-                    <option value="PR" reference="PR">PR</option>
-                    <option value="PE" reference="PE">PE</option>
-                    <option value="PI" reference="PI">PI</option>
-                    <option value="RJ" reference="RJ">RJ</option>
-                    <option value="RN" reference="RN">RN</option>
-                    <option value="RS" reference="RS">RS</option>
-                    <option value="RO" reference="RO">RO</option>
-                    <option value="RR" reference="RR">RR</option>
-                    <option value="SC" reference="SC">SC</option>
-                    <option value="SP" reference="SP">SP</option>
-                    <option value="SE" reference="SE">SE</option>
-                    <option value="TO" reference="TO">TO</option>
-                    </select> -->
-                </div>
+            
                 <br>
-                <div class="campo">
+            
                     <label for="nome">Referência:</label>
                     <input type="text" name="referencia" size="40" maxlength="100" >
-                </div>
+            
             </fieldset>
-            <fieldset class="grupoTres">
-                <span class="info"><strong> Dados da conta:</strong></span>
-                <div class="campo">
-                    <label for="email">Email</label>
-                    <input type="email" name="email" size="40" maxlength="100" >
-                </div>
-                <br>
-                <div class="campo">
-                    <label for="email">Senha:</label>
-                    <input type="password" name="password" size="14" maxlength="20" >
-                </div>
-                <br>
-                <div class="campo">
-                    <label for="email">Repita a Senha:</label>
-                    <input type="password" name="repeatpassword" size="14" maxlength="20" >
-                </div>
-                <br>
-                <button type="submit" class="cadastraUsuario">Cadastrar</button>
-            </fieldset>
- 
+            </div>
+            
+            
+        </div>
+        <div class="botao">
+            <button type="submit" class="cadastraUsuario">Cadastrar</button>
+            </div>
         </form>
-
+    
         <div class="ofertas">
             <span>Inscreva-se e receba ofertas exclusivas!</span>
             <form class="cadastrar" action="" method="">
