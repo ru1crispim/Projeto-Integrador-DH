@@ -65,7 +65,7 @@ const userController = {
             senha:senhaCriptografada
         });
         console.log('olaola', result)
-        return res.redirect("/formLogin");
+        return res.redirect("/index");
     }
         catch(err){
             console.log(err)

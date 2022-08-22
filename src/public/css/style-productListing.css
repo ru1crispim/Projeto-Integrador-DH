@@ -13,6 +13,14 @@ tr {
     color: white;
 }
 
+.btncart {
+    transition: background 0.2s;
+}
+
+.btncart:hover {
+    opacity: 0.3s;
+}
+
 th {
     padding: 15px;
 }

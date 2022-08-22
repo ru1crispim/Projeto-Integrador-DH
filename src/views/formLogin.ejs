@@ -32,7 +32,7 @@
                 <span>Inicio > Cadastro</span>
             </div>
             <div>
-                <h2 class="titulo">Meu Cadastro</h2>
+                <h2 class="titulo">Endereço</h2>
                 <% if(typeof errors !== 'undefined') { %>
                     <% for(let error in errors){ %>
                         <%= error %>
@@ -41,53 +41,13 @@
                     <% } %>
             </div>
         </div>
-        <form class="camposCadastro" method="post" action="/clientes/cadastrar">
-            <fieldset class="grupoUm">
-                <span class="info"><strong> Dados pessoais:</strong></span>
-                <div class="campo">
-                    <label for="nome">Nome:</label>
-                    <input type="text" name="nome" size="40" maxlength="100" >
-                </div>
-                <br>
-                <div class="campo">
-                    <label for="sobrenome">Sobrenome:</label>
-                    <input type="text" name="sobrenome" size="40" maxlength="100" >
-                </div>
-                <br>
-                <div class="campo">
-                    <label for="nome">Data de Nascimento:</label>
-                    <input type="date" name="date" size="40" maxlength="100" >
-                </div>
-                <br>
-                <div class="campo">
-                    <label for="nome" >Sexo:</label>
-                    <select name="sexo">
-                        <option value>Selecione</option>
-                        <option value="F" reference="F">Feminino</option>
-                        <option value="M" reference="M">Masculino</option>
-                        <option value="N" reference="N">Não Informado</option>
-                    </select>
-                </div>
-                <br>
-                <div class="campo">
-                    <label for="nome">CPF:</label>
-                    <input type="number" name="cpf" size="40" maxlength="100" >
-                </div>
-                <br>
-                <div class="campo">
-                    <label for="nome">Telefone Celular:</label>
-                    <input type="number" name="telefone" size="40" maxlength="100" >
-                    <br>
-                    <small>Ex: DDD + Telefone</small>
-                </div>
-                <br>
-            </fieldset>
+        <form class="camposCadastro" method="post" action="/clientes/endereco">
             <fieldset class="grupoDois">
                 <span class="info"><strong> Endereço:</strong></span>
                 <br>
                 <div class="campo">
                     <label for="nome">CEP:</label>
-                    <input type="number" name="CEP"size="40" maxlength="100" id="cep" >
+                    <input type="number" name="cep"size="40" maxlength="100" id="cep" >
                 </div>
                 <br>
                 <div class="campo">
@@ -125,20 +85,6 @@
                     <input type="text" name="referencia" size="40" maxlength="100" >
                 </div>
             </fieldset>
-
-                <div class="campo">
-                    <!-- <label for="email">Email</label>
-                    <input type="email" name="email" size="40" maxlength="100" >
-                </div>
-                <br>
-                <div class="campo">
-                    <label for="email">Senha:</label>
-                    <input type="password" name="password" size="14" maxlength="20" >
-                </div>
-                <br>
-                <div class="campo">
-                    <label for="email">Repita a Senha:</label>
-                    <input type="password" name="repeatpassword" size="14" maxlength="20" > -->
                     <img src="../img/GIFs/mario.gif" class="minimario" width="100px" height="100px">
                 </div>
                 <br>
