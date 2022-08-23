@@ -8,7 +8,10 @@
     <link rel="stylesheet" href="/src/public/css/internalProduct.css">    
 </head>
 <body>
-    <%= include('./partials/header')
+    <header>
+        <%- include('./partials/head') %>
+        <%- include('./partials/header') %>
+    </header>
      <main>
         <section class="products">
             <div class="main-product">
@@ -83,6 +86,8 @@
             </ul>
         </section>
     </main>
-    <%= include('./partials/footer')
+    <footer id="contact">
+        <%- include('./partials/footer') %>
+    </footer>
 </body>
 </html>
