@@ -1,3 +1,7 @@
+html { 
+    font-size: 62.5%;
+    
+}
 
 body {
     font-family: Arial, Helvetica, sans-serif;
@@ -8,139 +12,9 @@ body {
 }
 
 
-.cabecalho{
-    display: flex;
-    flex-direction: row;
-    /* border: 1px solid black; */
-    height: 10vh;
-    box-sizing: border-box;
-    justify-content: space-around;
-    box-sizing: border-box;
-    background: black;
-}
-
-.logoPressStart{
-    width: 125px;
-}
-.navegacao{
-    display: flex;
-    flex-direction: row;
-    height: 10vh;
-    box-sizing: border-box;
-    width: 70%;
-    padding: 20px;
-    justify-content: flex-start;
-    box-sizing: border-box;
-    font-size: 15px;
-    
-
-}
-
-.navegacao ul {
-display: flex;
-flex-direction: row;
-list-style-type: none; /* Retirar o estilo da lista  */
-
-}
-
-.navegacao li a{
-    display: flex;
-    font-size: 20px;
-    font-weight: bold;
-    box-sizing: border-box;
-    margin-right: 150px;
-    color: yellow;
-    text-decoration: none;
-    
-  
-}
-.navegacao li a:hover{
-   background-color: lightblue;
-
-}
-
-.navegacao img{
-    width: 120px;
-    
-}
-
-.login{
-    display: flex;
-    flex-direction: row;
-    /* border: 1px solid black; */
-    padding: 15px;
-    height: 10vh;
-    width: 30%;
-        justify-content: flex-end;
-    box-sizing: border-box;
-}
-.login a{
-    display: flex;
-    /* border: 1px solid black; */
-    padding: 10px;
-    box-sizing: border-box;
-    color: white;    
-}
-.login img{
-    width: px;
-
-}
-
-.rodape{
-    display: flex;
-    flex-direction: row;
-    /* border: 1px solid black; */
-    height: 20vh;
-    box-sizing: border-box;
-    justify-content:space-around;
-    background-color: white;
-}
-.rodapeChild{
-    /* border: 1px solid black; */
-    height: 20vh;
-    padding: 10px;
-    box-sizing: border-box;
-    font-size: 15px;
-}
-.rodape img{
-    width: 50px;
-}
-
-.conteudo{
-    display: flex;
-    flex-direction: row;
-    background-color: lightgreen;
-    height: 700px;
-}
 /* <!---ESCREVA AQUI SEU CSS--> */
 
 
-.superior{
-    background-color: white;
-    margin-top: 5px;
-    padding: 2px;
-    color: black;
-    
-}
-
-.camposCadastro{
-    background-color: white;
-    display: flex;
-    padding: 15px;
-    justify-content: space-between;
-    text-align: left;
-}
-
-.info{
-    margin: 5px;
-    display: block;
-}
-
-.cadastraUsuario{
-    margin-top: 120px;
-    width: 10rem;
-    height: 50px;
-}
 
 button{
     background-color: red;
@@ -154,29 +28,56 @@ button{
     box-sizing: border-box;
 }
 
-
-
-.icon{
+.superior {
+    background-color: yellow;
+    border: 1px solid red;
     display: flex;
-    text-align: left;
-    padding: 0 0 0 170px;
-    font-size: 12px;
+    flex-direction: row;
+    justify-content: flex-start;
+    height: 10vh;
+
 }
 
-.ofertas{
-    background-color: white;
-    color: black;
-    display: inline-flex;
-    margin: 10px 0;
-    width: 100%;
+
+.mainForm {
+    background-color: yellow;
+    border: 1px solid red;
+    display: flex;
+    flex-direction: row;
     justify-content: space-around;
+    height: 60vh;   
+
+}
+.mainForm div {
+    display: flex;
+    flex-direction: column;
+    
+ 
+}
+.mainForm div input{
+    width: 100%;
+    margin: 5px;
+    
+ 
 }
 
-.ofertas span {
-    margin: 25px;
+
+.botao {
+    background-color: yellow;
+    border: 1px solid red;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 10vh;
+
 }
 
-.formdois{
-    padding-top: 10px;
-    margin: 10px;
+.ofertas {
+    background-color: yellow;
+    border: 1px solid red;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 10vh;
+
 }
