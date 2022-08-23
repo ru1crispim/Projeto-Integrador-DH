@@ -66,18 +66,15 @@ button{
     background-color: yellow;
     border: 1px solid red;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    height: 10vh;
+    text-align: left;
+    padding: 0 0 0 170px;
+    font-size: 12px;
+}
 
 }
 
-.ofertas {
-    background-color: yellow;
-    border: 1px solid red;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    height: 10vh;
+.ofertas span {
+    margin: 25px;
+}
 
 }

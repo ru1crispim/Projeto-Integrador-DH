@@ -53,11 +53,13 @@ router.get('/formlogin', userController.formLogin);
 router.post('/usuariologado', userController.loginUser);
 
 router.get('/entrar/admin', userController.AcessAdmin);
+router.get('/entrar/admin/centralAdmin', userController.loginAdmin);
 router.post('/entrar/admin/centralAdmin', userController.loginAdmin);
 router.get('/entrar/admin/centraladmin/usuario/listar', userController.listar);
 router.get('/entrar/admin/centraladmin/usuario/editar/:id', userController.directToEdit);
 router.put('/entrar/admin/centraladmin/usuario/editar/:id', userController.update);
-router.delete('/entrar/admin/centraladmin/usuario/deletar/:id', userController.destroy)
+router.delete('/entrar/admin/centraladmin/usuario/deletar/:id', userController.destroy);
+
  // carrega a rota entrar , com a view login
 
 // router.get('/cadastrar',userController.cadastro);

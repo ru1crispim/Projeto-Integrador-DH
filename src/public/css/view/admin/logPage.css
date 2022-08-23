@@ -1,0 +1,97 @@
+body {
+    display: block;
+    text-align: center;
+    justify-content: center;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+form {
+    position: relative;
+    padding-top: 75px;
+    padding-bottom: 75px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border: 1px solid black;
+    box-sizing: border-box;
+    margin: 10px;
+    height: 100%;
+    font-size: 2rem;
+}
+
+.containerOne{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border: 1px solid black;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    box-sizing: border-box;
+    width: 40%;
+    background-color: gray;
+    color: white;
+    border-radius: 20px;
+    margin: 10px;
+    font-size: 2rem;
+}
+
+.center-admin {
+    padding: 15px;
+}
+
+.center-pass {
+    padding-bottom: 15px;
+}
+
+#email, #password {
+    border: solid 2px black;
+    border-radius: 6px;
+    width: 250px;
+    height: 35px;
+    text-align: center;
+    background-color: transparent;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: bolder;
+    color: white;
+}
+
+.admin-label, .pass-label {
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+.btn-style {
+    text-align: center;
+    justify-content: center;
+    width: 105%;
+    padding-bottom: 10px;
+}
+
+#btn {
+    width: 100px;
+    color: white;
+    background-color: red;
+}
+
+.log {
+    width: 105%;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+}
+
+.keepLog {
+    width: 150px;
+    font-size: 20px;
+    background-color: red;
+    font-weight: bolder;
+    opacity: 0.8;
+    border-radius: 6px;
+    padding: 10px;
+}

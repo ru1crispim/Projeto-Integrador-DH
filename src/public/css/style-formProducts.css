@@ -94,6 +94,7 @@ list-style-type: none; /* Retirar o estilo da lista  */
     box-sizing: border-box;
     justify-content:space-around;
     background-color: white;
+    margin: 10px;
 }
 .rodapeChild{
     /* border: 1px solid black; */
