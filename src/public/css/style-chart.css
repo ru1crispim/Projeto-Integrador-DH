@@ -203,7 +203,7 @@ header{
 
 .nome {
     color: black;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: Poppins;
     font-stretch: normal;
     display: flex;
     justify-content: center;
@@ -213,7 +213,7 @@ header{
 
 .preco {
     color: black;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: Poppins;
     font-stretch: normal;
     display: flex;
     justify-content: center;
@@ -247,7 +247,7 @@ html {
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Poppins;
     background-image: url('//www.wallpapersun.com/wp-content/uploads/2021/01/Gaming-Wallpaper-2-715x536.jpg');
     background-attachment: fixed;
     opacity: 0.97;
