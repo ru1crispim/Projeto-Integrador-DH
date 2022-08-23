@@ -17,13 +17,13 @@ module.exports = (sequelize, DataType)=>{
     },{        
         timestamps:false 
     }) 
-    //     Produtos.associate = (models) => {
-    //         Produtos.belongsTo(models.ItemPedido,{
-    //         foreignKey: 'Produtos_id'
-    //     })
+        Produtos.associate = (models) => {
+            Produtos.belongsTo(models.ItemPedidos,{
+            foreignKey: 'Produtos_id'
+        })
         
-    //     Fabricantes.belongsToMany(models.Produtos)
-    //     Produtos.belongsToMany(models.Ofertas)
-    // }
+        Fabricantes.belongsToMany(models.Produtos)
+        Produtos.belongsToMany(models.Ofertas)
+        }
     return Produtos; 
 }

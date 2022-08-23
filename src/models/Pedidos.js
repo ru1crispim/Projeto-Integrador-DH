@@ -1,7 +1,7 @@
 module.exports = (sequelize, DataType) => {
     const Pedidos = sequelize.define('Pedidos', {
         id:{
-            type: DataType.INTERGER,
+            type: DataType.INTEGER,
             primaryKey: true,
             autoIncrement: true
         },
@@ -13,10 +13,10 @@ module.exports = (sequelize, DataType) => {
     },{
         timestamps: false
     })
-    //     Pedidos.associate = (models) => {
-    //         Pedidos.hasMany(models.ItemPedido,{
-    //         foreignKey: 'Pedidos_id'
-    //     })
-    // }      
+        Pedidos.associate = (models) => {
+            Pedidos.hasMany(models.ItemPedidos,{
+            foreignKey: 'Pedidos_id'
+        })
+    }      
     return Pedidos;
 }

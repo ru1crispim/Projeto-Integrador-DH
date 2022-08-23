@@ -7,14 +7,14 @@ module.exports = (sequelize, DataType)=>{
         },
         active:true,
         discount:DataType.FLOAT,
-        produtos_id: DataType.INTERGER
+        produtos_id: DataType.INTEGER
     },{
         timestamps:false
     }) 
-    //     Ofertas.associate = (models) => {
-    //         Ofertas.hasMany(models.Produtos,{
-    //         foreignKey: 'Produtos_Ofertas1_id'
-    //     })
-    // }
+        Ofertas.associate = (models) => {
+            Ofertas.hasMany(models.Produtos,{
+            foreignKey: 'Produtos_Ofertas1_id'
+        })
+    }
     return Ofertas
 }

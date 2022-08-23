@@ -15,8 +15,8 @@ module.exports = (sequelize, DataType)=>{
     },{      
         timestamps:false 
     }) 
-        // Usuarios.associate = (models) =>{
-        //     Usuarios.belongsTo(models.Clientes)
-        // }
+        Usuarios.associate = (models) =>{
+            Usuarios.belongsTo(models.Clientes)
+        }
     return Usuarios; 
 }

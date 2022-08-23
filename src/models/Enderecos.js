@@ -1,32 +1,28 @@
 const Clientes = require("./Clientes")
 
 module.exports = (sequelize, DataType)=>{
-    const Endereco = sequelize.define('Endereco',{
+    const Enderecos = sequelize.define('Enderecos',{
         id:{
-            type: DataType.INTERGER,
+            type: DataType.INTEGER,
             primaryKey: true,
             unique: true,
             autoIncrement: true
         },
         cep: DataType.STRING,
         endereco: DataType.STRING,
-        numero: DataType.INTERGER,
+        numero: DataType.INTEGER,
         complemento: DataType.STRING,
         bairro: DataType.STRING,
         cidade: DataType.STRING,
         estado: DataType.STRING,
         referencia: DataType.STRING,
-        pedidos_id: DataType.INTERGER
+        pedidos_id: DataType.INTEGER
     },{
         timestamps: false   
     }) 
-        // Endereco.associate = (models) => {
-        //     Endereco.hasOne(models.Pedidos, {
-        //         foreignKey: 'Endereco_id'
-        //     })
-        // Endereco.belongsTo(models.Pedidos)
-
-        // Endereco.belongsTo(models.Clientes)
-        // }
-    return Endereco
+        Enderecos.associate = (models) => {
+            Enderecos.belongsTo(models.Clientes)
+            Enderecos.belongsTo(models.Pedidos)
+        }
+    return Enderecos
     }
