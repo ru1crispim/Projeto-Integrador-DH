@@ -6,11 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cart - DH Games</title> 
     <link rel="stylesheet" href="/css/style-chart.css">
+    <link rel="stylesheet" href="/css/animation.css">   
     <script href="./index.js"></script>
-
-    
-
-    
 </head>
 <body>
     
@@ -32,34 +29,41 @@
     
     </header>
     <main>
-        <form action="/carrinho" method="post">
-            <div class="pai">
-                <div class="filho1">
-                    <h2 class="LeveTambem">Carrinho</h2>
-                        <div class="images" id="productList">
-                            <% cart.forEach(function(item) { %>                  
+        <div class="pai">
+            <div class="filho1">
+                <h2 class="LeveTambem">Aproveite e leve tambem</h2>
+                <div class="carousel">
+                    <div class="parent"> 
+                            <div class="images">                  
                                 <div class="produto">
-                                    <span class="nome" name="nome">Nome:
-                                        <%= item.nome %>
-                                    </span>
-                                        <div class="produtos">
-                                            <img class='imagem' src="/productsImg/<%= item.imagem %>" style="width:100%">
-                                        </div>
-                                <span class="preco" name="preco">Valor:<%= item.valor %>
-                                </span>
+                                    <span class="nome">Elden Ring</span>
+                                    <div class="produtos"><img src="/img/carrosel/home/img-1.jpg" style="width:100%"></div>
+                                    <span class="preco">Valor: ####</span>
                                 </div>
-                            <% }); %> 
-                        </div>
-                            <div id="totalValue">
-                                <h2 nome="valor">Total da sua compra:</h2>
-                                    <%= total %>
-                                <br>
-                                    <button type="submit" id="completeOrder">
-                                    Finalizar compra</button>
+                                <div class="produto">
+                                    <span class="nome">Playstation 5</span>
+                                    <div class="produtos"><img src="/img/carrosel/home/img-2.jpg" style="width:100%"></div>
+                                    <span class="preco">Valor: ####</span>
+                                </div>
+                                <div class="produto">
+                                    <span class="nome">Pokemon</span>
+                                    <div class="produtos"><img src="/img/carrosel/home/img-3.jpg" style="width:100%"></div>
+                                    <span class="preco">Valor: ####</span>
+                                </div>
                             </div>
+                    </div>
                 </div>
             </div>
-        </form>
+        </div>
+        <div class="pai2">
+            <div class="filho2">
+                <h2 class="Seu Carrinho">Seu Carrinho</h2>
+            </div>
+            <div class="resumo">
+                <h2 class="resumoCompra">Resumo da Compra</h2>
+            </div>
+        </div>
+
     </main>
     <footer class="rodape">
         <div class="rodapeChild">
@@ -83,9 +87,6 @@
         </div>
 
     </footer>
-
-    <script src="../javascript/cart.js"></script>
 </body>
-
 </html>
 

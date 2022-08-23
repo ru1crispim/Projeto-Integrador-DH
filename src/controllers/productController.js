@@ -106,7 +106,7 @@ const productController = {
         }
     },
 
-    offers: async (req,res)=>{
+    offers:  (req,res)=>{
         try{
 
 
@@ -199,19 +199,8 @@ const productController = {
     }
         catch(err){
             console.log(err)
-        }
-    },
-
-    offers: (req,res)=>{
-        try{
-            return res.render('productOffers')
-        }
-        catch(err){
-            console.log(err)
-        }
     }
-
+}
 }
 
-
-module.exports=productController;
+module.exports=productController

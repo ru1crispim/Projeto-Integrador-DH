@@ -14,7 +14,6 @@
             </form>
             <button><a href="/allproducts/categories" target="_blank">Categorias</a></button>
             <button><a href="/allproducts/offers" target="_blank">Ofertas</a></button>
-            <button><a href="/carrinho" target="_blank">Carrinho</a></button>
                 <table class="table">
                     <thead>
                         <tr>
@@ -37,12 +36,13 @@
                                 <td>
                                     <button 
                                         type="button"
-                                        onclick="addToCart({
+                                        onclick="handleAddCart({
                                             id: <%= products[i].id %>, 
-                                            nome:'<%= products[i].nome %>', 
-                                            valor: <%= products[i].valor %>, 
+                                            name:'<%= products[i].nome %>', 
+                                            value: <%= products[i].valor %>, 
                                             genre: '<%= products[i].categoria %>', 
-                                            imagem: '<%= products[i].imagem %>'
+                                            description: '<%= products[i].descricao %>', 
+                                            image: '<%= products[i].imagem %>'
                                         })"
                                     >
                                         Adicionar ao Carrinho
