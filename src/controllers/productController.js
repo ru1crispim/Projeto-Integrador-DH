@@ -106,7 +106,7 @@ const productController = {
         }
     },
 
-    offers: async (req,res)=>{
+    offers:  (req,res)=>{
         try{
 
 
@@ -199,18 +199,8 @@ const productController = {
     }
         catch(err){
             console.log(err)
-<<<<<<< HEAD
     }
 }
-=======
-        }
-    },
-
-    offers: (req,res)=>{
-        
-    }
-
->>>>>>> parent of ee96458 (Alterações CSS homepage)
 }
 
 module.exports=productController

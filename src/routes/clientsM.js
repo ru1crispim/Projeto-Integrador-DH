@@ -4,6 +4,7 @@ const multer = require('multer');
 const path = require('path');
 const ClientesController = require("../controllers/ClientesController");
 const userController = require('../controllers/ClientesController');
+const addressController = require('../controllers/addressController');
 const auth = require('../middlewares/auth')
 
 // router.get('/clientes', ClientesController.client);
@@ -15,6 +16,8 @@ router.put('/clientes/editar/:id', ClientesController.update);
 
 router.get('/clientes/cadastrar', ClientesController.AcessCreate);
 router.post('/clientes/cadastrar', ClientesController.create);
+
+router.post('/clientes/endereco', addressController.address);
 
 router.delete('/clientes/deletar/:id', ClientesController.destroy)
 

@@ -1,0 +1,21 @@
+main {
+    display: flex;
+    justify-content: flex-start;
+    background-color: rgb(80, 39, 117);
+    opacity: 0.9;
+}
+
+ul {
+    padding: 10px;
+    display: flex;
+}
+
+
+.productsList {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    font-size: 15px;
+    border: 2px;
+    padding: 10px;
+}
