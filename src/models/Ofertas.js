@@ -8,10 +8,15 @@ module.exports = (sequelize, DataType)=>{
             autoIncrement:true
         },
         active:true,
-        inactive:false, //como alterar para true or false
-        discount:DataType.STRING
+        discount:DataType.FLOAT,
+        produtos_id: DataType.INTEGER
     },{
         timestamps:false
     }) 
+        Ofertas.associate = (models) => {
+            Ofertas.hasMany(models.Produtos,{
+            foreignKey: 'Produtos_Ofertas1_id'
+        })
+    }
     return Ofertas
 }

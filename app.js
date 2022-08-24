@@ -14,7 +14,6 @@ var usedProductsRouter = require('./src/routes/used');
 var clientsM = require('./src/routes/clientsM');
 // var adminRouter = require('./src/routes/admin');
 var fabRouter = require('./src/routes/fabricantes');
-// var logMiddleware = require('./src/middlewares/logSite'); //Todas as rotas
 var methodOverride = require('method-override');
 var session = require('express-session');
 const cookieMiddleware = require('./src/middlewares/cookieLogin')
@@ -39,7 +38,6 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '/src/public')));
-// app.use(logMiddleware);
 app.use(methodOverride('_method'));
 app.use(cookieMiddleware);
 
