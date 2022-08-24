@@ -11,21 +11,9 @@
 </head>
 <body>
     
-    <header class="cabecalho">
-        <a href=""><img class="logoPressStart" src="/img/logo-loja-br.png" alt="logo-loja"></a>
-        <div class="navegacao">
-            <ul>
-                <li><a href="/index">Inicio</a></li>
-                <li><a href="/allproducts">Jogos</a></li>
-                <li><a href="/contato">Contato</a></li>
-                <li><a href="/produtosusados">Orçamentos</a></li>              
-            </ul>
-        </div>
-        <div class="login">
-            <a href="/entrar">Entrar / Cadastrar</a>
-            <!-- <a href="/formLogin">Crie sua conta</a> -->
-            <a href="./login.html"><img src="/img/login.png" alt="login"></a>
-        </div>
+    <header>
+        <%- include('./partials/head') %>
+        <%- include('./partials/header') %>
     </header>
     
     <div class="productsForm">
@@ -38,11 +26,7 @@
         
             <div class="menuManutencao">   
                     <form action="/productform/registration" method="get">
-
                         <button type="submit" id="bt">Cadastrar novos produtos</button>                    
-
-                        <button type="submit">Cadastrar produtos</button>                    
-
                     </form> 
                     <!-- <form action="/productform/update" method="get">
                         <button type="submit">Alterar cadastro de produtos</button>                    
@@ -54,28 +38,8 @@
         </div> 
     </div>
 
-    <footer class="rodape">
-        <div class="rodapeChild">
-            <h4>Beneficios</h4>
-            <ul>
-                <li>Garantia de qualidade</li>
-                <li>Melhor opção do mercado</li>
-                <li>Entrega para todo o Brasil</li>
-            </ul>
-        </div>
-        <div class="rodapeChild">
-            <h4 >Contatos</h4>
-            <p>Telefone: (11) 00000-0000</p>
-            <p>E-mail: sac@pressstart.com.br</p>
-        </div>
-        <div class="rodapeChild">
-            <h4 >Redes Sociais</h4>
-            <img src="/img/icons/facebook.png" alt="logo-facebook">
-            <img src="/img/icons/instagram.png" alt="logo-instagram">
-            <img src="/img/icons/whattsapp.png" alt="logo-whattsapp">
-
-        </div>
-
+    <footer id="contact">
+        <%- include('./partials/footer') %>
     </footer>
 </body>
 <script src="/js/script.js"></script>  

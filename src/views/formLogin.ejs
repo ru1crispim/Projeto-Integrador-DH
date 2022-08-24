@@ -10,29 +10,16 @@
 </head>
 <body>
     
-    <header class="cabecalho">
-        <a href=""><img class="logoPressStart" src="/img/logo-loja-br.png" alt="logo-loja"></a>
-        <div class="navegacao">
-            <ul>
-                <li><a href="/index">Inicio</a></li>
-                <li><a href="/allproducts">Jogos</a></li>
-                <li><a href="/contato">Contato</a></li>
-                <li><a href="/produtosusados">Orçamentos</a></li>              
-            </ul>
-        </div>
-        <div class="login">
-            <a href="/entrar">Entrar / Cadastrar</a>
-            <!-- <a href="/formLogin">Crie sua conta</a> -->
-            <a href="./login.html"><img src="/img/login.png" alt="login"></a>
-        </div>
-    
+    <header>
+        <%- include('./partials/head') %>
+        <%- include('./partials/header') %>
     </header>
         <div class="superior">
             <div class="historico">
                 <span>Inicio > Cadastro</span>
             </div>
             <div>
-                <h2 class="titulo">Endereço</h2>
+                <h2 class="titulo">Meu Cadastro</h2>
                 <% if(typeof errors !== 'undefined') { %>
                     <% for(let error in errors){ %>
                         <%= error %>
@@ -41,58 +28,105 @@
                     <% } %>
             </div>
         </div>
-        <form class="camposCadastro" method="post" action="/clientes/endereco">
-            <fieldset class="grupoDois">
+        
+        
+        <form method="post" action="/clientes/cadastrar">
+            <div class="mainForm">
+            <div class="grupoUm">
+            <!-- <fieldset>
+                <span class="info"><strong> Dados pessoais:</strong></span>
+                
+                    <label for="nome">Nome:</label>
+                    <input type="text" name="nome" size="40" maxlength="100" >
+                
+                <br>
+                
+                    <label for="sobrenome">Sobrenome:</label>
+                    <input type="text" name="sobrenome" size="40" maxlength="100" >
+                
+                <br>
+                
+                    <label for="nome">Data de Nascimento:</label>
+                    <input type="date" name="date" size="40" maxlength="100" >
+                
+                <br>
+                
+                    <label for="nome" >Sexo:</label>
+                    <select name="sexo">
+                        <option value>Selecione</option>
+                        <option value="F" reference="F">Feminino</option>
+                        <option value="M" reference="M">Masculino</option>
+                        <option value="N" reference="N">Não Informado</option>
+                    </select>
+                
+                <br>
+                
+                    <label for="nome">CPF:</label>
+                    <input type="number" name="cpf" size="40" maxlength="100" >
+                
+                <br>
+                
+                    <label for="nome">Telefone Celular:</label>
+                    <input type="number" name="telefone" size="40" maxlength="100" >
+                    <br>
+                    <small>Ex: DDD + Telefone</small>
+                
+                <br>
+            </fieldset> -->
+            </div>
+            <div class="grupoDois">
+            <fieldset>
                 <span class="info"><strong> Endereço:</strong></span>
                 <br>
-                <div class="campo">
+            
                     <label for="nome">CEP:</label>
-                    <input type="number" name="cep"size="40" maxlength="100" id="cep" >
-                </div>
+                    <input type="number" name="CEP"size="40" maxlength="100" id="cep" >
+            
                 <br>
-                <div class="campo">
+            
                     <label for="nome">Endereço:</label>
                     <input type="text" name="endereco" size="40" maxlength="100" id="endereco">
-                </div>
+            
                 <br>
-                <div class="campo">
+            
                     <label for="nome">Número:</label>
                     <input type="text" name="enderecoNumber" size="40" maxlength="100" >
-                </div>
+            
                 <br>
-                <div class="campo">
+            
                     <label for="nome">Complemento:</label>
                     <input type="text" name="complemento" size="40" maxlength="100" >
-                </div>
+            
                 <br>
-                <div class="campo">
+            
                     <label for="nome">Bairro:</label>
                     <input type="text" name="bairro" size="40" maxlength="100" id="bairro">
-                </div>
+            
                 <br>
-                <div class="campo">
+            
                     <label for="nome">Cidade:</label>
                     <input type="text" name="cidade" size="40" maxlength="100" id="cidade">
-                </div>
+            
                 <br>
-                <div class="campo">
+            
                     <label for="nome">Estado:</label>
                     <input type="text" name="state" size="40" maxlength="100" id="estado">
-                </div>
+            
                 <br>
-                <div class="campo">
+            
                     <label for="nome">Referência:</label>
                     <input type="text" name="referencia" size="40" maxlength="100" >
-                </div>
+            
             </fieldset>
-                    <img src="../img/GIFs/mario.gif" class="minimario" width="100px" height="100px">
-                </div>
-                <br>
-                <button type="submit" class="cadastraUsuario">Cadastrar</button>
-
- 
+            </div>
+            
+            
+        </div>
+        <div class="botao">
+            <button type="submit" class="cadastraUsuario">Cadastrar</button>
+            </div>
         </form>
-
+    
         <div class="ofertas">
             <span>Inscreva-se e receba ofertas exclusivas!</span>
             <form class="cadastrar" action="" method="">

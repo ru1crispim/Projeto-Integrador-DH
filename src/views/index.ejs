@@ -10,33 +10,20 @@
 <body>
     
     <header>
-        <a href=""><img class="logoPressStart" src="/img/logo-loja-br.png" alt="logo-loja"></a>
-        <div class="navigation">
-            <ul>
-                <li><a href="/index">Inicio</a></li>
-                <li><a href="/allproducts">Jogos</a></li>
-                <li><a href="/contato">Contato</a></li>
-                <li><a href="/produtosusados">Orçamentos</a></li>              
-            </ul>
-        </div>
-        <div class="login">
-            <a href="/entrar">Entrar / Cadastrar</a>
-            <!-- <a href="/formlogin">Crie sua conta</a> -->
-            <a href="./login.html"><img src="/img/login.png" alt="login"></a>
-        </div>
-    
+        <%- include('./partials/head') %>
+        <%- include('./partials/header') %>
     </header>
+
     <main>
+        <img class="megaman" src="/img/GIFs/megaman_running.gif" alt="">
         <a href="https://web.whatsapp.com/send?phone=5521972275757" target="_blank"><img class="whattsapp" src="/img/icons/whattsapp.png" alt=""></a>
-        <!-- <div class="video">
-            <video src="../public/img/carrosel/home/img-4.mp4" type="video/mp4" width="1200px" autoplay loop></video>
-        </div> -->
+
     <div class="carousel">
         <div class="parent"> 
-                <div class="images">                  
-                    <img src="/img/carrosel/home/img-1.jpg" alt="">
-                    <img src="/img/carrosel/home/img-4.jpg" alt="">
-                    <img src="/img/carrosel/home/img-3.jpg" alt="">
+                <div class="images">
+                    <a href="/allproducts/offers"><img src="/img/carrosel/home/img-1.jpg" alt=""></a>
+                    <a href=""><img src="/img/carrosel/home/img-4.jpg" alt=""></a>
+                    <a href=""><img src="/img/carrosel/home/img-3.jpg" alt=""></a>
                 </div>
         </div>
     </div>
@@ -93,11 +80,10 @@
                 <img src="/img/usados/usados.png" alt="Used product">
             </div>
             <div class="usedB"> <p>Solicite uma avaliação de seus jogos usados e acumule prontos para a compra de novos jogos</p>
-                <button><a href="paginaUsado.html">Solicitar avaliação</a></button>
+                <button><a href="/src/views/usedPage.ejs">Solicitar avaliação</a></button>
             </div>
             </div>
             
-           
         </section>
 
         <section class="news">
@@ -137,26 +123,8 @@
         </section>
     </main>
     <footer id="contact">
-        <div class="footerChild">
-            <h4>Beneficios</h4>
-            <ul>
-                <li>Garantia de qualidade</li>
-                <li>Melhor opção do mercado</li>
-                <li>Entrega para todo o Brasil</li>
-            </ul>
-        </div>
-        <div class="footerChild">
-            <h4 >Contatos</h4>
-            <p>Telefone: (11) 00000-0000</p>
-            <p>E-mail: sac@pressstart.com.br</p>
-        </div>
-        <div class="footerChild">
-            <h4 >Redes Sociais</h4>
-            <img src="/img/icons/facebook.png" alt="logo-facebook">
-            <img src="/img/icons/instagram.png" alt="logo-instagram">
-            <img src="/img/icons/whattsapp.png" alt="logo-whattsapp">
 
-        </div>
+    <%- include('./partials/footer') %>
 
     </footer>
 </body>

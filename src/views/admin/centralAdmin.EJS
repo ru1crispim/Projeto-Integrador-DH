@@ -1,21 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portal do ADM</title>
-</head>
+<!-- http://localhost:3000/entrar/admin/centralAdmin    rota para acessar essa pagina -->
+
+<%- include('../partials/head') %>
+<%- include('../partials/header') %>
+<link rel="stylesheet" href="/css/admin/style-centralAdmin.css">;
+<link rel="stylesheet" href="/css/style-index.css">;
 <body>
-    <h1>Portal do ADM</h1>
-    <p>Administrar:</p>
-    <ul>
-        <li><a href="/entrar/admin/centraladmin/usuario/listar">Usuários</a></li>
-        <li><a href="/product/settings">Produtos</a></li>
-        <li><a href="/fabricantes">Fabricantes</a></li>
-        <li><a href="/clientes">Clientes</a></li>
-        
-    </ul>
+    <div class="container">
+        <div class="containerOne">
+            <h1>Portal do ADM</h1>
+            <h2>Administrar:</h2>
+            <div class="option">
+                <ul>
+                    <li class="info"><a href="/entrar/admin/centralAdmin/usuario/listar">Usuários</a></li>
+                    <li class="info"><a href="/product/settings" target="_blank">Produtos</a></li>
+                    <li class="info"><a href="/clientes" target="_blank">Clientes</a></li>
+                    <li class="info"><a href="/fabricantes" target="_blank">Fabricantes</a></li>
+                    <li class="info"><a href="/allproducts/offers" target="_blank">Ofertas</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+<%- include('../partials/footer') %>
 </body>
 </html>
-

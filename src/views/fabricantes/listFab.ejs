@@ -1,22 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fabricantes</title>
-</head>
-<body>
-    <ul>
-    <% for(let i = 0; i < developers.length; i++) { %>
-        <ol>
-            <p>Nome: <%= developers[i].nome %></p>
-            <form action="/fabricantes/deletar/<%= developers[i].id %>?_method=DELETE" method="post">
-                <button type="submit">Deletar Usuario</button>
-            </form>
-        </ol>
-        <% } %>
-    </ul>
-    <button><a href="fabricantes/cadastrar">Cadastrar novo Fabricante</a></button>
-</body>
+<!-- http://localhost:3000/fabricantes    rota para acessar essa pagina não está funcionando a rota -->
+
+<%- include('../partials/head') %>
+<%- include('../partials/header') %>
+<link rel="stylesheet" href="/css/fabricantes/style-listFab.css">;
+<link rel="stylesheet" href="/css/style-index.css">;
+    <body>
+        <div class="containerMaster">
+            <div class="containerOne">
+                <ul>
+                    <% for(let i = 0; i < developers.length; i++) { %>
+                        <ol>
+                            <p>Fabricante: <%= developers[i].nome %></p>
+                            <form action="/fabricantes/deletar/<%= developers[i].id %>?_method=DELETE" method="POST">
+                                <button class="deleteFabricante" type="submit">Deletar Fabricante</button>
+                            </form>
+                        </ol>
+                        <% } %>
+                    </ul>
+                    <button>
+                        <a href="fabricantes/cadastrar">Cadastrar novo Fabricante</a>
+                    </button>
+            </div>
+        </div>
+        <%- include('../partials/footer') %>
+    </body>
 </html>

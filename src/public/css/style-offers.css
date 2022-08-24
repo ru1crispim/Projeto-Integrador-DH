@@ -1,7 +1,84 @@
-.teste1 {
-    font-weight: bold;
-    color: blue;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;900&display=swap');
+
+html { 
+    font-size: 62.5%;
+    
+}
+
+body {
+    font-family: Poppins;
+    background-image: url('//www.wallpapersun.com/wp-content/uploads/2021/01/Gaming-Wallpaper-2-715x536.jpg');
+    background-attachment: fixed;
+    opacity: 0.97;
+    box-sizing: border-box; 
+
+}
+
+.tiluloNovidades{
+    background-color: white;
+    height: 15vh;
+    font-size: 15px;
+    margin-bottom: 5px;
+
+}
+
+
+.popular{
+
+    /* border: 1px solid black; */
+    height: auto;
+    box-sizing: border-box;
+    justify-content: center;
+    text-align: center;
+    background-color: black;
+    color: white;
+}
+
+.popularTitles{
+    /* border: 1px solid black; */
+    height: auto;
+    box-sizing: border-box;
+    text-align: center;
+    
+    }
+
+.popularCatalog{
+    background-color: white;
+    display: grid;
+    grid-template-columns: 200px 200px 200px 200px 200px 200px;
+    /* border: 1px solid black; */
+    height: auto;
+    box-sizing: border-box;
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+    
+    
+}
+.popularCatalog div{
+    border: 1px solid black;
+    border-radius: 30px;  
+    background-color: white;  
+    color: black;
+    margin: 20px;
+    padding: 10px;
+    
+}
+
+.popularCatalog div:hover{
+   background-color: lightblue;
+   transform: scale(1.5);
+
+}
+
+.catalogNews div:hover{
     background-color: lightblue;
+    transform: scale(1.5);
+ 
+ }
+
+.popularCatalog img{
+    width: 100px;
 }
 
 /* Inclusao do CSS header e footer */

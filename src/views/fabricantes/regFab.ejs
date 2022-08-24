@@ -1,20 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="/javascript/regFab.js" defer></script>
-    <title>Cadastro de Fabricantes</title>
-</head>
+<!-- http://localhost:3000/fabricantes/cadastrar    rota para acessar essa pagina -->
+
+<%- include('../partials/head') %>
+<%- include('../partials/header') %>
+<link rel="stylesheet" href="/css/fabricantes/style-regFab.css">;
+<link rel="stylesheet" href="/css/style-index.css">;
 <body>
-    <main><form action="/fabricantes/cadastrar" method="post">
-        <div>
-            <label for="nome">Nome:</label>
-            <input type="text" id="nome" name="nome"/>
-        </div>
-    <button type="submit" id="submitId">Cadastrar Fabricante</button>
-    </form>
-</main>
+    <main>
+        <form action="/fabricantes/cadastrar" method="post">
+            <div class="containerMaster">
+                <div class="containerOne">
+                    <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome"/>
+                <br>
+                <button type="submit" id="submitId">Cadastrar Fabricante</button>
+                </div>
+            </div>
+        </form>
+    </main>
+<%- include('../partials/footer') %>
 </body>
 </html>
