@@ -1,20 +1,10 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Produtos</title>
-    <link rel="stylesheet" href="/css/style-productListing.css">
-<script src="/javascript/cart.js"></script>
-    
-</head>
 
+<%- include('./partials/head') %>
+<link rel="stylesheet" href="/css/style-productListing.css">
+
+<script src="/javascript/cart.js"></script>
+<%- include('./partials/header') %>
 <body>
-    <header>
-        <%- include('./partials/head') %>
-        <%- include('./partials/header') %>
-    </header>
     <main>
         <div class="games">
             <h1>Lista de Produtos</h1>
@@ -24,6 +14,7 @@
             </form>
             <button><a href="/allproducts/categories" target="_blank">Categorias</a></button>
             <button><a href="/allproducts/offers" target="_blank">Ofertas</a></button>
+            <button><a href="/carrinho" target="_blank">Carrinho</a></button>
                 <table class="table">
                     <thead>
                         <tr>
@@ -46,13 +37,12 @@
                                 <td>
                                     <button 
                                         type="button"
-                                        onclick="handleAddCart({
+                                        onclick="addToCart({
                                             id: <%= products[i].id %>, 
-                                            name:'<%= products[i].nome %>', 
-                                            value: <%= products[i].valor %>, 
+                                            nome:'<%= products[i].nome %>', 
+                                            valor: <%= products[i].valor %>, 
                                             genre: '<%= products[i].categoria %>', 
-                                            description: '<%= products[i].descricao %>', 
-                                            image: '<%= products[i].imagem %>'
+                                            imagem: '<%= products[i].imagem %>'
                                         })"
                                     >
                                         Adicionar ao Carrinho
@@ -76,8 +66,6 @@
             <img left src="/img/icons/pacman.png" alt="imagem de fundo">
         </div> -->
     </main>
-    <footer id="contact">
-        <%- include('./partials/footer') %>
-    </footer>
+<%- include('./partials/footer') %>
 </body>
 </html>
