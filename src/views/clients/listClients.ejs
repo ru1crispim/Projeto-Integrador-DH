@@ -2,12 +2,14 @@
 
 <%- include('../partials/head') %>
 <%- include('../partials/header') %>
-<link rel="stylesheet" href="/css/view/clientes/style-listClients.css">;
+<link rel="stylesheet" href="/css/clientes/style-listClients.css">;
+<link rel="stylesheet" href="/css/style-index.css">;
 <body>
     <div class="containerMaster">
-        <ul>
+        <div class="containerOne">
+            <ul class="containerContent">
             <% for(let i = 0; i < users.length; i++) { %>
-                <div class="containerOne">
+                <li>
                     <p>Nome: <%= users[i].nome %></p>
                     <p>Sobrenome: <%= users[i].sobrenome %></p>
                     <p>Email: <%= users[i].email %></p>
@@ -15,20 +17,19 @@
                     <p>Telefone: <%= users[i].telefone %></p>
                     <p>Data de Nascimento: <%= users[i].data_nascimento %></p>
                     
-                    <button>
+                    <button class="containerBtn">
                         <a href="/clientes/editar/<%= users[i].id %>">
                         Editar Usuario
                         </a>
                     </button>
-                    <form action="/clientes/deletar/<%= users[i].id %>?_method=DELETE" method="post">
-                        <button type="submit">Deletar Usuario</button>
+                    <form action="/clientes/deletar/<%= users[i].id %>?_method=DELETE" method="POST">
+                        <button class="containerBtnOne" type="submit">Deletar Usuario</button>
                     </form>
                 </li>
-                </div>
-                <li>
                 <% } %>
-        </ul>
-            <button>
+            </ul>
+        </div>
+            <button class="containerBtn" id="btnCadastrar">
                 <a href="/clientes/cadastrar">Cadastrar novo Usuario</a>
             </button>
     </div>

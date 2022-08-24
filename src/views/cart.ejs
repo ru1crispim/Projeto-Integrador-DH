@@ -4,14 +4,32 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cart - DH Games</title>
+    <title>Cart - DH Games</title> 
     <link rel="stylesheet" href="/css/style-chart.css">
     <script href="./index.js"></script>
+
+    
+
+    
 </head>
 <body>
-    <header>
-        <%- include('./partials/head') %>
-        <%- include('./partials/header') %>
+    
+    <header class="cabecalho">
+        <a href=""><img class="logoPressStart" src="/img/logo-loja-br.png" alt="logo-loja"></a>
+        <div class="navigation">
+            <ul>
+                <li><a href="/index">Inicio</a></li>
+                <li><a href="/allproducts">Jogos</a></li>
+                <li><a href="/contato">Contato</a></li>
+                <li><a href="/produtosusados">Orçamentos</a></li>              
+            </ul>
+        </div>
+        <div class="login">
+            <a href="/entrar">Entrar / Cadastrar</a>
+            <!-- <a href="/formLogin">Crie sua conta</a> -->
+            <a href="./login.html"><img src="/img/login.png" alt="login"></a>
+        </div>
+    
     </header>
     <main>
         <form action="/carrinho" method="post">
@@ -19,7 +37,7 @@
                 <div class="filho1">
                     <h2 class="LeveTambem">Carrinho</h2>
                         <div class="images" id="productList">
-                            <% cart.forEach(function(item) { %>
+                            <% cart.forEach(function(item) { %>                  
                                 <div class="produto">
                                     <span class="nome" name="nome">Nome:
                                         <%= item.nome %>
@@ -30,10 +48,10 @@
                                 <span class="preco" name="preco">Valor:<%= item.valor %>
                                 </span>
                                 </div>
-                            <% }); %>
+                            <% }); %> 
                         </div>
                             <div id="totalValue">
-                                <h2 nome="valor">Total da sua compra :</h2>
+                                <h2 nome="valor">Total da sua compra:</h2>
                                     <%= total %>
                                 <br>
                                     <button type="submit" id="completeOrder">
@@ -43,9 +61,31 @@
             </div>
         </form>
     </main>
-    <footer id="contact">
-        <%- include('./partials/footer') %>
+    <footer class="rodape">
+        <div class="rodapeChild">
+            <h4>Beneficios</h4>
+            <ul>
+                <li>Garantia de qualidade</li>
+                <li>Melhor opção do mercado</li>
+                <li>Entrega para todo o Brasil</li>
+            </ul>
+        </div>
+        <div class="rodapeChild">
+            <h4 >Contatos</h4>
+            <p>Telefone: (11) 00000-0000</p>
+            <p>E-mail: sac@pressstart.com.br</p>
+        </div>
+        <div class="rodapeChild">
+            <h4 >Redes Sociais</h4>
+            <img src="/img/icons/facebook.png" alt="logo-facebook">
+            <img src="/img/icons/instagram.png" alt="logo-instagram">
+            <img src="/img/icons/whattsapp.png" alt="logo-whattsapp">
+        </div>
+
     </footer>
+
     <script src="../javascript/cart.js"></script>
 </body>
+
 </html>
+
