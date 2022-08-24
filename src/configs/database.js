@@ -1,4 +1,4 @@
-const config = {
+module.exports = {
     username:'root',
     password:'',
     database:'ecommercegames',  // banco que vai comunicar com o mysql
@@ -6,5 +6,3 @@ const config = {
     dialect:'mysql',
     operatorAliases: false // ??????????
 }
-
-module.exports = config;

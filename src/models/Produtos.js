@@ -13,7 +13,6 @@ module.exports = (sequelize, DataType)=>{
         quantidade: DataType.INTEGER,
         console: DataType.STRING,
         imagem:DataType.STRING,
-        itemPedido_id: DataType.INTEGER
     },{        
         timestamps:false 
     }) 
@@ -21,9 +20,9 @@ module.exports = (sequelize, DataType)=>{
             Produtos.belongsTo(models.ItemPedidos,{
             foreignKey: 'Produtos_id'
         })
-        
-        Fabricantes.belongsToMany(models.Produtos)
-        Produtos.belongsToMany(models.Ofertas)
+
+        Produtos.hasOne(models.Fabricantes)
+        Produtos.hasMany(models.Ofertas)
         }
     return Produtos; 
 }

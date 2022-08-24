@@ -17,20 +17,19 @@ module.exports = (sequelize, DataType)=>{
         data_nascimento:DataType.DATE,
         usuario_id: DataType.INTEGER,
         endereco_id: DataType.INTEGER,
-        pedidos_id: DataType.INTEGER
     },{
         
         timestamps:false 
     }) 
         Clientes.associate = (models) => {
             Clientes.hasOne(models.Usuarios,{
-                foreignKey: 'Usuarios_id'
+                foreignKey: 'id'
             })        
             Clientes.hasMany(models.Enderecos,{
-                foreignKey: 'Clientes_id'
+                foreignKey: 'clientes_id'
             })
             Clientes.hasMany(models.Pedidos,{
-                foreignKey: 'Clientes_id'
+                foreignKey: 'clientes_id'
             })
         }       
 

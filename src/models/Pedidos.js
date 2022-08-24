@@ -9,7 +9,6 @@ module.exports = (sequelize, DataType) => {
         endereco_cobranca: DataType.STRING,
         endereco_entrega: DataType.STRING,
         codigo_status: true,
-        ItemPedido_id: DataType.INTEGER
     },{
         timestamps: false
     })

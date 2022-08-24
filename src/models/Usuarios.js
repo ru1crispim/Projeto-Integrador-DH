@@ -16,7 +16,7 @@ module.exports = (sequelize, DataType)=>{
         timestamps:false 
     }) 
         Usuarios.associate = (models) =>{
-            Usuarios.belongsTo(models.Clientes)
+            Usuarios.belongsTo(models.Clientes, {foreignKey: 'id'})
         }
     return Usuarios; 
 }
