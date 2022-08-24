@@ -182,8 +182,8 @@ form,#senha,#login, #name{
 }
 
 #login, #senha, #email, #nome, #name{
-    border: solid 2px black;
-    border-radius: 5%;
+    margin: 03px;
+    
 }
 
 button{
