@@ -4,10 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="/css/clientes/style-listClients.css">;
+<link rel="stylesheet" href="/css/style-index.css">;
     <title>Document</title>
 </head>
 <body>
-    <ul>
+    <div class="containerMaster">
+    <div class="containerOne">
+    <ul class="containerContent">
     <% for(let i = 0; i < users.length; i++) { %>
         <li>
             <p>Email: <%= users[i].email %></p>
@@ -21,6 +26,8 @@
         </li>
         <% } %>
     </ul>
-    <button><a href="/entrar">Cadastrar novo Usuario</a></button>
+</div>
+    <button class="containerBtn"><a href="/entrar">Cadastrar novo Usuario</a></button>
+</div>
 </body>
 </html>

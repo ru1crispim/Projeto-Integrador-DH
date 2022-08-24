@@ -25,12 +25,34 @@ header{
     /* position: fixed; */
     top: 0px;
     width: 100%;
+    animation-name: colorTransition;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
 
+}
+
+@keyframes colorTransition {
+	0% {
+		background-color: blueviolet;
+	} 50% {
+		background-color: black;
+	} 75% {
+		background-color: black;
+	} 100% {
+		background-color: none;
+	}
+}
+
+@keyframes spin {
+    from {transform:rotate(0deg);}
+    to {transform:rotate(360deg);}
 }
 
 .logoPressStart{
     width: 100%;
     height: 100%;
+    animation-name: spin;
+    animation-duration: 4s;
 }
 .navigation{
     display: flex;
@@ -62,6 +84,8 @@ list-style-type: none; /* Retirar o estilo da lista  */
     margin-right: 150px;
     color: yellow;
     text-decoration: none;
+    animation-name: spin;
+    animation-duration: 4s;
     
   
 }
@@ -112,8 +136,25 @@ list-style-type: none; /* Retirar o estilo da lista  */
     position: fixed;
     right:40px;
     top: 500px;
-
+    animation: spin 3s;
+    
 }
+
+.megaman{
+    width: 80px;
+    position: absolute;
+    left:100px;
+    top: 0px;
+    animation: moveLeft 3s;
+}
+@keyframes moveLeft{
+    0%{left: 0px;}
+    100%{left: 1200px; width: 20px;}
+}
+
+
+
+
 
 @keyframes carrossel{
     0%{margin-left: 0px;}
@@ -369,6 +410,7 @@ footer{
     box-sizing: border-box;
     justify-content:space-around;
     background-color: white;
+    margin: 10px;
 }
 .footerChild{
     /* border: 1px solid black; */

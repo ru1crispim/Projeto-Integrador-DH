@@ -1,4 +1,7 @@
-<!DOCTYPE html>
+<%- include('./partials/header') %>
+<%- include('./partials/head') %>
+
+<!-- <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
@@ -21,11 +24,12 @@
         </div>
         <div class="login">
             <a href="/entrar">Entrar / Cadastrar</a>
-            <!-- <a href="/formLogin">Crie sua conta</a> -->
-            <a href="./login.html"><img src="./img/login.png" alt="login"></a>
+            <a href="/formLogin">Crie sua conta</a> -->
+            <!-- <a href="./login.html"><img src="./img/login.png" alt="login"></a>
         </div>
     
-    </header>
+    </header> -->
+    <link rel="stylesheet" href="/css/style-index.css">
     <main>
         <div class="carrossel">
             <div class="parent"> 
@@ -35,7 +39,7 @@
                         <img src="/img/carrosel/home/img-3.jpg" alt="">
                     </div>
             </div>
-        </div>
+        </div> -->
         <div class="painelUsuario">
             <div class="caixa-1">
                 <img src="/img/Yago.jpg" alt="Foto">
@@ -43,7 +47,7 @@
                 <h3><%= user.nome %></h2>
                 <p>Creditos: R$ 500.000,00</p>
                 <button><a href="/clientes/cadastrar" target="_blank">Cadastro</a></button>
-                <button>Endereço</button>
+                <button><a href="/formLogin" target="_blank">Endereço</a></button>
                 <button>Pedidos</button>
                 <h4>Atendimento ao cliente</h4>
                 <p>SAC:(xx)xxxx-xxxx / E-mail:sac@ecoomerce.com.br</p>
