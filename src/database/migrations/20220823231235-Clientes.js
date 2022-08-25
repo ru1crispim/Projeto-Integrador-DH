@@ -20,7 +20,6 @@ module.exports = {
       data_nascimento:Sequelize.DATE,
       usuario_id:{
         type: Sequelize.INTEGER,
-        references: { model: 'Usuarios', key: 'id' },
         primaryKey: true,
         onUpdate: 'CASCADE',
         onDelete: 'SET NULL',
