@@ -11,7 +11,12 @@ module.exports = {
       },
       active:Sequelize.BOOLEAN,
       discount:Sequelize.FLOAT,
-      produtos_id: Sequelize.INTEGER
+      produtos_id: {
+        type: Sequelize.INTEGER,
+        onUpdate: 'CASCADE',
+        onDelete: 'SET NULL',
+        allowNull: false,
+      },
   },{
       timestamps:false
   }) 

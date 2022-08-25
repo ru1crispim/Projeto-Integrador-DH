@@ -13,16 +13,17 @@ module.exports = (sequelize, DataType)=>{
         quantidade: DataType.INTEGER,
         console: DataType.STRING,
         imagem:DataType.STRING,
+        fabricante_id: DataType.INTEGER
     },{        
         timestamps:false 
     }) 
-        Produtos.associate = (models) => {
-            Produtos.belongsTo(models.ItemPedidos,{
-            foreignKey: 'Produtos_id'
-        })
+        // Produtos.associate = (models) => {
+        //     Produtos.belongsTo(models.ItemPedidos,{
+        //     foreignKey: 'Produtos_id'
+        // })
 
-        Produtos.hasOne(models.Fabricantes)
-        Produtos.hasMany(models.Ofertas)
-        }
+        // Produtos.hasOne(models.Fabricantes)
+        // Produtos.hasMany(models.Ofertas)
+        // }
     return Produtos; 
 }

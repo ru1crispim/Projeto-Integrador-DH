@@ -8,7 +8,8 @@ module.exports = (sequelize, DataType) => {
         valor_total: DataType.FLOAT,
         endereco_cobranca: DataType.STRING,
         endereco_entrega: DataType.STRING,
-        codigo_status: true,
+        codigo_status: DataType.STRING,
+        cliente_id: DataType.INTEGER
     },{
         timestamps: false
     })

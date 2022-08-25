@@ -15,14 +15,18 @@ module.exports = {
           type:Sequelize.STRING,
           allowNull:false  
       },
-      cpf: Sequelize.INTEGER,
-      telefone: Sequelize.INTEGER,
+      cpf: Sequelize.STRING,
+      telefone: Sequelize.STRING,
       data_nascimento:Sequelize.DATE,
-      usuario_id: Sequelize.INTEGER,
-      endereco_id: Sequelize.INTEGER,
-  },{
-      
-      timestamps:false 
+      usuario_id:{
+        type: Sequelize.INTEGER,
+        primaryKey: true,
+        onUpdate: 'CASCADE',
+        onDelete: 'SET NULL',
+        allowNull: false,
+      },
+  },{      
+      timestamps:false
   }) 
   },
   

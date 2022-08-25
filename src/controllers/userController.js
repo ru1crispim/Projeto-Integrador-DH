@@ -64,6 +64,10 @@ const userController = {
             email,
             senha:senhaCriptografada
         });
+        await db.Clientes.create({
+            nome, 
+            email
+        })
         console.log('olaola', result)
         return res.redirect("/index");
     }

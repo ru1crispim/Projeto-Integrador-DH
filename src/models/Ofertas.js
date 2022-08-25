@@ -14,8 +14,8 @@ module.exports = (sequelize, DataType)=>{
         timestamps:false
     }) 
         Ofertas.associate = (models) => {
-            Ofertas.hasMany(models.Produtos,{
-            foreignKey: 'Produtos_Ofertas1_id'
+            Ofertas.hasOne(models.Produtos,{
+            foreignKey: 'id'
         })
     }
     return Ofertas

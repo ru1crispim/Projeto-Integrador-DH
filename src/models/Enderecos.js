@@ -16,7 +16,7 @@ module.exports = (sequelize, DataType)=>{
         cidade: DataType.STRING,
         estado: DataType.STRING,
         referencia: DataType.STRING,
-        pedidos_id: DataType.INTEGER
+        clientes_id: DataType.INTEGER
     },{
         timestamps: false   
     }) 

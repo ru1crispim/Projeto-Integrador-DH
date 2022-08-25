@@ -9,16 +9,26 @@
           unique:true,
           autoIncrement:true
       },
-        nome:Sequelize.STRING,  
-        sobrenome: Sequelize.STRING,
-        email:{
-            type:Sequelize.STRING,
-            allowNull:false  
-        },
         valor_total: Sequelize.FLOAT,
-        endereco_cobranca: Sequelize.STRING,
-        endereco_entrega: Sequelize.STRING,
-        codigo_status: Sequelize.BOOLEAN
+        codigo_status: Sequelize.STRING,
+        cliente_id: {
+          type: Sequelize.INTEGER,
+          onUpdate: 'CASCADE',
+          onDelete: 'SET NULL',
+          allowNull: false,
+        },
+        endereco_cobranca: {
+          type: Sequelize.INTEGER,
+          onUpdate: 'CASCADE',
+          onDelete: 'SET NULL',
+          allowNull: false,
+        },
+        endereco_entrega: {
+          type: Sequelize.INTEGER,
+          onUpdate: 'CASCADE',
+          onDelete: 'SET NULL',
+          allowNull: false,
+        },
     },{
         timestamps: false
     })
