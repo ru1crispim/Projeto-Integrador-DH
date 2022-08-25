@@ -15,21 +15,26 @@ module.exports = (sequelize, DataType)=>{
         cpf: DataType.INTEGER,
         telefone: DataType.INTEGER,
         data_nascimento:DataType.DATE,
-        usuario_id: DataType.INTEGER,
-        endereco_id: DataType.INTEGER,
+        usuario_id: {
+            type: DataType.INTEGER,
+            references: {model: 'usuarios', key: 'id'}
+        },
     },{
         
         timestamps:false 
     }) 
         Clientes.associate = (models) => {
             Clientes.hasOne(models.Usuarios,{
-                foreignKey: 'id'
+                foreignKey: 'id',
+                foreignKeyConstraint: true
             })        
             Clientes.hasMany(models.Enderecos,{
-                foreignKey: 'clientes_id'
+                foreignKey: 'clientes_id',
+                foreignKeyConstraint: true
             })
             Clientes.hasMany(models.Pedidos,{
-                foreignKey: 'clientes_id'
+                foreignKey: 'clientes_id',
+                foreignKeyConstraint: true
             })
         }       
 

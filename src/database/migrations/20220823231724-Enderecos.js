@@ -17,7 +17,12 @@ module.exports = {
       cidade: Sequelize.STRING,
       estado: Sequelize.STRING,
       referencia: Sequelize.STRING,
-      pedidos_id: Sequelize.INTEGER
+      clientes_id:{
+        type: Sequelize.INTEGER,
+        onUpdate: 'CASCADE',
+        onDelete: 'SET NULL',
+        allowNull: false,
+      },
   },{
       timestamps: false   
   }) 

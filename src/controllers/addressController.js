@@ -5,7 +5,7 @@ const addressController = {
         try{
             const {cep, endereco, enderecoNumber, complemento, bairro, cidade,state, referencia} = req.body;
 
-            const resultAddress = await db.Endereços.create({
+            const resultAddress = await db.Enderecos.create({
                 cep,
                 endereco,
                 numero: enderecoNumber,
