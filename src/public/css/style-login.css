@@ -177,13 +177,13 @@ list-style-type: none; /* Retirar o estilo da lista  */
     opacity: 0.9;
 }
 
-form,#senha,#login, #name{
+form,#senha,#login, #name, #senhaCadastrado, #loginCadastrado{
     font-size: 17px;
 }
 
-#login, #senha, #email, #nome, #name{
-    border: solid 2px black;
-    border-radius: 5%;
+#login, #senha, #email, #nome, #name, #senhaCadastrado, #loginCadastrado{
+    margin: 03px;
+    
 }
 
 button{

@@ -1,10 +1,3 @@
-// const {Sequelize, DataType} = require('sequelize');
-// const databaseConfig = require('../configs/database');
-
-// const connection =  new Sequelize(databaseConfig);
-
-
-
 module.exports = (sequelize, DataType)=>{
     const Usuarios = sequelize.define('Usuarios',{
         id:{
@@ -13,15 +6,17 @@ module.exports = (sequelize, DataType)=>{
             unique:true,
             autoIncrement:true
         },
-        nome:DataType.STRING,   
         email:{
             type:DataType.STRING,
             allowNull:false  
         },
-        senha:DataType.STRING
-    }, {
-        
+        senha:DataType.STRING,
+        admin: false
+    },{      
         timestamps:false 
-    })
+    }) 
+        Usuarios.associate = (models) =>{
+            Usuarios.belongsTo(models.Clientes, {foreignKey: 'id'})
+        }
     return Usuarios; 
 }

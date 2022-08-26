@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="stylesheet" href="/css/style-login.css">
-    
+    <script src="/javascript/validator.js"></script>
     
 </head>
 <body>
@@ -25,10 +25,10 @@
                         <h2 class="escrito">Já sou cadastrado</h2>
                         <form action="/usuariologado" method="post">
                             <label for="login">Email:</label>
-                            <input type="email" id="login" name="email" placeholder="Digite seu Email" />
+                            <input type="email" id="loginCadastrado" name="email" placeholder="Digite seu Email" />
                             <br><br>
                             <label for="senha"> Senha:</label>
-                            <input type="password" id="senha" name="password" placeholder="Digite sua Senha" />
+                            <input type="password" id="senhaCadastrado" name="password" placeholder="Digite sua Senha" />
                             <br><br>
                             <input type="checkbox" name="logado" id="" />
                             <label for="">Manter logado?</label>
@@ -44,15 +44,16 @@
                     </div>
                 <div class="naocadastrado">
                     <h2 class="escrito">Não sou cadastrado</h2>
-                    <form action="/entrar/registrado" method="post">
+                    <form class="formCadastrase" action="/entrar/registrado" method="post">
                         <label for="nome">Nome:</label>
-                        <input type="text" name="nome" id="name" placeholder="Digite seu nome Completo">
+                        <input type="text" name="nome" id="name" placeholder="Digite seu Nome">
+                        <br>
                         <label for="login">Email:</label>
                         <input type="email" id="login" name="email" placeholder="Digite seu Email" />
-                        <br><br>
+                        <br>
                         <label for="senha"> Senha:</label>
                         <input type="password" id="senha" name="password" placeholder="Digite sua Senha" />
-                    <p class="pncadastrado">Cadastre-se agora em nossa loja, é seguro, rápido e fácil</p>
+                        <p class="pncadastrado">Cadastre-se agora em nossa loja, é seguro, rápido e fácil</p>
                         <button type="submit" id="Cadastre-se">Cadastre-se</button>
                         </a>
                     </form>

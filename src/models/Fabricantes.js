@@ -5,9 +5,15 @@ module.exports = (sequelize, DataType)=>{
             primaryKey:true,
             autoIncrement:true
         },
-        nome:DataType.STRING
+        nome:DataType.STRING,
+        produtos_id: DataType.INTEGER
     }, {
         timestamps:false 
     })
+        Fabricantes.associate = (models) => {
+            Fabricantes.hasMany(models.Produtos,{
+            foreignKey: 'fabricante_id'
+        })
+    }
     return Fabricantes; 
 }
