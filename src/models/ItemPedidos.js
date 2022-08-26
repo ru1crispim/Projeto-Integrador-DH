@@ -4,7 +4,12 @@ module.exports = (sequelize, DataType) =>{
             type: DataType.INTEGER,
             primaryKey: true,
             autoIncrement: true
-        }
+        },
+        quantidade: DataType.INTEGER,
+        valor_unitario: DataType.FLOAT,
+        valor_total: DataType.FLOAT,
+        produto_id: DataType.INTEGER,
+        pedido_id: DataType.INTEGER
     },{
         timestamps: false
     }) 

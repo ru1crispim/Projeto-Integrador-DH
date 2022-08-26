@@ -16,6 +16,12 @@ module.exports = {
       quantidade: Sequelize.INTEGER,
       console: Sequelize.STRING,
       imagem:Sequelize.STRING,
+      fabricante_id: {
+        type: Sequelize.INTEGER,
+        onUpdate: 'CASCADE',
+        onDelete: 'SET NULL',
+        allowNull: false,
+      },
   },{        
       timestamps:false 
   }) 

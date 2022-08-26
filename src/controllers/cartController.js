@@ -25,6 +25,7 @@ const cartController = {
 
     sendToServer:async(req,res)=>{
         try{
+            const userEmail = req.cookies['logado']
             const KEY_STORAGE = '@games:cart';
             let cart = req.cookies[KEY_STORAGE];
             if(!cart){
@@ -32,14 +33,29 @@ const cartController = {
             }
             console.log(cart, 'teste');
             cart = JSON.parse(cart);
-            const products = cart.map(item => ({
-                id: item.id,
-                quantidade: item.quantidade,
-                preco: item.preco
-            }))
             
-            const result = await db.Compras.bulkCreate(products)
-
+            const total = cart.reduce((acc,current)=>acc+Number(current.valor) * Number(current.amount),0)
+            const cliente = await db.Clientes.findOne({
+                where: {
+                    email: userEmail,
+                }
+            })
+            const pedido = await db.Pedidos.create({
+                valor_total: total,
+                codigo_status: 'sucesso!',
+                cliente_id: cliente.id,
+                endereco_cobranca: 1,
+                endereco_entrega: 3
+            })
+            const products = cart.map(item => ({
+                produto_id: item.id,
+                pedido_id: pedido.id,
+                quantidade: item.amount,
+                valor_unitario: item.valor,
+                valor_total: Number(item.amount) * Number(item.valor)                
+            }))
+            const result = await db.ItemPedidos.bulkCreate(products)
+            console.log(products, 'algumacoisa')
             return res.redirect('/index')
         }
         catch(err){
