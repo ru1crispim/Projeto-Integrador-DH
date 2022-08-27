@@ -6,6 +6,7 @@ module.exports = (sequelize, DataType)=>{
             unique:true,
             autoIncrement:true
         },
+        nome:DataType.STRING,
         email:{
             type:DataType.STRING,
             allowNull:false  
