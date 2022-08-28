@@ -10,10 +10,10 @@ module.exports = (sequelize, DataType)=>{
     }, {
         timestamps:false 
     })
-        Fabricantes.associate = (models) => {
-            Fabricantes.hasMany(models.Produtos,{
-            foreignKey: 'fabricante_id'
-        })
-    }
+    //     Fabricantes.associate = (models) => {
+    //         Fabricantes.hasMany(models.Produtos,{
+    //         foreignKey: 'id'
+    //     })
+    // }
     return Fabricantes; 
 }
