@@ -177,11 +177,11 @@ list-style-type: none; /* Retirar o estilo da lista  */
     opacity: 0.9;
 }
 
-form,#senha,#login, #name, #senhaCadastrado, #loginCadastrado{
+form,#senha,#email, #name, #senhaCadastrado, #loginCadastrado{
     font-size: 17px;
 }
 
-#login, #senha, #email, #nome, #name, #senhaCadastrado, #loginCadastrado{
+#email, #senha, #email, #nome, #name, #senhaCadastrado, #loginCadastrado{
     margin: 03px;
     
 }
@@ -365,11 +365,11 @@ list-style-type: none; /* Retirar o estilo da lista  */
     box-sizing: border-box;
     justify-content:space-around;
     background-color: white;
-    margin: 10px;
+    margin: 5px;
 }
 .footerChild{
     /* border: 1px solid black; */
-    height: 20vh;
+    /* height: 20vh; */
     padding: 10px;
     box-sizing: border-box;
     font-size: 1.5rem;

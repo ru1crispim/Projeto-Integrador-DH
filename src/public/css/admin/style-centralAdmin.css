@@ -14,9 +14,8 @@ body {
     background-color: white;
     border: 1px solid black;
     box-sizing: border-box;
-    margin: 10px;
     height: 100%;
-    font-size: 20px;
+    font-size: 2rem;
     width: 100%;
 }
 
@@ -27,13 +26,11 @@ body {
     border: 1px solid black;
     justify-content: center;
     align-items: center;
-    padding: 40px;
     box-sizing: border-box;
     width: 50%;
     background-color: gray;
     color: white;
     border-radius: 20px;
-    margin: 10px;
 }
 
 .option, .info{

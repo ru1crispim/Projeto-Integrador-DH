@@ -8,6 +8,7 @@
     <div class="containerMaster">
         <div class="containerOne">
             <ul class="containerContent">
+                <h3>Lista de clientes</h3>
             <% for(let i = 0; i < users.length; i++) { %>
                 <li>
                     <p>Nome: <%= users[i].nome %></p>
@@ -19,18 +20,18 @@
                     
                     <button class="containerBtn">
                         <a href="/clientes/editar/<%= users[i].id %>">
-                        Editar Usuario
+                        Editar Cliente
                         </a>
                     </button>
                     <form action="/clientes/deletar/<%= users[i].id %>?_method=DELETE" method="POST">
-                        <button class="containerBtnOne" type="submit">Deletar Usuario</button>
+                        <button class="containerBtnOne" type="submit">Deletar Cliente</button>
                     </form>
                 </li>
                 <% } %>
             </ul>
         </div>
             <button class="containerBtn" id="btnCadastrar">
-                <a href="/clientes/cadastrar">Cadastrar novo Usuario</a>
+                <a href="/clientes/cadastrar">Cadastrar novo Cliente</a>
             </button>
     </div>
 <%- include('../partials/footer') %>
