@@ -14,12 +14,21 @@ ul {
 .productsList {
     display: flex;
     flex-direction: column;
-    color: white;
+    color: black;
+    background-color: white;
+    font-weight: bold;
     font-size: 15px;
-    border: 2px;
+    border: 2px solid white;
+    border-radius: 10px;
+    margin: 3px;
     padding: 10px;
+    align-items: center;
 }
 
+.buttons{
+    display: flex;
+    
+}
 
 /* Inclusao do CSS header e footer */
 
@@ -183,4 +192,13 @@ a{
     /* background-color: red;
     border-radius: 10px;
     padding: 5px; */
+}
+
+
+.gamesList h1{
+    color: white;
+}
+
+main{
+    height: 80vh;
 }

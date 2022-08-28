@@ -43,6 +43,12 @@ ul{
     padding: 5px;
 }
 
+.games{
+    height: 70vh;
+}
+.games h1{
+    color: white;
+}
 
 .li_games {
     display: flex;
