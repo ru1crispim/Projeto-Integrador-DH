@@ -12,24 +12,26 @@
 <body>
     
     <header>
-        <%- include('./partials/head') %>
         <%- include('./partials/header') %>
     </header>
 
     <main>
         <div class="gamesList">
-            <h2>Produtos Cadastrados</h2>
+            <h1>Produtos Cadastrados</h1>
             <ul>
         <% for(let i = 0; i < products.length; i++) { %>
             <li class="productsList">
+            <img src="/img/images.png" alt="">
             <p>Nome: <%= products[i].nome %></p>
             <p>Valor: <%= products[i].valor %></p>
             <p>Quantidade: <%= products[i].quantidade %></p>
+            <div class="buttons">
             <button><a href="/productform/update/<%= products[i].id %>">
                 Editar Produto
             </a></button>
             <form action="/product/deletar/<%= products[i].id %>?_method=DELETE" method="post">
                 <button type="submit">Deletar Produto</button>
+            </div>
             </form>
         </li>
         <% } %>
