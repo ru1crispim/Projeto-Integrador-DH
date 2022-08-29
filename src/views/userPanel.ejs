@@ -31,15 +31,15 @@
     </header> -->
     <link rel="stylesheet" href="/css/style-index.css">
     <main>
-        <div class="carrossel">
+        <div class="carousel">
             <div class="parent"> 
-                    <div class="imagens">                  
-                        <img src="/img/carrosel/home/img-1.jpg" alt="">
-                        <img src="/img/carrosel/home/img-4.jpg" alt="">
-                        <img src="/img/carrosel/home/img-3.jpg" alt="">
+                    <div class="images">
+                        <a href="/allproducts/offers"><img src="/img/carrosel/home/img-1.jpg" alt=""></a>
+                        <a href="/allproducts/offers"><img src="/img/carrosel/home/img-4.jpg" alt=""></a>
+                        <a href="/allproducts/offers"><img src="/img/carrosel/home/img-3.jpg" alt=""></a>
                     </div>
             </div>
-        </div> -->
+        </div>
         <div class="painelUsuario">
             <div class="caixa-1">
                 <img src="/img/Yago.jpg" alt="Foto">
@@ -123,11 +123,12 @@
                             <td>45230</td>
                         </tr>
                         <tr>
-                            <td>123456</td>
-                            <td>12/04/2022</td>
-                            <td>R$1250,00</td>
-                            <td>Em transito</td>
-                            <td>45230</td>
+                            <% for(let i = 0; i < user.length; i++) { %>
+                            <td><%= user[i].id %></td>
+                            <td><%= user[i].valor_total %></td>
+                            <td><%= user[i].codigo_status %></td>
+                            <td><%= user[i].endereco_cobranca %></td>
+                            <% } %>
                         </tr>
                     </table>
                 </div>

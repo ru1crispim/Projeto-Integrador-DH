@@ -14,24 +14,13 @@
     
 </head>
 <body>
-    
-    <header class="cabecalho">
-        <a href=""><img class="logoPressStart" src="/img/logo-loja-br.png" alt="logo-loja"></a>
-        <div class="navigation">
-            <ul>
-                <li><a href="/index">Inicio</a></li>
-                <li><a href="/allproducts">Jogos</a></li>
-                <li><a href="/contato">Contato</a></li>
-                <li><a href="/produtosusados">Orçamentos</a></li>              
-            </ul>
-        </div>
-        <div class="login">
-            <a href="/entrar">Entrar / Cadastrar</a>
-            <!-- <a href="/formLogin">Crie sua conta</a> -->
-            <a href="./login.html"><img src="/img/login.png" alt="login"></a>
-        </div>
-    
+
+    <header>
+        <%- include('./partials/head') %>
+        <%- include('./partials/header') %>
     </header>
+    
+   
     <main>
         <form action="/carrinho" method="post">
             <div class="pai">
@@ -62,28 +51,11 @@
             </div>
         </form>
     </main>
-    <footer class="rodape">
-        <div class="rodapeChild">
-            <h4>Beneficios</h4>
-            <ul>
-                <li>Garantia de qualidade</li>
-                <li>Melhor opção do mercado</li>
-                <li>Entrega para todo o Brasil</li>
-            </ul>
-        </div>
-        <div class="rodapeChild">
-            <h4 >Contatos</h4>
-            <p>Telefone: (11) 00000-0000</p>
-            <p>E-mail: sac@pressstart.com.br</p>
-        </div>
-        <div class="rodapeChild">
-            <h4 >Redes Sociais</h4>
-            <img src="/img/icons/facebook.png" alt="logo-facebook">
-            <img src="/img/icons/instagram.png" alt="logo-instagram">
-            <img src="/img/icons/whattsapp.png" alt="logo-whattsapp">
-        </div>
+    <footer id="contact">
 
-    </footer>
+        <%- include('./partials/footer') %>
+    
+        </footer>
 
     <script src="../javascript/cart.js"></script>
 </body>

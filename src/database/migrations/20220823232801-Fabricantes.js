@@ -10,6 +10,7 @@ module.exports = {
           autoIncrement:true
       },
       nome:Sequelize.STRING,
+      produtos_id:Sequelize.INTEGER
   }, {
       timestamps:false 
   }
