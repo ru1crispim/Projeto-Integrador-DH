@@ -193,7 +193,7 @@ list-style-type: none; /* Retirar o estilo da lista  */
     display: flex;
     flex-direction: row;
     animation-name: carrossel;
-    animation-duration: 20s;
+    animation-duration: 10s;
     animation-iteration-count: infinite;
     animation-direction: alternate;
 }
