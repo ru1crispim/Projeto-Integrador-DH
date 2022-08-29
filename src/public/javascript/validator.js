@@ -12,21 +12,21 @@ window.addEventListener('load', function() {
         let errors = [];
 
             if (fieldName.value == ''){
-                errors.push("O Campo nome não pode estar vazio.\n");
+                errors.push('\nO Campo nome não pode estar vazio');
             } else if (fieldName.value.length < 3) {
-                errors.push('O Campo nome precisa ter mais de 3 caracteres.\n');
+                errors.push('\nO Campo nome precisa ter mais de 3 caracteres');
             };
 
             if (fieldEmail.value == ''){
-                errors.push('O Campo E-mail não pode estar vazio.\n');
+                errors.push('\nO Campo E-mail não pode estar vazio');
             } else if (fieldEmail.value.length < 11) {
-                errors.push('Campo E-mail invalido!.\n');
+                errors.push('\nCampo E-mail invalido!');
             }
 
             if (fieldPassword.value == ''){
-                errors.push('O Campo senha não pode estar vazio.\n');
+                errors.push('\nO Campo senha não pode estar vazio.');
             } else if (fieldPassword.value.length < 6) {
-                errors.push('A senha tem que ter mais que 5 caracteres.\n');
+                errors.push('\nA senha tem que ter mais que 5 caracteres.');
             };
             
            if (errors.length > 0){

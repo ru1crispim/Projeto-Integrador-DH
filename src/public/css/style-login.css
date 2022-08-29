@@ -287,7 +287,6 @@ header{
 .navigation{
     display: flex;
     flex-direction: row;
-    
     height: 10vh;
     box-sizing: border-box;
     width: 70%;
