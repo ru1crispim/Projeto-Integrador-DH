@@ -1,33 +1,31 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="stylesheet" href="/css/clientes/style-listClients.css">;
+<%- include('../partials/head') %>
+<%- include('../partials/header') %>
+<link rel="stylesheet" href="/css/clientes/style-listClients.css">;
 <link rel="stylesheet" href="/css/style-index.css">;
-    <title>Document</title>
 </head>
 <body>
     <div class="containerMaster">
-    <div class="containerOne">
-    <ul class="containerContent">
-    <% for(let i = 0; i < users.length; i++) { %>
-        <li>
-            <p>Email: <%= users[i].email %></p>
-            <p>Nome: <%= users[i].nome %></p>
-            <button><a href="/entrar/admin/centraladmin/usuario/editar/<%= users[i].id %>">
-                Editar Usuario
-            </a></button>
-            <form action="/entrar/admin/centraladmin/usuario/deletar/<%= users[i].id %>?_method=DELETE" method="post">
-                <button type="submit">Deletar Usuario</button>
-            </form>
-        </li>
-        <% } %>
-    </ul>
-</div>
-    <button class="containerBtn"><a href="/entrar">Cadastrar novo Usuario</a></button>
-</div>
+        <div class="containerOne">
+            <ul class="containerContent">
+                <h3>Lista de Usuario</h3>
+                <% for(let i = 0; i < users.length; i++) { %>
+                <li>
+                    <p>Email: <%= users[i].email %></p>
+                    <p>Nome: <%= users[i].nome %></p>
+                    <button>
+                        <a href="/entrar/admin/centraladmin/usuario/editar/<%= users[i].id %>">
+                        Editar Usuario
+                        </a>
+                    </button>
+                    <form action="/entrar/admin/centraladmin/usuario/deletar/<%= users[i].id %>?_method=DELETE" method="post">
+                    <button type="submit">Deletar Usuario</button>
+                    </form>
+                </li>
+                <% } %>
+            </ul>
+        </div>
+        <button class="containerBtn"><a href="/entrar">Cadastrar novo Usuario</a></button>
+    </div>
+<%- include('../partials/footer') %>
 </body>
 </html>

@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;900&display=swap');
 
 main {
     display: flex;
@@ -43,6 +43,12 @@ ul{
     padding: 5px;
 }
 
+.games{
+    height: 70vh;
+}
+.games h1{
+    color: white;
+}
 
 .li_games {
     display: flex;

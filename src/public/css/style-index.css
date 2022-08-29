@@ -59,16 +59,13 @@ header{
 .navigation{
     display: flex;
     flex-direction: row;
-    
     height: 10vh;
     box-sizing: border-box;
     width: 70%;
-    padding: 20px;
+    align-items: center;
     justify-content: flex-start;
     box-sizing: border-box;
     font-size: 1.5rem;
-    
-
 }
 
 .navigation ul {
@@ -193,7 +190,7 @@ list-style-type: none; /* Retirar o estilo da lista  */
     display: flex;
     flex-direction: row;
     animation-name: carrossel;
-    animation-duration: 20s;
+    animation-duration: 10s;
     animation-iteration-count: infinite;
     animation-direction: alternate;
 }
@@ -407,20 +404,19 @@ list-style-type: none; /* Retirar o estilo da lista  */
 footer{
     display: flex;
     flex-direction: row;
-    /* border: 1px solid black; */
     height: auto;
     box-sizing: border-box;
     justify-content:space-around;
     background-color: white;
-    margin: 10px;
+    margin: 10px 0px;
 }
+
 .footerChild{
-    /* border: 1px solid black; */
-    height: 20vh;
     padding: 10px;
     box-sizing: border-box;
     font-size: 1.5rem;
 }
+
 .footerChild img{
     width: 3.3rem;
 }

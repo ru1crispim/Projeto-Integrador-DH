@@ -1,163 +1,56 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro</title>
-    <link rel="stylesheet" href="/css/style-formLogin.css">
-    <script src="/javascript/zipCodeUsers.js" defer></script>
-</head>
+<%- include('./partials/head') %>
+<%- include('./partials/header') %>
+
+<script src="/javascript/zipCodeUsers.js" defer></script>
+<link rel="stylesheet" href="/css/style-formLogin.css">;
+<link rel="stylesheet" href="/css/style-index.css">;
 <body>
-    
-    <header>
-        <%- include('./partials/head') %>
-        <%- include('./partials/header') %>
-    </header>
-        <div class="superior">
-            <div class="historico">
-                <span>Inicio > Cadastro</span>
-            </div>
-            <div>
-                <h2 class="titulo">Meu Cadastro</h2>
-                <% if(typeof errors !== 'undefined') { %>
-                    <% for(let error in errors){ %>
-                        <%= error %>
-                        <%= errors[error].msg %>
-                    <% } %>
-                    <% } %>
-            </div>
+    <div class="containerOne">
+        <div>
+            <h2 class="titulo">Meu Cadastro</h2>
+            <% if(typeof errors !== 'undefined') { %>
+                <% for(let error in errors){ %>
+                    <%= error %>
+                    <%= errors[error].msg %>
+                <% } %>
+                <% } %>
         </div>
-        
-        
-        <form method="post" action="/clientes/endereco">
+        <form method="POST" action="/clientes/endereco">
             <div class="mainForm">
-            <div class="grupoUm">
-            <!-- <fieldset>
-                <span class="info"><strong> Dados pessoais:</strong></span>
-                
-                    <label for="nome">Nome:</label>
-                    <input type="text" name="nome" size="40" maxlength="100" >
-                
-                <br>
-                
-                    <label for="sobrenome">Sobrenome:</label>
-                    <input type="text" name="sobrenome" size="40" maxlength="100" >
-                
-                <br>
-                
-                    <label for="nome">Data de Nascimento:</label>
-                    <input type="date" name="date" size="40" maxlength="100" >
-                
-                <br>
-                
-                    <label for="nome" >Sexo:</label>
-                    <select name="sexo">
-                        <option value>Selecione</option>
-                        <option value="F" reference="F">Feminino</option>
-                        <option value="M" reference="M">Masculino</option>
-                        <option value="N" reference="N">Não Informado</option>
-                    </select>
-                
-                <br>
-                
-                    <label for="nome">CPF:</label>
-                    <input type="number" name="cpf" size="40" maxlength="100" >
-                
-                <br>
-                
-                    <label for="nome">Telefone Celular:</label>
-                    <input type="number" name="telefone" size="40" maxlength="100" >
-                    <br>
-                    <small>Ex: DDD + Telefone</small>
-                
-                <br>
-            </fieldset> -->
-            </div>
-            <div class="grupoDois">
-            <fieldset>
-                <span class="info"><strong> Endereço:</strong></span>
-                <br>
-            
-                    <label for="nome">CEP:</label>
-                    <input type="number" name="cep"size="40" maxlength="100" id="cep" >
-            
-                <br>
-            
-                    <label for="nome">Endereço:</label>
-                    <input type="text" name="endereco" size="40" maxlength="100" id="endereco">
-            
-                <br>
-            
-                    <label for="nome">Número:</label>
-                    <input type="text" name="enderecoNumber" size="40" maxlength="100" >
-            
-                <br>
-            
-                    <label for="nome">Complemento:</label>
-                    <input type="text" name="complemento" size="40" maxlength="100" >
-            
-                <br>
-            
-                    <label for="nome">Bairro:</label>
-                    <input type="text" name="bairro" size="40" maxlength="100" id="bairro">
-            
-                <br>
-            
-                    <label for="nome">Cidade:</label>
-                    <input type="text" name="cidade" size="40" maxlength="100" id="cidade">
-            
-                <br>
-            
-                    <label for="nome">Estado:</label>
-                    <input type="text" name="state" size="40" maxlength="100" id="estado">
-            
-                <br>
-            
-                    <label for="nome">Referência:</label>
-                    <input type="text" name="referencia" size="40" maxlength="100" >
-            
-            </fieldset>
-            </div>
-            
-            
-        </div>
-        <div class="botao">
-            <button type="submit" class="cadastraUsuario">Cadastrar</button>
-            </div>
+                <div class="grupoDois">
+                    <fieldset>
+                        <span class="info"><strong> Endereço:</strong></span>
+                            <br>
+                            <label for="nome">CEP:</label>
+                            <input type="number" name="CEP"size="40" maxlength="100" id="cep" >
+                            <br>
+                            <label for="nome">Endereço:</label>
+                            <input type="text" name="endereco" size="40" maxlength="100" id="endereco">
+                            <br>
+                            <label for="nome">Número:</label>
+                            <input type="text" name="enderecoNumber" size="40" maxlength="100" >
+                            <br>
+                            <label for="nome">Complemento:</label>
+                            <input type="text" name="complemento" size="40" maxlength="100" >
+                            <br>
+                            <label for="nome">Bairro:</label>
+                            <input type="text" name="bairro" size="40" maxlength="100" id="bairro">
+                            <br>
+                            <label for="nome">Cidade:</label>
+                            <input type="text" name="cidade" size="40" maxlength="100" id="cidade">
+                            <br>
+                            <label for="nome">Estado:</label>
+                            <input type="text" name="state" size="40" maxlength="100" id="estado">
+                            <br>
+                            <label for="nome">Referência:</label>
+                            <input type="text" name="referencia" size="40" maxlength="100" >
+                    </fieldset>
+                </div>      
         </form>
-    
-        <div class="ofertas">
-            <span>Inscreva-se e receba ofertas exclusivas!</span>
-            <form class="cadastrar" action="" method="">
-                <input type="text" id="nome" name="nome" placeholder="Nome">
-                <input type="email" id="email" name="email" placeholder="E-mail">
-                <button>Cadastrar</button>
-            </form>
-        </div>
-    <footer class="rodape">
-        <div class="rodapeChild">
-            <h4>Beneficios</h4>
-            <ul>
-                <li>Garantia de qualidade</li>
-                <li>Melhor opção do mercado</li>
-                <li>Entrega para todo o Brasil</li>
-            </ul>
-        </div>
-        <div class="rodapeChild">
-            <h4 >Contatos</h4>
-            <p>Telefone: (11) 00000-0000</p>
-            <p>E-mail: sac@pressstart.com.br</p>
-        </div>
-        <div class="rodapeChild">
-            <h4 >Redes Sociais</h4>
-            <img src="/img/icons/facebook.png" alt="logo-facebook">
-            <img src="/img/icons/instagram.png" alt="logo-instagram">
-            <img src="/img/icons/whattsapp.png" alt="logo-whattsapp">
-
-        </div>
-
-    </footer>
+    </div>
+    <div class="botao">
+        <button type="submit" class="cadastraUsuario">Cadastrar</button>
+    </div>
+<%- include('./partials/footer') %>                
 </body>
 </html>
-
