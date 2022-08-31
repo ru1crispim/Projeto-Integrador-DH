@@ -6,6 +6,6 @@ const logDBMiddleware = require('../middlewares/logDB')
 
 router.get('/carrinho',cartController.cart);
 router.post('/carrinho', cartController.sendToServer);
-router.get('/meuPedido', cartController.orderCompletion); // carrega a rota de acompanhamento do pedido, com a view orderCompletion
+router.get('/minhascompras', cartController.clientOrder); // carrega a rota de acompanhamento do pedido, com a view orderCompletion
 
 module.exports=router;

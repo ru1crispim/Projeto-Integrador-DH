@@ -1,0 +1,16 @@
+/* .confirm-pedidos{
+    background-color: white;
+    font-style: black;
+    align-items: center;
+} */
+
+.confirm-pedidos{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: lightgreen;
+    height: 80vh;
+}
+

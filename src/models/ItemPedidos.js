@@ -13,9 +13,9 @@ module.exports = (sequelize, DataType) =>{
     },{
         timestamps: false
     }) 
-        ItemPedidos.associate = (models) => {
-            ItemPedidos.belongsTo(models.Pedidos)
-            ItemPedidos.belongsTo(models.Produtos)
-    }
+    //     ItemPedidos.associate = (models) => {
+    //         ItemPedidos.belongsTo(models.Pedidos)
+    //         ItemPedidos.belongsTo(models.Produtos)
+    // }
     return ItemPedidos
 }
