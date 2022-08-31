@@ -65,6 +65,19 @@ const cartController = {
 
     orderCompletion:(req,res)=>{
         return res.render('orderCompletion'); //  /meupedido
+    },
+
+    clientOrder:async(req,res)=>{
+        try{
+            const order = await db.ItemPedidos.findAll({
+                raw: true
+            })
+            console.log(order)
+            return res.render('orderCompletion', {order})
+        }
+        catch(err){
+            console.log(err)
+        }
     }
 }
 module.exports = cartController;

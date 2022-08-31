@@ -33,7 +33,7 @@ module.exports = (sequelize, DataType)=>{
                 foreignKeyConstraint: true
             })
             Clientes.hasMany(models.Pedidos,{
-                foreignKey: 'clientes_id',
+                foreignKey: 'cliente_id',
                 foreignKeyConstraint: true
             })
         }       

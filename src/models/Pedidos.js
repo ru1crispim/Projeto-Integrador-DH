@@ -13,10 +13,10 @@ module.exports = (sequelize, DataType) => {
     },{
         timestamps: false
     })
-        Pedidos.associate = (models) => {
-            Pedidos.hasMany(models.ItemPedidos,{
-            foreignKey: 'Pedidos_id'
-        })
-    }      
+    //     Pedidos.associate = (models) => {
+    //         Pedidos.hasMany(models.ItemPedidos,{
+    //         foreignKey: 'Pedidos_id'
+    //     })
+    // }      
     return Pedidos;
 }

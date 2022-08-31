@@ -29,5 +29,6 @@ const logDBMiddleware = require('../middlewares/logDB');
 //router.post('/', validateRegister, usedController.processRegister);
 
 router.get('/index',indexController.index);
+router.get('/index2', indexController.indexDarkMode);
 
 module.exports=router;

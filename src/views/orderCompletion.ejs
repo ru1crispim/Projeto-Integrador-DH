@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Order - DH Games</title>
     <link rel="stylesheet" href="/css/style-index.css">
+    <link rel="stylesheet" href="/css/style-order.css">
     
     
 </head>
@@ -16,11 +17,39 @@
         <%- include('./partials/header') %>
     </header>
     <main>
-      <div class="confirm-pedido">
+      <div class="confirm-pedidos">
           <div>
               <img src="/img/controle-icon.png" alt="">
               <h3>Numero do pedido: xxxx</h3>
               <p>Acompanhe o status do mesmo através do link da pagina de acompanhamento de pedidos ou se preferir, entre em contato conosco através dos canais de atendimento da página.</p>
+              <thead>
+                <tr>
+                    <th>ID:</th>
+                    <th>QUANTIDADE:</th>
+                    <th>VALOR POR PRODUTO:</th>
+                    <th>VALOR TOTAL:</th>
+                </tr>
+              </thead>
+              <br></br>
+              <tbody>
+                <% for(let i = 0; i < order.length; i++) { %>
+                <tr>
+                
+                    <%= order[i].id %>
+                
+                
+                    <%= order[i].quantidade %>
+                
+                
+                    <%= order[i].valor_unitario %>
+                
+                
+                    <p>Valor Total: </p><%= order[i].valor_total %>
+                    <br>
+                
+            </tr>
+        </tbody>
+              <% } %>
           </div>
 
       </div>
