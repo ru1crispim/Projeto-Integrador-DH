@@ -189,6 +189,9 @@ list-style-type: none; /* Retirar o estilo da lista  */
     width: px;
 
 }
+
+
+
 .login a:hover{
    
     transform: scale(1.5);
