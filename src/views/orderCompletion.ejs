@@ -22,41 +22,37 @@
               <img src="/img/controle-icon.png" alt="">
               <h3>Numero do pedido: xxxx</h3>
               <p>Acompanhe o status do mesmo através do link da pagina de acompanhamento de pedidos ou se preferir, entre em contato conosco através dos canais de atendimento da página.</p>
-              <thead>
-                <tr>
-                    <th>ID:</th>
-                    <th>QUANTIDADE:</th>
-                    <th>VALOR POR PRODUTO:</th>
-                    <th>VALOR TOTAL:</th>
-                </tr>
-              </thead>
-              <br></br>
-              <tbody>
-                <% for(let i = 0; i < order.length; i++) { %>
-                <tr>
-                
-                    <%= order[i].id %>
-                
-                
-                    <%= order[i].quantidade %>
-                
-                
-                    <%= order[i].valor_unitario %>
-                
-                
-                    <p>Valor Total: </p><%= order[i].valor_total %>
-                    <br>
-                
-            </tr>
-        </tbody>
-              <% } %>
-          </div>
+            </div>
+            <br>
+              <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col" class="th">Pedido</th>
+                        <th scope="col" class="th">Quantidade</th>
+                        <!-- <th scope="col" class="th">Valor Unitário</th> -->
+                        <th scope="col" class="th">Valor Total</th>
+                    </tr>
+                </thead>
 
-      </div>
+                <tbody>
+                    <% for(let i = 0; i < order.length; i++) { %>
+                        <tr>
+                            <td scope="row"><%= order[i].id %></td>
+                            <td scope="col"><%= order[i].quantidade %></td>
+                            <!-- <td scope="col"><%= order[i].valor_unitario %></td> -->
+                            <td scope="col"><%= order[i].valor_total %></td>
+                        </tr>
+                    <% } %>
+                </tbody>
+        </table>
+    </div>
     </main>
     <footer id="contact">
         <%- include('./partials/footer') %>
     </footer>
 </body>
 </html>
+
+
+
 

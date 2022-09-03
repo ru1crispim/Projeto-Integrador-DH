@@ -8,9 +8,13 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    /* align-items: center; */
     text-align: center;
     background-color: lightgreen;
-    height: 80vh;
+    height: 100%;
+}
+
+.table {
+
 }
 
